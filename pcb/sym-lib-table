@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name eduROV_motherboard)(type Legacy)(uri ${KIPRJMOD}/eduRov_motherboard-rescue.lib)(options "")(descr ""))
+)

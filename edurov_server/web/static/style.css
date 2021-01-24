@@ -1,0 +1,41 @@
+body {
+    background-color: #20272b !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#image {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    transform: rotate(0deg);
+}
+
+.rollOverlay {
+    position: absolute;
+    color: white;
+}
+
+.center-panel{
+    display: inline;
+    position: relative;
+}
+
+.grid-container > div {
+  padding: 10px 10px 0px 10px;
+}
+
+.side-panel > .card {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  height: 100%;
+}
+
+.side-panel{
+  idth=250px;
+}

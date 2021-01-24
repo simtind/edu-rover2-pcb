@@ -1,0 +1,11 @@
+pip >= 19.3
+
+# Used for emulating web camera testing on windows / OS X
+opencv-python; sys_platform != 'linux'
+# Regular picamera
+picamera; sys_platform == 'linux'
+
+pyserial-asyncio
+asyncio~=3.4.3
+psutil~=5.8.0
+websockets~=8.1
