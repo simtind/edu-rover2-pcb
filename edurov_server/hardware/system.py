@@ -10,7 +10,7 @@ class SystemMonitor(object):
 
     async def get_system_data(self):
         return {
-                    'free_space': psutil.disk_usage("/").free,
+                    'free_space': psutil.disk_usage("/").free / 1024 / 1024,
                     'cpu_temp': psutil.sensors_temperatures()[0],
                     'cpu_load': psutil.cpu_percent()
                 }

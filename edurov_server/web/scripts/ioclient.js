@@ -1,22 +1,9 @@
-
-export class IOClient{
+export class IOClient {
     client = null;
-
-    DummyActuators() {
-        this.actuators["vertical" ] += Math.random() - 0.5;
-        this.actuators["starboard"] += Math.random() - 0.5;
-        this.actuators["port"     ] += Math.random() - 0.5;
-        this.actuators["lights"   ] += Math.random() - 0.5;
-
-        this.client.send(JSON.stringify(this.actuators));
-        console.log("Sent data ", this.actuators)
-    }
 
     OpenHandler(event) {
         console.log("I/O Server Connection made");
         this.client.send("Start");
-
-        setInterval(self.DummyActuators, 1000);
     }
 
     Send(data) {
@@ -28,13 +15,6 @@ export class IOClient{
     }
 
     constructor(messageHandler) {
-        this.actuators = {
-            "vertical"  :0.0,
-            "starboard" :0.0,
-            "port"      :0.0,
-            "lights"    :0.0
-        }
-
         var self = this;
 
         console.log("Starting I/O server");

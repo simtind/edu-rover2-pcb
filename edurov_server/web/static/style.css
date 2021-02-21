@@ -5,37 +5,53 @@ body {
     overflow: hidden;
 }
 
-#image {
-    display: block;
-    margin: auto auto;
-    width: 100%;
-    transform: rotate(0deg);
-}
-
 .rollOverlay {
     position: absolute;
+    top:100px;
     color: white;
+    width:100%;
 }
 
-.center-panel{
+#canvas {
+    margin:auto;
+    z-index: -1;
+    padding-left: 10;
+    padding-right: 10;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+}
+
+.flexbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.panel {
+    .d-none;
     display: inline;
     position: relative;
+    margin: 10px;
+}
+
+.side-panel {
+    .panel;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .grid-container > div {
   padding: 10px 10px 0px 10px;
 }
 
-.side-panel > .card {
-  margin-bottom: 10px;
-  overflow: hidden;
-}
 .grid-container {
   display: grid;
   grid-template-columns: 200px auto 200px;
   height: 100%;
-}
-
-.side-panel{
-  idth=250px;
 }

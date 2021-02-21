@@ -14,19 +14,20 @@ class Arduino(object):
 
     async def get_sensors(self):
         received = await self._reader.readline()
-        water_temp, water_pressure, battery_voltage = received.split(':')
+        sensors = received.split(',')
         return {
-                   'tempWater': float(water_temp),
-                   'pressureWater': float(water_pressure),
-                   'batteryVoltage': float(battery_voltage)
+                   'batteryVoltage': float(sensors[0] / 100),
+                   'pressureWater': float(sensors[1] / 100),
+                   'tempWater': float(sensors[2] / 100),
+                   'motorCurrents': [float(sensor / 100) for sensor in sensors[3:7]]
                }
 
     async def set_actuators(self, values):
 
-        vertical  = int(round(100 * values["vertical"]))
-        starboard = int(round(100 * values["starboard"]))
-        port      = int(round(100 * values["port"]))
-        lights    = int(round(values['lights']))
+        vertical  = int(round(1000 * values["vertical"]))
+        starboard = int(round(1000 * values["starboard"]))
+        port      = int(round(1000 * values["port"]))
+        lights    = int(round(1000 * values['lights']))
 
-        message = f"vertical={vertical};starboard={starboard};port={port};lights={lights}".encode('ascii')
+        message = f"{starboard}, {port}, {vertical}, {lights}".encode('ascii')
         await self._writer.write(message)

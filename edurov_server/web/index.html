@@ -12,9 +12,9 @@
 </head>
 <body>
 
-<div class="grid-container">
-    <div class="d-none d-md-block side-panel " style="display:none;">
-        <div class="card bg-light cinema">
+<div class="flexbox">
+    <div class="side-panel">
+        <div class="card">
             <h5 class="card-header">Sensors</h5>
             <div class="card-body">
                 <h5>ROV</h5>
@@ -69,7 +69,7 @@
                 </table>
             </div>
         </div>
-        <div class="card bg-light cinema">
+        <div class="card">
             <h5 class="card-header">System</h5>
             <div class="card-body">
                 <table class="table table-sm">
@@ -89,56 +89,61 @@
                         <td id="cpu_temp"></td>
                         <td>&#8451</td>
                     </tr>
+                    <tr id="cpuLr">
+                        <th scope="row">CPU Load</th>
+                        <td id="cpu_load"></td>
+                        <td>%</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <div class="center-panel">
-		<canvas id="stream_canvas"></canvas>
+    <div class="panel" id="center-panel">
+		<canvas id="streamCanvas" style="margin:auto"></canvas>
         <img class="rollOverlay" id="rollOverlay" src="./static/roll.png">
     </div>
-    <div class="d-none d-md-block side-panel">
-        <div class="card bg-light cinema">
+    <div class="side-panel">
+        <div class="card">
             <h5 class="card-header">Options</h5>
             <div class="card-body">
-                <button type="button" onclick="toggle_armed()" id="armBtn"
+                <button type="button" id="button_arm"
                         class="btn btn-outline-success btn-sm btn-block"
                         title="Use this to arm the robot">
                     Arm
                 </button>
-                <button type="button" onclick="rotate_image()"
+                <button type="button" id="button_rotate_image"
                         class="btn btn-outline-primary btn-sm btn-block"
                         title="Will rotate the video 180 degrees">
                     Flip video
                 </button>
-                <button type="button" onclick="toggle_roll()" id="rollBtn"
+                <button type="button" id="button_toggle_roll"
                         class="btn btn-outline-primary btn-sm btn-block active"
                         title="Toggle the roll indicator on/off">
                     Roll
                 </button>
-                <button type="button" onclick="camera.ToggleCinema()"
+                <button type="button" id="button_enter_cinema"
                         class="btn btn-outline-primary btn-sm btn-block"
-                        title="Toggle cinema mode which hides everything except video">
+                        title="Enter cinema mode which hides everything except video">
                     Cinema
                 </button>
-                <button type="button" onclick="set_update_frequency()"
+                <button type="button" id="button_set_update_frequency"
                         class="btn btn-outline-primary btn-sm btn-block"
                         title="Changes the sensor update frequency to desired value">
                     Sensor frequency
                 </button>
-                <button type="button" onclick="toggle_light(true)" id="lightBtn"
+                <button type="button" id="button_toggle_light"
                         class="btn btn-outline-warning btn-sm btn-block"
                         title="Toggle the light on the ROV on/off">Light
                 </button>
-                <button type="button" onclick="stop_rov()"
+                <button type="button" id="button_stop_rov"
                         class="btn btn-outline-danger btn-sm btn-block"
                         title="Stops the ROV, this page will stop working">
                     Shutdown
                 </button>
             </div>
         </div>
-        <div class="card bg-light cinema">
+        <div class="card">
             <h5 class="card-header">Hotkeys</h5>
             <div class="card-body">
                 <table class="table table-sm">
@@ -166,8 +171,6 @@
 
     </div>
 </div>
-
+<script type="module" src="./scripts/main.js"></script>
 </body>
-<script type="module" src="./scripts/websocket/ioclient.js"></script>
-<script type="module" src="./scripts/websocket/cameraclient.js"></script>
 </html>
