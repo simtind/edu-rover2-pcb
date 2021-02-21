@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\simti\Documents\Git\eduROV-simtind\KiCad\eduRov_motherboard.sch</source>
+    <date>03/01/2021 15:59:02</date>
+    <tool>Eeschema (5.1.6)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>eduROV motherboard</title>
+        <company/>
+        <rev>A</rev>
+        <date/>
+        <source>eduRov_motherboard.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/MotorController_4/" tstamps="/5FFEC45F/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/MotorController_3/" tstamps="/6003A868/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/MotorController_2/" tstamps="/6003F027/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/MotorController_1/" tstamps="/60043462/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P103">
+      <value>Ext temp</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-3_P5.00mm</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X03-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD072D</tstamp>
+    </comp>
+    <comp ref="P102">
+      <value>Ext press</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-3_P5.00mm</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X03-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD089E</tstamp>
+    </comp>
+    <comp ref="R110">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD15CB</tstamp>
+    </comp>
+    <comp ref="2Pscrew103">
+      <value>Channel 3</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X02-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3D3E</tstamp>
+    </comp>
+    <comp ref="R107">
+      <value>10k</value>
+      <footprint>Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59D35BF6</tstamp>
+    </comp>
+    <comp ref="2Pscrew105">
+      <value>Ch LED</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X02-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59D3A8DC</tstamp>
+    </comp>
+    <comp ref="P101">
+      <value>Battery connector</value>
+      <footprint>TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X02-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59F0943E</tstamp>
+    </comp>
+    <comp ref="Q101">
+      <value>IRL540NPBF</value>
+      <footprint>TO_SOT_Packages_THT:TO-220-3_Vertical</footprint>
+      <libsource lib="eduROV_motherboard" part="IRL540NPBF-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A60C2A4</tstamp>
+    </comp>
+    <comp ref="RaspberryPI101">
+      <value>Raspberry_Pi_2_3</value>
+      <footprint>EduROV:RaspBerry_PI</footprint>
+      <datasheet>https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf</datasheet>
+      <libsource lib="Connector" part="Raspberry_Pi_2_3" description="expansion header for Raspberry Pi 2 &amp; 3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F72663B</tstamp>
+    </comp>
+    <comp ref="5vReg101">
+      <value>Conn_01x04</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7592EB</tstamp>
+    </comp>
+    <comp ref="R111">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F76240D</tstamp>
+    </comp>
+    <comp ref="R109">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD11FD</tstamp>
+    </comp>
+    <comp ref="R105">
+      <value>10k</value>
+      <footprint>Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3229</tstamp>
+    </comp>
+    <comp ref="R108">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB9B542</tstamp>
+    </comp>
+    <comp ref="2Pscrew102">
+      <value>Channel 2</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X02-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CCD414</tstamp>
+    </comp>
+    <comp ref="2Pscrew101">
+      <value>Channel 1</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X02-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3B58</tstamp>
+    </comp>
+    <comp ref="2Pscrew104">
+      <value>Channel 4</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm</footprint>
+      <libsource lib="eduROV_motherboard" part="CONN_01X02-eduRov_motherboard-rescue" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3CF4</tstamp>
+    </comp>
+    <comp ref="A101">
+      <value>Arduino_Nano_v3.x</value>
+      <footprint>Module:Arduino_Nano</footprint>
+      <datasheet>http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</datasheet>
+      <libsource lib="MCU_Module" part="Arduino_Nano_v3.x" description="Arduino Nano v3.x"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60095748</tstamp>
+    </comp>
+    <comp ref="R106">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>600D5E65</tstamp>
+    </comp>
+    <comp ref="C101">
+      <value>470uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>600EBD67</tstamp>
+    </comp>
+    <comp ref="C107">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC68142</tstamp>
+    </comp>
+    <comp ref="R102">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6015AA7F</tstamp>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6015A2BD</tstamp>
+    </comp>
+    <comp ref="R103">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>600D5188</tstamp>
+    </comp>
+    <comp ref="R104">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>600D04E5</tstamp>
+    </comp>
+    <comp ref="D202">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D201">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="IC201">
+      <value>L6203</value>
+      <footprint>EduROV:MULTIWATT-11</footprint>
+      <fields>
+        <field name="MPN">L6203</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+      </fields>
+      <libsource lib="eduROV_motherboard" part="L6203" description=""/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF31</tstamp>
+    </comp>
+    <comp ref="C204">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C205">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C202">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C203">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R201">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U201">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C201">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+    <comp ref="D302">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D301">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="IC301">
+      <value>L6203</value>
+      <footprint>EduROV:MULTIWATT-11</footprint>
+      <fields>
+        <field name="MPN">L6203</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+      </fields>
+      <libsource lib="eduROV_motherboard" part="L6203" description=""/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF31</tstamp>
+    </comp>
+    <comp ref="C304">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C305">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C302">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C303">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R301">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U301">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C301">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+    <comp ref="D402">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D401">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="IC401">
+      <value>L6203</value>
+      <footprint>EduROV:MULTIWATT-11</footprint>
+      <fields>
+        <field name="MPN">L6203</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+      </fields>
+      <libsource lib="eduROV_motherboard" part="L6203" description=""/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF31</tstamp>
+    </comp>
+    <comp ref="C404">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C405">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C402">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C403">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R401">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U401">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C401">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+    <comp ref="D502">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D501">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="IC501">
+      <value>L6203</value>
+      <footprint>EduROV:MULTIWATT-11</footprint>
+      <fields>
+        <field name="MPN">L6203</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+      </fields>
+      <libsource lib="eduROV_motherboard" part="L6203" description=""/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF31</tstamp>
+    </comp>
+    <comp ref="C504">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C505">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C502">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C503">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R501">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U501">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C501">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Raspberry_Pi_2_3">
+      <description>expansion header for Raspberry Pi 2 &amp; 3</description>
+      <docs>https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf</docs>
+      <footprints>
+        <fp>PinHeader*2x20*P2.54mm*Vertical*</fp>
+        <fp>PinSocket*2x20*P2.54mm*Vertical*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Raspberry_Pi_2_3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_in"/>
+        <pin num="2" name="5V" type="power_in"/>
+        <pin num="3" name="SDA/GPIO2" type="BiDi"/>
+        <pin num="4" name="5V" type="power_in"/>
+        <pin num="5" name="SCL/GPIO3" type="BiDi"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GCLK0/GPIO4" type="BiDi"/>
+        <pin num="8" name="GPIO14/TXD" type="BiDi"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="GPIO15/RXD" type="BiDi"/>
+        <pin num="11" name="GPIO17" type="BiDi"/>
+        <pin num="12" name="GPIO18/PWM0" type="BiDi"/>
+        <pin num="13" name="GPIO27" type="BiDi"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="GPIO22" type="BiDi"/>
+        <pin num="16" name="GPIO23" type="BiDi"/>
+        <pin num="17" name="3V3" type="power_in"/>
+        <pin num="18" name="GPIO24" type="BiDi"/>
+        <pin num="19" name="MOSI0/GPIO10" type="BiDi"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="MISO0/GPIO9" type="BiDi"/>
+        <pin num="22" name="GPIO25" type="BiDi"/>
+        <pin num="23" name="SCLK0/GPIO11" type="BiDi"/>
+        <pin num="24" name="~CE0~/GPIO8" type="BiDi"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="~CE1~/GPIO7" type="BiDi"/>
+        <pin num="27" name="ID_SD/GPIO0" type="BiDi"/>
+        <pin num="28" name="ID_SC/GPIO1" type="BiDi"/>
+        <pin num="29" name="GCLK1/GPIO5" type="BiDi"/>
+        <pin num="30" name="GND" type="power_in"/>
+        <pin num="31" name="GCLK2/GPIO6" type="BiDi"/>
+        <pin num="32" name="PWM0/GPIO12" type="BiDi"/>
+        <pin num="33" name="PWM1/GPIO13" type="BiDi"/>
+        <pin num="34" name="GND" type="power_in"/>
+        <pin num="35" name="GPIO19/MISO1" type="BiDi"/>
+        <pin num="36" name="GPIO16" type="BiDi"/>
+        <pin num="37" name="GPIO26" type="BiDi"/>
+        <pin num="38" name="GPIO20/MOSI1" type="BiDi"/>
+        <pin num="39" name="GND" type="power_in"/>
+        <pin num="40" name="GPIO21/SCLK1" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Module" part="Arduino_Nano_v2.x">
+      <aliases>
+        <alias>Arduino_Nano_v3.x</alias>
+      </aliases>
+      <description>Arduino Nano v2.x</description>
+      <docs>https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</docs>
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_Nano_v2.x</field>
+        <field name="Footprint">Module:Arduino_Nano</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D1/TX" type="BiDi"/>
+        <pin num="2" name="D0/RX" type="BiDi"/>
+        <pin num="3" name="~RESET" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="D2" type="BiDi"/>
+        <pin num="6" name="D3" type="BiDi"/>
+        <pin num="7" name="D4" type="BiDi"/>
+        <pin num="8" name="D5" type="BiDi"/>
+        <pin num="9" name="D6" type="BiDi"/>
+        <pin num="10" name="D7" type="BiDi"/>
+        <pin num="11" name="D8" type="BiDi"/>
+        <pin num="12" name="D9" type="BiDi"/>
+        <pin num="13" name="D10" type="BiDi"/>
+        <pin num="14" name="D11" type="BiDi"/>
+        <pin num="15" name="D12" type="BiDi"/>
+        <pin num="16" name="D13" type="BiDi"/>
+        <pin num="17" name="3V3" type="power_out"/>
+        <pin num="18" name="AREF" type="input"/>
+        <pin num="19" name="A0" type="BiDi"/>
+        <pin num="20" name="A1" type="BiDi"/>
+        <pin num="21" name="A2" type="BiDi"/>
+        <pin num="22" name="A3" type="BiDi"/>
+        <pin num="23" name="A4" type="BiDi"/>
+        <pin num="24" name="A5" type="BiDi"/>
+        <pin num="25" name="A6" type="BiDi"/>
+        <pin num="26" name="A7" type="BiDi"/>
+        <pin num="27" name="+5V" type="power_out"/>
+        <pin num="28" name="~RESET" type="input"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Current" part="ACS722xLCTR-05AB">
+      <aliases>
+        <alias>ACS722xLCTR-10AB</alias>
+        <alias>ACS722xLCTR-10AU</alias>
+        <alias>ACS722xLCTR-20AB</alias>
+        <alias>ACS722xLCTR-20AU</alias>
+        <alias>ACS722xLCTR-40AB</alias>
+        <alias>ACS722xLCTR-40AU</alias>
+        <alias>ACS723xLCTR-05AB</alias>
+        <alias>ACS723xLCTR-10AB</alias>
+        <alias>ACS723xLCTR-10AU</alias>
+        <alias>ACS723xLCTR-20AB</alias>
+        <alias>ACS723xLCTR-20AU</alias>
+        <alias>ACS723xLCTR-40AB</alias>
+        <alias>ACS723xLCTR-40AU</alias>
+      </aliases>
+      <description>±5A Bidirectional Hall-Effect Current Sensor, +3.3V supply, 264mV/A, SOIC-8</description>
+      <docs>http://www.allegromicro.com/~/media/Files/Datasheets/ACS722-Datasheet.ashx?la=en</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ACS722xLCTR-05AB</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IP+" type="passive"/>
+        <pin num="2" name="IP+" type="passive"/>
+        <pin num="3" name="IP-" type="passive"/>
+        <pin num="4" name="IP-" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="BW_SEL" type="input"/>
+        <pin num="7" name="VIOUT" type="output"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="eduROV_motherboard" part="CONN_01X02-eduRov_motherboard-rescue">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02-eduRov_motherboard-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eduROV_motherboard" part="CONN_01X03-eduRov_motherboard-rescue">
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03-eduRov_motherboard-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eduROV_motherboard" part="IRL540NPBF-eduRov_motherboard-rescue">
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">IRL540NPBF-eduRov_motherboard-rescue</field>
+        <field name="Footprint">TO_SOT_Packages_THT:TO-220_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eduROV_motherboard" part="L6203">
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">L6203</field>
+        <field name="Footprint">EduROV:MULTIWATT-11</field>
+        <field name="OC_NEWARK">56P8434</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="MPN">L6203</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT2" type="output"/>
+        <pin num="2" name="~" type="power_in"/>
+        <pin num="3" name="OUT1" type="output"/>
+        <pin num="4" name="CBOOT1" type="input"/>
+        <pin num="5" name="IN1" type="input"/>
+        <pin num="6" name="~" type="power_in"/>
+        <pin num="7" name="IN2" type="input"/>
+        <pin num="8" name="CBOOT2" type="input"/>
+        <pin num="9" name="VREF" type="input"/>
+        <pin num="10" name="SENSE" type="input"/>
+        <pin num="11" name="ENABLE" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="MCU_Module">
+      <uri>C:\Program Files\KiCad\share\kicad\library/MCU_Module.lib</uri>
+    </library>
+    <library logical="Sensor_Current">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Sensor_Current.lib</uri>
+    </library>
+    <library logical="eduROV_motherboard">
+      <uri>C:\Users\simti\Documents\Git\eduROV-simtind\KiCad/eduRov_motherboard-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/Mot1-">
+      <node ref="IC501" pin="3"/>
+      <node ref="D501" pin="1"/>
+      <node ref="2Pscrew101" pin="2"/>
+      <node ref="C504" pin="1"/>
+    </net>
+    <net code="2" name="/Mot1+">
+      <node ref="2Pscrew101" pin="1"/>
+      <node ref="D502" pin="1"/>
+      <node ref="C505" pin="1"/>
+      <node ref="IC501" pin="1"/>
+    </net>
+    <net code="3" name="/Mot2-">
+      <node ref="C404" pin="1"/>
+      <node ref="D401" pin="1"/>
+      <node ref="IC401" pin="3"/>
+      <node ref="2Pscrew102" pin="2"/>
+    </net>
+    <net code="4" name="/Mot2+">
+      <node ref="C405" pin="1"/>
+      <node ref="2Pscrew102" pin="1"/>
+      <node ref="IC401" pin="1"/>
+      <node ref="D402" pin="1"/>
+    </net>
+    <net code="5" name="/Mot4-">
+      <node ref="IC201" pin="3"/>
+      <node ref="D201" pin="1"/>
+      <node ref="C204" pin="1"/>
+      <node ref="2Pscrew104" pin="2"/>
+    </net>
+    <net code="6" name="/Mot4+">
+      <node ref="IC201" pin="1"/>
+      <node ref="C205" pin="1"/>
+      <node ref="D202" pin="1"/>
+      <node ref="2Pscrew104" pin="1"/>
+    </net>
+    <net code="7" name="Net-(A101-Pad27)">
+      <node ref="A101" pin="27"/>
+      <node ref="R106" pin="1"/>
+    </net>
+    <net code="8" name="Net-(A101-Pad23)">
+      <node ref="A101" pin="23"/>
+    </net>
+    <net code="9" name="Net-(A101-Pad2)">
+      <node ref="R103" pin="1"/>
+      <node ref="A101" pin="2"/>
+    </net>
+    <net code="10" name="Net-(A101-Pad18)">
+      <node ref="A101" pin="18"/>
+    </net>
+    <net code="11" name="Net-(A101-Pad17)">
+      <node ref="A101" pin="17"/>
+    </net>
+    <net code="12" name="Net-(A101-Pad16)">
+      <node ref="A101" pin="16"/>
+    </net>
+    <net code="13" name="Net-(A101-Pad15)">
+      <node ref="A101" pin="15"/>
+    </net>
+    <net code="14" name="IO4A">
+      <node ref="A101" pin="14"/>
+      <node ref="IC201" pin="5"/>
+    </net>
+    <net code="15" name="IO4B">
+      <node ref="A101" pin="13"/>
+      <node ref="IC201" pin="7"/>
+    </net>
+    <net code="16" name="IOEN">
+      <node ref="IC301" pin="11"/>
+      <node ref="IC501" pin="11"/>
+      <node ref="IC201" pin="11"/>
+      <node ref="R105" pin="2"/>
+      <node ref="A101" pin="5"/>
+      <node ref="IC401" pin="11"/>
+    </net>
+    <net code="17" name="Sense3">
+      <node ref="U301" pin="7"/>
+      <node ref="A101" pin="20"/>
+    </net>
+    <net code="18" name="IO3B">
+      <node ref="IC301" pin="7"/>
+      <node ref="A101" pin="11"/>
+    </net>
+    <net code="19" name="IO3A">
+      <node ref="A101" pin="12"/>
+      <node ref="IC301" pin="5"/>
+    </net>
+    <net code="20" name="Sense4">
+      <node ref="A101" pin="19"/>
+      <node ref="U201" pin="7"/>
+    </net>
+    <net code="21" name="+Bat">
+      <node ref="IC301" pin="2"/>
+      <node ref="R108" pin="2"/>
+      <node ref="2Pscrew105" pin="2"/>
+      <node ref="P101" pin="1"/>
+      <node ref="C203" pin="2"/>
+      <node ref="C107" pin="1"/>
+      <node ref="C503" pin="2"/>
+      <node ref="5vReg101" pin="1"/>
+      <node ref="IC201" pin="2"/>
+      <node ref="IC501" pin="2"/>
+      <node ref="IC401" pin="2"/>
+      <node ref="C303" pin="2"/>
+      <node ref="C403" pin="2"/>
+      <node ref="C101" pin="2"/>
+    </net>
+    <net code="22" name="-Batt">
+      <node ref="C301" pin="1"/>
+      <node ref="C303" pin="1"/>
+      <node ref="U301" pin="6"/>
+      <node ref="IC201" pin="6"/>
+      <node ref="D201" pin="2"/>
+      <node ref="D202" pin="2"/>
+      <node ref="C202" pin="2"/>
+      <node ref="R301" pin="1"/>
+      <node ref="D501" pin="2"/>
+      <node ref="R501" pin="1"/>
+      <node ref="D502" pin="2"/>
+      <node ref="C402" pin="2"/>
+      <node ref="D402" pin="2"/>
+      <node ref="D401" pin="2"/>
+      <node ref="IC401" pin="6"/>
+      <node ref="U501" pin="5"/>
+      <node ref="IC501" pin="6"/>
+      <node ref="U501" pin="3"/>
+      <node ref="U501" pin="4"/>
+      <node ref="C501" pin="1"/>
+      <node ref="U501" pin="6"/>
+      <node ref="C503" pin="1"/>
+      <node ref="C302" pin="2"/>
+      <node ref="D302" pin="2"/>
+      <node ref="D301" pin="2"/>
+      <node ref="R401" pin="1"/>
+      <node ref="C502" pin="2"/>
+      <node ref="IC301" pin="6"/>
+      <node ref="U301" pin="3"/>
+      <node ref="U301" pin="4"/>
+      <node ref="U401" pin="3"/>
+      <node ref="U401" pin="4"/>
+      <node ref="U401" pin="5"/>
+      <node ref="C401" pin="1"/>
+      <node ref="U301" pin="5"/>
+      <node ref="U401" pin="6"/>
+      <node ref="C403" pin="1"/>
+      <node ref="RaspberryPI101" pin="39"/>
+      <node ref="RaspberryPI101" pin="6"/>
+      <node ref="RaspberryPI101" pin="9"/>
+      <node ref="RaspberryPI101" pin="20"/>
+      <node ref="RaspberryPI101" pin="25"/>
+      <node ref="R111" pin="1"/>
+      <node ref="P102" pin="3"/>
+      <node ref="Q101" pin="3"/>
+      <node ref="P101" pin="2"/>
+      <node ref="RaspberryPI101" pin="14"/>
+      <node ref="P103" pin="3"/>
+      <node ref="R105" pin="1"/>
+      <node ref="R107" pin="1"/>
+      <node ref="RaspberryPI101" pin="34"/>
+      <node ref="R201" pin="1"/>
+      <node ref="C107" pin="2"/>
+      <node ref="5vReg101" pin="3"/>
+      <node ref="R102" pin="1"/>
+      <node ref="C101" pin="1"/>
+      <node ref="A101" pin="4"/>
+      <node ref="A101" pin="29"/>
+      <node ref="C203" pin="1"/>
+      <node ref="U201" pin="6"/>
+      <node ref="U201" pin="4"/>
+      <node ref="U201" pin="5"/>
+      <node ref="RaspberryPI101" pin="30"/>
+      <node ref="U201" pin="3"/>
+      <node ref="C201" pin="1"/>
+      <node ref="5vReg101" pin="2"/>
+    </net>
+    <net code="23" name="Sense1">
+      <node ref="U501" pin="7"/>
+      <node ref="A101" pin="22"/>
+    </net>
+    <net code="24" name="IO1B">
+      <node ref="IC501" pin="7"/>
+      <node ref="A101" pin="7"/>
+    </net>
+    <net code="25" name="IO1A">
+      <node ref="IC501" pin="5"/>
+      <node ref="A101" pin="8"/>
+    </net>
+    <net code="26" name="Net-(A101-Pad28)">
+      <node ref="A101" pin="28"/>
+    </net>
+    <net code="27" name="Sense2">
+      <node ref="U401" pin="7"/>
+      <node ref="A101" pin="21"/>
+    </net>
+    <net code="28" name="IO2B">
+      <node ref="A101" pin="9"/>
+      <node ref="IC401" pin="7"/>
+    </net>
+    <net code="29" name="IO2A">
+      <node ref="IC401" pin="5"/>
+      <node ref="A101" pin="10"/>
+    </net>
+    <net code="30" name="Net-(R103-Pad2)">
+      <node ref="R103" pin="2"/>
+      <node ref="RaspberryPI101" pin="8"/>
+    </net>
+    <net code="31" name="Net-(A101-Pad1)">
+      <node ref="A101" pin="1"/>
+      <node ref="R104" pin="2"/>
+    </net>
+    <net code="32" name="Net-(R101-Pad2)">
+      <node ref="R104" pin="1"/>
+      <node ref="R101" pin="2"/>
+      <node ref="RaspberryPI101" pin="10"/>
+    </net>
+    <net code="33" name="Net-(R101-Pad1)">
+      <node ref="R101" pin="1"/>
+      <node ref="R102" pin="2"/>
+    </net>
+    <net code="34" name="IO_LED">
+      <node ref="R107" pin="2"/>
+      <node ref="Q101" pin="1"/>
+      <node ref="A101" pin="6"/>
+    </net>
+    <net code="35" name="Net-(A101-Pad30)">
+      <node ref="A101" pin="30"/>
+    </net>
+    <net code="36" name="Net-(A101-Pad3)">
+      <node ref="A101" pin="3"/>
+    </net>
+    <net code="37" name="+5V">
+      <node ref="C301" pin="2"/>
+      <node ref="RaspberryPI101" pin="4"/>
+      <node ref="C501" pin="2"/>
+      <node ref="U301" pin="8"/>
+      <node ref="RaspberryPI101" pin="2"/>
+      <node ref="5vReg101" pin="4"/>
+      <node ref="P103" pin="1"/>
+      <node ref="R106" pin="2"/>
+      <node ref="U501" pin="8"/>
+      <node ref="C201" pin="2"/>
+      <node ref="U401" pin="8"/>
+      <node ref="C401" pin="2"/>
+      <node ref="P102" pin="1"/>
+      <node ref="U201" pin="8"/>
+    </net>
+    <net code="38" name="Net-(RaspberryPI101-Pad23)">
+      <node ref="RaspberryPI101" pin="23"/>
+    </net>
+    <net code="39" name="Net-(RaspberryPI101-Pad31)">
+      <node ref="RaspberryPI101" pin="31"/>
+    </net>
+    <net code="40" name="Net-(RaspberryPI101-Pad3)">
+      <node ref="RaspberryPI101" pin="3"/>
+    </net>
+    <net code="41" name="Net-(RaspberryPI101-Pad29)">
+      <node ref="RaspberryPI101" pin="29"/>
+    </net>
+    <net code="42" name="Net-(RaspberryPI101-Pad28)">
+      <node ref="RaspberryPI101" pin="28"/>
+    </net>
+    <net code="43" name="Net-(RaspberryPI101-Pad27)">
+      <node ref="RaspberryPI101" pin="27"/>
+    </net>
+    <net code="44" name="Net-(RaspberryPI101-Pad26)">
+      <node ref="RaspberryPI101" pin="26"/>
+    </net>
+    <net code="45" name="Net-(RaspberryPI101-Pad24)">
+      <node ref="RaspberryPI101" pin="24"/>
+    </net>
+    <net code="46" name="Net-(RaspberryPI101-Pad32)">
+      <node ref="RaspberryPI101" pin="32"/>
+    </net>
+    <net code="47" name="Net-(RaspberryPI101-Pad22)">
+      <node ref="RaspberryPI101" pin="22"/>
+    </net>
+    <net code="48" name="Net-(RaspberryPI101-Pad21)">
+      <node ref="RaspberryPI101" pin="21"/>
+    </net>
+    <net code="49" name="Net-(RaspberryPI101-Pad19)">
+      <node ref="RaspberryPI101" pin="19"/>
+    </net>
+    <net code="50" name="Net-(RaspberryPI101-Pad18)">
+      <node ref="RaspberryPI101" pin="18"/>
+    </net>
+    <net code="51" name="Net-(RaspberryPI101-Pad17)">
+      <node ref="RaspberryPI101" pin="17"/>
+    </net>
+    <net code="52" name="Net-(RaspberryPI101-Pad16)">
+      <node ref="RaspberryPI101" pin="16"/>
+    </net>
+    <net code="53" name="Net-(RaspberryPI101-Pad40)">
+      <node ref="RaspberryPI101" pin="40"/>
+    </net>
+    <net code="54" name="Net-(RaspberryPI101-Pad7)">
+      <node ref="RaspberryPI101" pin="7"/>
+    </net>
+    <net code="55" name="Net-(RaspberryPI101-Pad5)">
+      <node ref="RaspberryPI101" pin="5"/>
+    </net>
+    <net code="56" name="Net-(RaspberryPI101-Pad15)">
+      <node ref="RaspberryPI101" pin="15"/>
+    </net>
+    <net code="57" name="Net-(RaspberryPI101-Pad38)">
+      <node ref="RaspberryPI101" pin="38"/>
+    </net>
+    <net code="58" name="Net-(RaspberryPI101-Pad37)">
+      <node ref="RaspberryPI101" pin="37"/>
+    </net>
+    <net code="59" name="Net-(RaspberryPI101-Pad36)">
+      <node ref="RaspberryPI101" pin="36"/>
+    </net>
+    <net code="60" name="Net-(RaspberryPI101-Pad35)">
+      <node ref="RaspberryPI101" pin="35"/>
+    </net>
+    <net code="61" name="Net-(RaspberryPI101-Pad33)">
+      <node ref="RaspberryPI101" pin="33"/>
+    </net>
+    <net code="62" name="BattMonitor">
+      <node ref="R111" pin="2"/>
+      <node ref="R110" pin="1"/>
+      <node ref="A101" pin="24"/>
+    </net>
+    <net code="63" name="Net-(R109-Pad1)">
+      <node ref="R110" pin="2"/>
+      <node ref="R109" pin="1"/>
+    </net>
+    <net code="64" name="PressMonitor">
+      <node ref="P102" pin="2"/>
+      <node ref="A101" pin="25"/>
+    </net>
+    <net code="65" name="TempMonitor">
+      <node ref="P103" pin="2"/>
+      <node ref="A101" pin="26"/>
+    </net>
+    <net code="66" name="Net-(RaspberryPI101-Pad13)">
+      <node ref="RaspberryPI101" pin="13"/>
+    </net>
+    <net code="67" name="Net-(RaspberryPI101-Pad12)">
+      <node ref="RaspberryPI101" pin="12"/>
+    </net>
+    <net code="68" name="Net-(RaspberryPI101-Pad11)">
+      <node ref="RaspberryPI101" pin="11"/>
+    </net>
+    <net code="69" name="Net-(RaspberryPI101-Pad1)">
+      <node ref="RaspberryPI101" pin="1"/>
+    </net>
+    <net code="70" name="Net-(2Pscrew105-Pad1)">
+      <node ref="2Pscrew105" pin="1"/>
+      <node ref="Q101" pin="2"/>
+    </net>
+    <net code="71" name="Net-(R108-Pad1)">
+      <node ref="R109" pin="2"/>
+      <node ref="R108" pin="1"/>
+    </net>
+    <net code="72" name="/Mot3-">
+      <node ref="2Pscrew103" pin="2"/>
+      <node ref="IC301" pin="3"/>
+      <node ref="D301" pin="1"/>
+      <node ref="C304" pin="1"/>
+    </net>
+    <net code="73" name="/Mot3+">
+      <node ref="2Pscrew103" pin="1"/>
+      <node ref="IC301" pin="1"/>
+      <node ref="D302" pin="1"/>
+      <node ref="C305" pin="1"/>
+    </net>
+    <net code="74" name="Net-(IC201-Pad10)">
+      <node ref="U201" pin="1"/>
+      <node ref="R201" pin="2"/>
+      <node ref="U201" pin="2"/>
+      <node ref="IC201" pin="10"/>
+    </net>
+    <net code="75" name="Net-(C202-Pad1)">
+      <node ref="C202" pin="1"/>
+      <node ref="IC201" pin="9"/>
+    </net>
+    <net code="76" name="Net-(C204-Pad2)">
+      <node ref="IC201" pin="4"/>
+      <node ref="C204" pin="2"/>
+    </net>
+    <net code="77" name="Net-(C205-Pad2)">
+      <node ref="IC201" pin="8"/>
+      <node ref="C205" pin="2"/>
+    </net>
+    <net code="78" name="Net-(IC301-Pad10)">
+      <node ref="U301" pin="2"/>
+      <node ref="U301" pin="1"/>
+      <node ref="R301" pin="2"/>
+      <node ref="IC301" pin="10"/>
+    </net>
+    <net code="79" name="Net-(C302-Pad1)">
+      <node ref="C302" pin="1"/>
+      <node ref="IC301" pin="9"/>
+    </net>
+    <net code="80" name="Net-(C304-Pad2)">
+      <node ref="IC301" pin="4"/>
+      <node ref="C304" pin="2"/>
+    </net>
+    <net code="81" name="Net-(C305-Pad2)">
+      <node ref="IC301" pin="8"/>
+      <node ref="C305" pin="2"/>
+    </net>
+    <net code="82" name="Net-(IC401-Pad10)">
+      <node ref="IC401" pin="10"/>
+      <node ref="U401" pin="1"/>
+      <node ref="U401" pin="2"/>
+      <node ref="R401" pin="2"/>
+    </net>
+    <net code="83" name="Net-(C402-Pad1)">
+      <node ref="C402" pin="1"/>
+      <node ref="IC401" pin="9"/>
+    </net>
+    <net code="84" name="Net-(C404-Pad2)">
+      <node ref="C404" pin="2"/>
+      <node ref="IC401" pin="4"/>
+    </net>
+    <net code="85" name="Net-(C405-Pad2)">
+      <node ref="C405" pin="2"/>
+      <node ref="IC401" pin="8"/>
+    </net>
+    <net code="86" name="Net-(IC501-Pad10)">
+      <node ref="R501" pin="2"/>
+      <node ref="U501" pin="2"/>
+      <node ref="IC501" pin="10"/>
+      <node ref="U501" pin="1"/>
+    </net>
+    <net code="87" name="Net-(C502-Pad1)">
+      <node ref="C502" pin="1"/>
+      <node ref="IC501" pin="9"/>
+    </net>
+    <net code="88" name="Net-(C505-Pad2)">
+      <node ref="IC501" pin="8"/>
+      <node ref="C505" pin="2"/>
+    </net>
+    <net code="89" name="Net-(C504-Pad2)">
+      <node ref="IC501" pin="4"/>
+      <node ref="C504" pin="2"/>
+    </net>
+  </nets>
+</export>

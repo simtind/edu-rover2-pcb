@@ -1,0 +1,130 @@
+
+(module MULTIWATT-11 (layer F.Cu) (tedit 5FEDBBAD)
+  (descr "<b>Muliwatt 11 lead</b>")
+  (fp_text reference REF** (at -5.717235 -0.635245 0) (layer F.SilkS)
+    (effects (font (size 1.00038582677 1.00038582677) (thickness 0.015)))
+  )
+  (fp_text value MULTIWATT-11 (at 6.3558 -0.63558 0) (layer F.Fab)
+    (effects (font (size 1.00091338583 1.00091338583) (thickness 0.015)))
+  )
+  (fp_line (start -9.7 1.87) (end -9.7 -1.43) (layer F.SilkS) (width 0.254))
+  (fp_line (start -9.7 1.87) (end -7.8 1.87) (layer F.SilkS) (width 0.254))
+  (fp_line (start -9.7 1.87) (end 9.7 1.87) (layer F.Fab) (width 0.254))
+  (fp_line (start 9.7 1.87) (end 9.7 -1.43) (layer F.SilkS) (width 0.254))
+  (fp_line (start 7.8 1.87) (end 9.7 1.87) (layer F.SilkS) (width 0.254))
+  (fp_poly
+    (pts
+      (xy -9.80622 -3.03)
+      (xy 9.8 -3.03)
+      (xy 9.8 -1.43091)
+      (xy -9.80622 -1.43091)
+    ) (layer F.SilkS) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -8.8005 5.37)
+      (xy -8.2 5.37)
+      (xy -8.2 6.57038)
+      (xy -8.8005 6.57038)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -8.80293 1.97)
+      (xy -8.2 1.97)
+      (xy -8.2 5.47182)
+      (xy -8.80293 5.47182)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -5.40346 5.37)
+      (xy -4.8 5.37)
+      (xy -4.8 6.57421)
+      (xy -5.40346 6.57421)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -5.40344 1.97)
+      (xy -4.8 1.97)
+      (xy -4.8 5.47348)
+      (xy -5.40344 5.47348)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -2.00246 5.37)
+      (xy -1.4 5.37)
+      (xy -1.4 6.57807)
+      (xy -2.00246 6.57807)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -2.00328 1.97)
+      (xy -1.4 1.97)
+      (xy -1.4 5.47896)
+      (xy -2.00328 5.47896)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 1.40222 5.37)
+      (xy 2.0 5.37)
+      (xy 2.0 6.58043)
+      (xy 1.40222 6.58043)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 1.40177 1.97)
+      (xy 2.0 1.97)
+      (xy 2.0 5.47693)
+      (xy 1.40177 5.47693)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 4.80237 5.37)
+      (xy 5.4 5.37)
+      (xy 5.4 6.57324)
+      (xy 4.80237 6.57324)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 4.80274 1.97)
+      (xy 5.4 1.97)
+      (xy 5.4 5.47312)
+      (xy 4.80274 5.47312)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 8.20841 5.37)
+      (xy 8.8 5.37)
+      (xy 8.8 6.57674)
+      (xy 8.20841 6.57674)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 8.21468 1.97)
+      (xy 8.8 1.97)
+      (xy 8.8 5.47979)
+      (xy 8.21468 5.47979)
+    ) (layer F.Fab) (width 0.01)
+  )
+  (pad 1 thru_hole oval (at -8.5 6.35) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 2 thru_hole oval (at -6.8 1.27) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 3 thru_hole oval (at -5.1 6.35) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 4 thru_hole oval (at -3.4 1.27) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 5 thru_hole oval (at -1.7 6.35) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 6 thru_hole oval (at 0.0 1.27) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 7 thru_hole oval (at 1.7 6.35) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 8 thru_hole oval (at 3.4 1.27) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 9 thru_hole oval (at 5.1 6.35) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 10 thru_hole oval (at 6.8 1.27) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 11 thru_hole oval (at 8.5 6.35) (size 1.8 3.6) (drill 1.2) (layers *.Cu *.Mask))
+)
