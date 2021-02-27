@@ -4,7 +4,7 @@ import logging
 from edurov_server.utility import get_host_ip
 from edurov_server.server.cameraserver import CameraServer
 from edurov_server.server.ioserver import IOServer
-from edurov_server.server.webserver import WebpageServer
+from edurov_server.server.webserver import WebServer
 
 
 def edurov_web():
@@ -14,8 +14,8 @@ def edurov_web():
         '-r',
         metavar='RESOLUTION',
         type=str,
-        default='1024x768',
-        help='''resolution, use format WIDTHxHEIGHT (default 1024x768)''')
+        default='1280x720',
+        help='''resolution, use format WIDTHxHEIGHT (default 1280x720)''')
     parser.add_argument(
         '-fps',
         metavar='FRAMERATE',
@@ -32,7 +32,7 @@ def edurov_web():
         '-serial',
         metavar='SERIAL_PORT',
         type=str,
-        default='/dev/ttyACM0',
+        default=None,
         help="which serial port the script should try to use to communicate with the Arduino module")
     parser.add_argument(
         '--loglevel',
@@ -45,15 +45,13 @@ def edurov_web():
     logging.basicConfig(level=args.loglevel)
 
     camera = CameraServer(args.r, args.fps, args.loglevel)
-    io = IOServer(args.serial, args.loglevel)
+    io = IOServer(args.serial, loglevel=args.loglevel)
 
     logging.info("Waiting for websocket servers to go online before starting web server")
     camera.ready.wait()
     io.ready.wait()
 
-    with WebpageServer(server_address=('', args.port)) as s:
-        print(f'Visit the webpage at {get_host_ip()}:{args.port}')
-        s.serve_forever()
+    WebServer(port=args.port, camera_server=camera, io_server=io).run()
 
 
 if __name__ == '__main__':

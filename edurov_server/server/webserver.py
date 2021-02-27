@@ -1,87 +1,86 @@
 """
 Sever classes used in the web method
 """
+import asyncio
+import json
 import logging
-import socketserver
+import signal
 import time
-from http import server
+from aiohttp import web
 from pathlib import Path
 
-from edurov_server.utility import get_host_ip
+from aiohttp.web_runner import GracefulExit
+from aiortc import RTCSessionDescription, RTCPeerConnection
+from aiortc.contrib.media import MediaPlayer
+
+from edurov_server.utility import get_host_ip, is_osx, is_linux, is_windows
 
 
-class RequestHandler(server.BaseHTTPRequestHandler):
-    """Request server, handles request from the browser"""
-    base_folder = None
-    index_file = None
-    logger = logging.getLogger("RequestHandler")
-
-    def do_GET(self):
-        if self.path == '/':
-            self.redirect('/index.html', redir_type=301)
-        elif '?cameraserver' in self.path:
-            self.serve_content(f'ws://{get_host_ip()}:8080'.encode('utf-8', 'ignore'))
-        elif '?ioserver' in self.path:
-            self.serve_content(f'ws://{get_host_ip()}:8081'.encode('utf-8', 'ignore'))
-        elif self.path.startswith('/http') or self.path.startswith('/www'):
-            self.redirect(self.path[1:])
-        else:
-            path = self.base_folder / self.path[1:]
-            if path.is_file():
-                self.serve_path(str(path))
-            else:
-                self.logger.warning(f'Bad response. {self.requestline}. Could not find {path}')
-                self.send_404()
-
-    def do_POST(self):
-        self.send_404()
-
-    def serve_content(self, content, content_type='text/html'):
-        self.send_response(200)
-        self.send_header('Content-Type', content_type)
-        self.send_header('Content-Length', len(content))
-        self.end_headers()
-        self.wfile.write(content)
-
-    def serve_path(self, path):
-        if '.css' in path:
-            content_type = 'text/css'
-        elif '.js' in path:
-            content_type = 'text/javascript'
-        else:
-            content_type = 'text/html'
-        with open(path, 'rb') as f:
-            content = f.read()
-        self.serve_content(content, content_type)
-
-    def redirect(self, path, redir_type=302):
-        self.send_response(redir_type)
-        self.send_header('Location', path)
-        self.end_headers()
-
-    def send_404(self):
-        self.send_error(404)
-        self.end_headers()
-
-
-class WebpageServer(socketserver.ThreadingMixIn, server.HTTPServer):
-    """Threaded HTTP server, forwards request to the RequestHandlerClass"""
-    allow_reuse_address = True
-    daemon_threads = True
-
-    def __init__(self, server_address, index_file=Path(__file__).parent.parent / "web" / "index.html", loglevel="INFO"):
-        logging.basicConfig(level=loglevel)
-        self.logger = logging.getLogger("WebpageServer")
-        self.start = time.time()
-        RequestHandler.base_folder = Path(index_file).parent.absolute()
-        RequestHandler.index_file = Path(index_file)
-        super(WebpageServer, self).__init__(server_address, RequestHandler)
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
+class WebServer:
+    async def on_shutdown(self, event):
+        await self.camera_server.stop()
+        await self.io_server.stop()
         self.logger.info('Shutting down http server')
         finish = time.time()
         self.logger.debug(f'HTTP server was live for {finish - self.start:.1f} seconds')
+
+    async def serve_camera(self, request):
+        return web.Response(text=f"ws://{self.server_address}:{self.camera_server.port}")
+
+    async def serve_io(self, request):
+        return web.Response(text=f"ws://{self.server_address}:{self.io_server.port}")
+
+    async def stop(self, request):
+        if not self.is_shutdown.is_set():
+            self.is_shutdown.set()
+            await self.app.shutdown()
+            await self.app.cleanup()
+            # Force aioHTTP to exit
+            # signal.raise_signal(signal.SIGINT)
+            raise KeyboardInterrupt()
+
+    async def index_handler(self, request):
+        return web.FileResponse(self.root_dir / "index.html")
+
+    def __init__(self,
+                 server_address=None,
+                 port=80, index_file=Path(__file__).parent.parent / "web" / "index.html",
+                 log_level="INFO",
+                 camera_server=None,
+                 io_server=None):
+        logging.basicConfig(level=log_level)
+        self.logger = logging.getLogger("WebpageServer")
+        self.root_dir = index_file.parent
+        self.start = time.time()
+        self.app = web.Application()
+        self.app.on_shutdown.append(self.on_shutdown)
+        self.camera_server = camera_server
+        self.io_server = io_server
+        self.pcs = set()
+        self.is_shutdown = asyncio.Event()
+
+        self.app.add_routes(
+            [
+                web.get("/cameraserver", self.serve_camera),
+                web.get("/ioserver", self.serve_io),
+                web.get("/stop", self.stop),
+                web.static("/", self.root_dir),
+                web.static("/scripts", self.root_dir / "scripts"),
+                web.static("/static", self.root_dir / "static")
+            ]
+        )
+
+        if server_address is None:
+            server_address = get_host_ip()
+        self.server_address = server_address
+        self.port = port
+
+    def run(self):
+        print(f'Visit the webpage at {self.server_address}:{self.port}')
+        try:
+            web.run_app(self.app, host=self.server_address, port=self.port)
+        except KeyboardInterrupt:
+            pass
+        finally:
+            logging.debug("Web server terminated")
 

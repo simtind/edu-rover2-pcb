@@ -47,9 +47,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   static uint32_t messageTime = 0;
-  const uint32_t delayTime = 500; //how long between each sensor update - milliseconds
+  static uint32_t sensor_interval = 500; //how long between each sensor update - milliseconds
   
-  if ((millis() - messageTime) > delayTime) {
+  if ((millis() - messageTime) > sensor_interval) {
     messageTime = millis();
     
     // All ADC measurements are multiplied by 100 to report 2-decimal precision numbers where possible
@@ -82,10 +82,22 @@ void loop() {
   int32_t port_thrust = 0;
   int32_t vertical_thrust = 0;
   int32_t led_power = 0;
+  uint32_t new_sensor_interval = 0;
 
   int res = sscanf(
     indata.c_str(), 
-    "%il, %il, %il, %il", 
+    "interval=%lu", 
+    &new_sensor_interval
+  );
+
+  if (res == 1)
+  {
+    sensor_interval = new_sensor_interval;
+  }
+  
+  res = sscanf(
+    indata.c_str(), 
+    "%li, %li, %li, %li", 
     &starboard_thrust, 
     &port_thrust, 
     &vertical_thrust, 

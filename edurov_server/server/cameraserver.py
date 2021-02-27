@@ -18,37 +18,53 @@ class CameraServer(multiprocessing.Process):
         self.fps = fps
         self.loglevel = loglevel
         self.start_time = time.time()
+        self.server = None
         self.ready = multiprocessing.Event()
+        self.stop_event = multiprocessing.Event()
 
         super().__init__(target=self._runner, daemon=True)
         self.start()
 
+    async def stop(self):
+        self.stop_event.set()
+        self.join()
+        logging.debug("Camera process terminated")
+
+    async def _wait_for_stop_event(self):
+        while not self.stop_event.is_set():
+            await asyncio.sleep(2)
+        self.server.ws_server.close()
+
     async def _send_frames(self, websocket):
-        while True:
+        while not self.stop_event.is_set():
             with self.camera.stream.condition:
                 self.camera.stream.condition.wait()
                 if self.camera.stream.frame is not None:
-                    self.logger.debug("Send frame")
                     await websocket.send("data:image/jpg;base64," + base64.b64encode(self.camera.stream.frame).decode())
 
     async def _handler(self, websocket, path):
         self.logger.info(f"Camera server received connection from {path}")
         start_cmd = await websocket.recv()
-        send = asyncio.get_event_loop().create_task(self._send_frames(websocket))
+        send = asyncio.create_task(self._send_frames(websocket))
         await websocket.wait_closed()
         send.cancel()
 
     def _runner(self):
+        asyncio.run(self._task())
+
+    async def _task(self):
         logging.basicConfig(level=self.loglevel)
         self.logger = logging.getLogger("CameraServer")
+        logging.getLogger("websockets.protocol").setLevel(logging.INFO)
         with camera.Camera(self.video_resolution, self.fps) as self.camera:
-            server = websockets.serve(self._handler, get_host_ip(), self.port)
-            self.logger.info(f"Camera websocket server started at ws://{get_host_ip()}:{self.port}")
+            self.server = websockets.serve(self._handler, get_host_ip(), self.port)
+            stop_task = asyncio.create_task(self._wait_for_stop_event())
 
+            self.logger.info(f"Camera websocket server started at ws://{get_host_ip()}:{self.port}")
             self.ready.set()
 
-            asyncio.get_event_loop().run_until_complete(server)
-            asyncio.get_event_loop().run_forever()
+            await self.server
+            await stop_task
 
         self.logger.info('Shutting down camera server')
         finish = time.time()

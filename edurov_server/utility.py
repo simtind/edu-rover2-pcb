@@ -1,4 +1,6 @@
+import re
 import socket
+import subprocess
 import sys
 import threading
 import io
@@ -25,8 +27,17 @@ class StreamingOutput(object):
             self.count += 1
         return self.buffer.write(buf)
 
+
 def is_linux():
     return sys.platform.startswith("linux")
+
+
+def is_windows():
+    return sys.platform.startswith("win")
+
+
+def is_osx():
+    return sys.platform.startswith("darwin")
 
 
 def is_raspberrypi():

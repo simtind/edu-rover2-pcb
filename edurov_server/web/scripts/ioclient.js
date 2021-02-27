@@ -32,7 +32,7 @@ export class IOClient {
                 xhttp = null;
             }
         }
-        xhttp.open("GET", "?ioserver", true);
+        xhttp.open("GET", "/ioserver", true);
         xhttp.send();
     }
 }

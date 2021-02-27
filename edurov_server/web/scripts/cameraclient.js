@@ -125,7 +125,7 @@ export class CameraClient {
                 xhttp = null;
             }
         }
-        xhttp.open("GET", "?cameraserver", true);
+        xhttp.open("GET", "/cameraserver", true);
         xhttp.send();
 
         this.SetSize();
