@@ -276,3 +276,5 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/macos,python,windows,pycharm,notepadpp,sublimetext
 /pcb/_autosave-*
+/pcb/*/gerber/
+/pcb/*/*.*-bak
