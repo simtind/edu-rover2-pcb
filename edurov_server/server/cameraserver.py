@@ -4,15 +4,15 @@ import multiprocessing
 import asyncio
 import time
 
-import websockets as websockets
+import websockets
 
-from edurov_server.hardware import camera
-from edurov_server.utility import get_host_ip
+from ..hardware import camera
+from ..utility import get_host_ip
 
 
 class CameraServer(multiprocessing.Process):
     """ Creates a new process that Exposes the raspberry pi camera as a websocket image stream """
-    def __init__(self, video_resolution='1024x768', fps=30, loglevel="INFO", port=8080):
+    def __init__(self, video_resolution='1024x768', fps=30, loglevel="INFO", port=8081):
         self.port = port
         self.video_resolution = [int(value) for value in video_resolution.split('x')]
         self.fps = fps
@@ -36,6 +36,8 @@ class CameraServer(multiprocessing.Process):
         self.server.ws_server.close()
 
     async def _send_frames(self, websocket):
+        if self.camera is None:
+            return
         while not self.stop_event.is_set():
             with self.camera.stream.condition:
                 self.camera.stream.condition.wait()
@@ -69,6 +71,9 @@ class CameraServer(multiprocessing.Process):
         self.logger.info('Shutting down camera server')
         finish = time.time()
         seconds = finish - self.start_time
-        framerate = self.camera.stream.count / (finish - self.start_time)
+        if self.camera is not None:
+            framerate = self.camera.stream.count / (finish - self.start_time)
+        else:
+            framerate = 0
         self.logger.debug(f'Sent {self.camera.stream.count} images in {seconds:.1f} seconds at {framerate:.2f} fps')
 

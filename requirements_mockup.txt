@@ -1,7 +1,7 @@
 pip >= 19.3
 
-picamera
-sense-hat
+# Used for reading regular web cameras instead of picamera
+opencv-python;
 
 pyserial-asyncio
 asyncio~=3.4.3

@@ -1,7 +1,6 @@
 import argparse
 import logging
 
-from edurov_server.utility import get_host_ip
 from edurov_server.server.cameraserver import CameraServer
 from edurov_server.server.ioserver import IOServer
 from edurov_server.server.webserver import WebServer
@@ -26,7 +25,7 @@ def edurov_web():
         '-port',
         metavar='SERVER_PORT',
         type=int,
-        default=80,
+        default=8080,
         help="which port the server should serve it's main page (default 80)")
     parser.add_argument(
         '-serial',

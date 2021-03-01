@@ -13,7 +13,7 @@ from aiohttp.web_runner import GracefulExit
 from aiortc import RTCSessionDescription, RTCPeerConnection
 from aiortc.contrib.media import MediaPlayer
 
-from edurov_server.utility import get_host_ip, is_osx, is_linux, is_windows
+from ..utility import get_host_ip, is_osx, is_linux, is_windows
 
 
 class WebServer:
@@ -29,6 +29,9 @@ class WebServer:
 
     async def serve_io(self, request):
         return web.Response(text=f"ws://{self.server_address}:{self.io_server.port}")
+
+    async def serve_entry(self, request):
+        raise web.HTTPFound(location="/index.html")
 
     async def stop(self, request):
         if not self.is_shutdown.is_set():
@@ -64,6 +67,7 @@ class WebServer:
                 web.get("/cameraserver", self.serve_camera),
                 web.get("/ioserver", self.serve_io),
                 web.get("/stop", self.stop),
+                web.get("/", self.serve_entry),
                 web.static("/", self.root_dir),
                 web.static("/scripts", self.root_dir / "scripts"),
                 web.static("/static", self.root_dir / "static")

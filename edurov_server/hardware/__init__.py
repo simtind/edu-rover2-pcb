@@ -1,6 +1,6 @@
 
 # Import mock interfaces if not running on raspberry pi.
-from edurov_server.utility import is_raspberrypi
+from ..utility import is_raspberrypi
 
 if not is_raspberrypi():
     from .mock import system as system
