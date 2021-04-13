@@ -5,7 +5,7 @@ import random
 
 import psutil
 
-from edurov_server.utility import is_linux
+from utility import is_linux
 
 
 class SystemMonitor(object):

@@ -6,14 +6,14 @@ import time
 
 import websockets as websockets
 
-from edurov_server.hardware import arduino
-from edurov_server.hardware import system
-from edurov_server.utility import get_host_ip
+from ..hardware import arduino
+from ..hardware import system
+from ..utility import get_host_ip
 
 
 class IOServer(multiprocessing.Process):
     """ Creates a new process that Exposes the ROV sensors and actuators as a websocket data stream """
-    def __init__(self, arduino_serial_port='/dev/ttyACM0', arduino_baud_rate=115200, loglevel="INFO", port=8081):
+    def __init__(self, arduino_serial_port='/dev/ttyACM0', arduino_baud_rate=115200, loglevel="INFO", port=8082):
         self.port = port
         self.serial_port = arduino_serial_port
         self.baud_rate = arduino_baud_rate
@@ -22,6 +22,7 @@ class IOServer(multiprocessing.Process):
         self.actuators = dict(sensor_interval=1)
         self.start_time = time.time()
         self.sensor_condition = None
+        self.sensor_event = None
         self.actuator_lock = None
         self.server = None
         self.ready = multiprocessing.Event()
@@ -48,10 +49,25 @@ class IOServer(multiprocessing.Process):
                 async with self.sensor_condition:
                     self.sensors.update(await self.arduino.get_sensors())
                     self.sensor_condition.notify_all()
+                await self.sensor_event.wait()
             else:
                 await asyncio.sleep(1)
 
-    async def _collect_system_sensors(self):
+    async def _collect_sense_hat_sensors(self):
+        raspberry = system.SenseHat()
+        while not self.stop_event.is_set():
+            # Don't get arduino data if we're not serving clients.
+            if self.server.ws_server.websockets:
+                self.logger.debug("Get sense hat data")
+                async with self.sensor_condition:
+                    await asyncio.sleep(self.actuators["sensor_interval"])
+                    self.sensors.update(await raspberry.get_sensors())
+                    self.sensor_condition.notify_all()
+                await self.sensor_event.wait()
+            else:
+                await asyncio.sleep(1)
+
+    async def _collect_system_data(self):
         raspberry = system.SystemMonitor()
         while not self.stop_event.is_set():
             await asyncio.sleep(10)
@@ -59,15 +75,19 @@ class IOServer(multiprocessing.Process):
             if self.server.ws_server.websockets:
                 self.logger.debug("Get system data")
                 async with self.sensor_condition:
-                    self.sensors.update(await raspberry.get_sensors())
                     self.sensors.update(await raspberry.get_system_data())
                     self.sensor_condition.notify_all()
+                await self.sensor_event.wait()
 
     async def _send_sensors(self, websocket):
         while not self.stop_event.is_set():
+            self.sensor_event.clear()
             async with self.sensor_condition:
                 await self.sensor_condition.wait()
                 await websocket.send(json.dumps(self.sensors))
+                self.sensor_event.set()
+        # Free other threads so they may exit.
+        self.sensor_event.set()
 
     async def _receive_input(self, websocket):
         while not self.stop_event.is_set():
@@ -77,13 +97,13 @@ class IOServer(multiprocessing.Process):
             self.logger.debug(f"Got websocket data {data}")
             async with self.actuator_lock:
                 if data["sensor_interval"] != self.actuators["sensor_interval"]:
-                    await arduino.set_interval(data["sensor_interval"])
+                    await self.arduino.set_interval(data["sensor_interval"])
                 self.actuators.update(data)
                 await self.arduino.set_actuators(self.actuators)
 
     async def _handler(self, websocket, path):
         self.logger.info(f"I/O server received connection from {path}")
-        start_cmd = await websocket.recv()
+        await websocket.recv()
         send = asyncio.create_task(self._send_sensors(websocket))
         receive = asyncio.create_task(self._receive_input(websocket))
         await websocket.wait_closed()
@@ -97,6 +117,7 @@ class IOServer(multiprocessing.Process):
         logging.basicConfig(level=self.loglevel)
         self.logger = logging.getLogger("IOServer")
         self.sensor_condition = asyncio.Condition()
+        self.sensor_event = asyncio.Event()
         self.actuator_lock = asyncio.Lock()
 
         self.server = websockets.serve(self._handler, get_host_ip(), self.port)
@@ -104,7 +125,8 @@ class IOServer(multiprocessing.Process):
 
         async with arduino.Arduino(self.serial_port, self.baud_rate) as self.arduino:
             arduino_task = asyncio.create_task(self._collect_arduino_sensors())
-            system_task = asyncio.create_task(self._collect_system_sensors())
+            arduino_task = asyncio.create_task(self._collect_sense_hat_sensors())
+            system_task = asyncio.create_task(self._collect_system_data())
             self.logger.debug("Ready to send sensor data")
 
             self.ready.set()

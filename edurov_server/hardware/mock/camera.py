@@ -2,7 +2,7 @@ import logging
 import threading
 import cv2
 
-from edurov_server.utility import StreamingOutput
+from utility import StreamingOutput
 
 
 class Camera(object):
