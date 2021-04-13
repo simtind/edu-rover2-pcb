@@ -16,23 +16,12 @@ $EndDescr
 Text GLabel 1200 1650 3    60   Input ~ 0
 +Bat1
 $Comp
-L eduROV_motherboard:CONN_01X03-eduRov_motherboard-rescue P103
-U 1 1 59CD072D
-P 14850 6400
-F 0 "P103" H 14850 6600 50  0000 C CNN
-F 1 "Ext temp" V 14950 6400 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-3_P5.00mm" H 14850 6400 50  0001 C CNN
-F 3 "" H 14850 6400 50  0000 C CNN
-	1    14850 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L eduROV_motherboard:CONN_01X03-eduRov_motherboard-rescue P102
+L Connector_Generic:Conn_01x03 P102
 U 1 1 59CD089E
 P 14850 5950
 F 0 "P102" H 14850 6150 50  0000 C CNN
 F 1 "Ext press" V 14950 5950 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-3_P5.00mm" H 14850 5950 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 14850 5950 50  0001 C CNN
 F 3 "" H 14850 5950 50  0000 C CNN
 	1    14850 5950
 	1    0    0    -1  
@@ -61,15 +50,15 @@ TempMonitor
 Text GLabel 14650 5950 0    60   Input ~ 0
 PressMonitor
 $Comp
-L eduROV_motherboard:CONN_01X02-eduRov_motherboard-rescue 2Pscrew103
+L Connector_Generic:Conn_01x02 2Pscrew103
 U 1 1 59CD3D3E
-P 12600 4700
-F 0 "2Pscrew103" H 12950 4650 50  0000 C CNN
-F 1 "Channel 3" H 12900 4750 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm" H 12600 4700 50  0001 C CNN
-F 3 "" H 12600 4700 50  0000 C CNN
-	1    12600 4700
-	1    0    0    -1  
+P 12600 4750
+F 0 "2Pscrew103" H 12950 4700 50  0000 C CNN
+F 1 "Channel 3" H 12900 4800 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 12600 4750 50  0001 C CNN
+F 3 "" H 12600 4750 50  0000 C CNN
+	1    12600 4750
+	1    0    0    1   
 $EndComp
 Text GLabel 13950 7500 0    60   Input ~ 0
 IO_LED
@@ -87,20 +76,20 @@ $EndComp
 Text GLabel 13950 7800 0    60   Input ~ 0
 GND
 $Comp
-L eduROV_motherboard:CONN_01X02-eduRov_motherboard-rescue 2Pscrew105
+L Connector_Generic:Conn_01x04 P105
 U 1 1 59D3A8DC
-P 15000 8050
-F 0 "2Pscrew105" H 15000 8200 50  0000 C CNN
-F 1 "Ch LED" V 15100 8050 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm" H 15000 8050 50  0001 C CNN
-F 3 "" H 15000 8050 50  0000 C CNN
-	1    15000 8050
+P 15250 7900
+F 0 "P105" H 15275 8100 50  0000 C CNN
+F 1 "Ch LED" V 15350 7900 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 15250 7900 50  0001 C CNN
+F 3 "" H 15250 7900 50  0000 C CNN
+	1    15250 7900
 	1    0    0    -1  
 $EndComp
 Text GLabel 13950 8100 0    60   Input ~ 0
 +Bat1
 $Comp
-L eduROV_motherboard:CONN_01X02-eduRov_motherboard-rescue P101
+L Connector_Generic:Conn_01x02 P101
 U 1 1 59F0943E
 P 1350 1100
 F 0 "P101" H 1350 1250 50  0000 C CNN
@@ -111,12 +100,12 @@ F 3 "" H 1350 1100 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L eduROV_motherboard:IRL540NPBF-eduRov_motherboard-rescue Q101
+L EduROV:IRL540NPBF Q101
 U 1 1 5A60C2A4
 P 14600 7700
 F 0 "Q101" H 14850 7775 50  0000 L CNN
 F 1 "IRL540NPBF" H 14850 7700 50  0001 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" H 14850 7625 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 14850 7625 50  0001 L CIN
 F 3 "" H 14600 7700 50  0001 L CNN
 	1    14600 7700
 	0    1    1    0   
@@ -290,8 +279,6 @@ Wire Wire Line
 	13950 8100 14150 8100
 Connection ~ 14150 8100
 Wire Wire Line
-	14150 8100 14800 8100
-Wire Wire Line
 	13950 7800 14150 7800
 Connection ~ 14150 7800
 Wire Wire Line
@@ -306,26 +293,15 @@ Mot3+
 Text Label 12000 4750 0    60   ~ 0
 Mot3-
 $Comp
-L eduROV_motherboard:CONN_01X02-eduRov_motherboard-rescue 2Pscrew102
-U 1 1 59CCD414
-P 12600 3500
-F 0 "2Pscrew102" H 12950 3450 50  0000 C CNN
-F 1 "Channel 2" H 12900 3550 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm" H 12600 3500 50  0001 C CNN
-F 3 "" H 12600 3500 50  0000 C CNN
-	1    12600 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L eduROV_motherboard:CONN_01X02-eduRov_motherboard-rescue 2Pscrew101
+L Connector_Generic:Conn_01x02 2Pscrew101
 U 1 1 59CD3B58
-P 12600 2350
-F 0 "2Pscrew101" H 12950 2300 50  0000 C CNN
-F 1 "Channel 1" H 12900 2400 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm" H 12600 2350 50  0001 C CNN
-F 3 "" H 12600 2350 50  0000 C CNN
-	1    12600 2350
-	1    0    0    -1  
+P 12600 2400
+F 0 "2Pscrew101" H 12950 2350 50  0000 C CNN
+F 1 "Channel 1" H 12900 2450 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 12600 2400 50  0001 C CNN
+F 3 "" H 12600 2400 50  0000 C CNN
+	1    12600 2400
+	1    0    0    1   
 $EndComp
 $Sheet
 S 10850 5550 1050 700 
@@ -402,15 +378,15 @@ GND
 Text GLabel 11900 2150 2    60   Input ~ 0
 +Bat1
 $Comp
-L eduROV_motherboard:CONN_01X02-eduRov_motherboard-rescue 2Pscrew104
+L Connector_Generic:Conn_01x02 2Pscrew104
 U 1 1 59CD3CF4
-P 12600 5900
-F 0 "2Pscrew104" H 12950 5850 50  0000 C CNN
-F 1 "Channel 4" H 12900 5950 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Altech_AK300-2_P5.00mm" H 12600 5900 50  0001 C CNN
-F 3 "" H 12600 5900 50  0000 C CNN
-	1    12600 5900
-	1    0    0    -1  
+P 12600 5950
+F 0 "2Pscrew104" H 12950 5900 50  0000 C CNN
+F 1 "Channel 4" H 12900 6000 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 12600 5950 50  0001 C CNN
+F 3 "" H 12600 5950 50  0000 C CNN
+	1    12600 5950
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	11900 4650 12400 4650
@@ -574,10 +550,10 @@ Wire Notes Line
 Wire Notes Line
 	6800 3950 6800 3350
 $Comp
-L Device:C C107
+L Device:C C102
 U 1 1 5FC68142
 P 14150 7950
-F 0 "C107" H 14400 7900 50  0000 R CNN
+F 0 "C102" H 14400 7900 50  0000 R CNN
 F 1 "100nF" H 14500 8000 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 14188 7800 50  0001 C CNN
 F 3 "~" H 14150 7950 50  0001 C CNN
@@ -649,4 +625,67 @@ F 3 "" H 4250 4450 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	6250 4350 4400 4350
+$Comp
+L Connector_Generic:Conn_01x03 P103
+U 1 1 60763419
+P 14850 6400
+F 0 "P103" H 14850 6600 50  0000 C CNN
+F 1 "Ext press" V 14950 6400 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 14850 6400 50  0001 C CNN
+F 3 "" H 14850 6400 50  0000 C CNN
+	1    14850 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 P104
+U 1 1 60771AD7
+P 14850 6850
+F 0 "P104" H 14850 7050 50  0000 C CNN
+F 1 "Ext press" V 14950 6850 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 14850 6850 50  0001 C CNN
+F 3 "" H 14850 6850 50  0000 C CNN
+	1    14850 6850
+	1    0    0    -1  
+$EndComp
+Text GLabel 14650 7050 0    60   Input ~ 0
+GND
+Text GLabel 14650 6950 0    60   Input ~ 0
+SCL
+Text GLabel 14650 6750 0    60   Input ~ 0
++3V3
+Text GLabel 14650 6850 0    60   Input ~ 0
+SDA
+Text GLabel 1650 4650 0    60   Input ~ 0
+SCL
+Text GLabel 1650 4750 0    60   Input ~ 0
+SDA
+Text GLabel 2250 3950 1    60   Input ~ 0
++3V3
+Text GLabel 2350 3950 1    60   Input ~ 0
++3V3
+$Comp
+L Connector_Generic:Conn_01x02 2Pscrew102
+U 1 1 59CCD414
+P 12600 3550
+F 0 "2Pscrew102" H 12950 3500 50  0000 C CNN
+F 1 "Channel 2" H 12900 3600 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 12600 3550 50  0001 C CNN
+F 3 "" H 12600 3550 50  0000 C CNN
+	1    12600 3550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	15050 7900 14875 7900
+Wire Wire Line
+	14875 7900 14875 8100
+Wire Wire Line
+	14150 8100 14875 8100
+Wire Wire Line
+	14875 8100 15050 8100
+Connection ~ 14875 8100
+Wire Wire Line
+	15050 8000 14800 8000
+Wire Wire Line
+	14800 7800 15050 7800
+Connection ~ 14800 7800
 $EndSCHEMATC
