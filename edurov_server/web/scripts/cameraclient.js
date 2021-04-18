@@ -134,6 +134,10 @@ export class CameraClient {
         this.image.onload = function () { self.context.drawImage(self.image, 0, 0, self.canvas.width, self.canvas.height);};
     }
 
+    Close(){
+        this.client.close();
+    }
+
     constructor() {
         var self = this;
         this.Connect()

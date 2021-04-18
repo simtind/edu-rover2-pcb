@@ -13,7 +13,7 @@ import { GamePad }      from './gamepad.js';
     stat = {armed:false, roll_ui:true, cinema:false, video_rotation:0};
     sensors = {time:0, temp:0, pressure:0, humidity:0, pitch:0, roll:0, yaw:0,
                 tempWater:0, pressureWater:0, batteryVoltage:0, free_space:0,
-                cpu_temp:0};
+                cpu_temp:0, motor_port:0, motor_starboard:0, motor_up_1:0, motor_up_2:0};
     critical = {voltage:10.0, disk_space:500.0, cpu_temp:80.0};
 
     actuators = {vertical:0.0, port:0.0, starboard:0.0, lights:0.0, sensor_interval:500}
@@ -32,6 +32,7 @@ import { GamePad }      from './gamepad.js';
         document.getElementById("button_set_update_frequency").onclick = function() { self.SetUpdateFrequency() };
         document.getElementById("button_toggle_light").onclick =         function() { self.ToggleLight(); self.PostActuators(); }
         document.getElementById("button_stop_rov").onclick =             function() { self.KillRov() };
+        document.getElementById("slider_headlight_intensity").onchange = function() { self.UpdateHeadLight(); self.PostActuators(); };
     }
 
     SensorHandler(event) {
@@ -43,14 +44,24 @@ import { GamePad }      from './gamepad.js';
         this.actuators[name] = value;
     }
 
+    UpdateHeadLight() {
+        var intensity_elm = document.getElementById("slider_headlight_intensity"); 
+        var intensity = intensity_elm.value / intensity_elm.max;
+        if(this.actuators['lights'] > 0.0){
+            this.actuators['lights'] = intensity;
+        }
+    }
+
     ToggleLight(){
+        var intensity_elm = document.getElementById("slider_headlight_intensity"); 
+        var intensity = intensity_elm.value / intensity_elm.max;
         var btn = document.getElementById("button_toggle_light");
-        if(this.actuators['lights'] == 1.0){
+        if(this.actuators['lights'] > 0.0){
             btn.className = btn.className.replace(" active", "");
         }else{
             btn.className += " active";
         }
-        this.actuators['lights'] = this.actuators['lights'] == 1.0 ? 0.0 : 1.0;
+        this.actuators['lights'] = this.actuators['lights'] > 0.0 ? 0.0 : 1.0;
     }
 
     ToggleCinema(){
@@ -100,6 +111,9 @@ import { GamePad }      from './gamepad.js';
         xhttp.open("GET", "/stop", true);
         xhttp.setRequestHeader("Content-Type", "application/text");
         xhttp.send();
+
+        this.io.Close();
+        this.camera.Close();
     }
 
     RefreshUI(){

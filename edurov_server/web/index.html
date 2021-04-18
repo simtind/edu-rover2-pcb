@@ -98,6 +98,35 @@
                 </table>
             </div>
         </div>
+        <div class="card">
+            <h5 class="card-header">Motor Current</h5>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <tbody class="table-borderless">
+                        <tr id="voltageTr">
+                            <th scope="row">Port</th>
+                            <td id="motor_port"></td>
+                            <td>mA</td>
+                        </tr>
+                        <tr id="diskTr">
+                            <th scope="row">Starboard</th>
+                            <td id="motor_starboard"></td>
+                            <td>mA</td>
+                        </tr>
+                        <tr id="cpuTr">
+                            <th scope="row">Up 1</th>
+                            <td id="motor_up_1"></td>
+                            <td>mA</td>
+                        </tr>
+                        <tr id="cpuLr">
+                            <th scope="row">Up 2</th>
+                            <td id="motor_up_2"></td>
+                            <td>mA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <div class="panel" id="center-panel">
 		<canvas id="streamCanvas" style="margin:auto"></canvas>
@@ -141,6 +170,18 @@
                         title="Stops the ROV, this page will stop working">
                     Shutdown
                 </button>
+                <p></p>
+                <label for="slider_actuator_sensitivity">Motor sensitivity:</label>
+                <input  type="range" value="1023"
+                        min="255" max="1023"
+                        class="slider" id="slider_actuator_sensitivity"
+                        title="Set the actuator sensitivity"/>
+                <p></p>
+                <label for="slider_headlight_intensity">Headlight Intensity:</label>
+                <input  type="range" value="1023"
+                        min="0" max="1023"
+                        class="slider" id="slider_headlight_intensity"
+                        title="Set the headlight intensity"/>
             </div>
         </div>
         <div class="card">

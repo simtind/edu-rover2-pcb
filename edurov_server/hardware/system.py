@@ -10,7 +10,6 @@ class SenseHat(object):
         self.sense = None
         try:
             self.sense = sense_hat.SenseHat()
-            self.sense.set_imu_config(False, True, True)
             self.sense.show_message("Hello World")
         except Exception as e:
             self.logger.warning("Sense hat is not available",  exc_info=True)

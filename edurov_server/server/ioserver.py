@@ -13,7 +13,7 @@ from ..utility import get_host_ip
 
 class IOServer(multiprocessing.Process):
     """ Creates a new process that Exposes the ROV sensors and actuators as a websocket data stream """
-    def __init__(self, arduino_serial_port='/dev/ttyACM0', arduino_baud_rate=115200, loglevel="INFO", port=8082):
+    def __init__(self, arduino_serial_port=None, arduino_baud_rate=115200, loglevel="INFO", port=8082):
         self.port = port
         self.serial_port = arduino_serial_port
         self.baud_rate = arduino_baud_rate
@@ -21,9 +21,8 @@ class IOServer(multiprocessing.Process):
         self.sensors = dict()
         self.actuators = dict(sensor_interval=1)
         self.start_time = time.time()
-        self.sensor_condition = None
-        self.sensor_event = None
-        self.actuator_lock = None
+        self.sensor_queue = None
+        self.actuator_queue = None
         self.server = None
         self.ready = multiprocessing.Event()
         self.stop_event = multiprocessing.Event()
@@ -46,10 +45,8 @@ class IOServer(multiprocessing.Process):
             # Don't get arduino data if we're not serving clients.
             if self.server.ws_server.websockets:
                 self.logger.debug("Get arduino data")
-                async with self.sensor_condition:
-                    self.sensors.update(await self.arduino.get_sensors())
-                    self.sensor_condition.notify_all()
-                await self.sensor_event.wait()
+                await self.sensor_queue.put(await self.arduino.get_sensors())
+                await self.sensor_queue.join()
             else:
                 await asyncio.sleep(1)
 
@@ -59,35 +56,37 @@ class IOServer(multiprocessing.Process):
             # Don't get arduino data if we're not serving clients.
             if self.server.ws_server.websockets:
                 self.logger.debug("Get sense hat data")
-                async with self.sensor_condition:
-                    await asyncio.sleep(self.actuators["sensor_interval"])
-                    self.sensors.update(await raspberry.get_sensors())
-                    self.sensor_condition.notify_all()
-                await self.sensor_event.wait()
-            else:
-                await asyncio.sleep(1)
+                await self.sensor_queue.put(await raspberry.get_sensors())
+                await self.sensor_queue.join()
+            await asyncio.sleep(self.actuators["sensor_interval"])
 
     async def _collect_system_data(self):
         raspberry = system.SystemMonitor()
         while not self.stop_event.is_set():
-            await asyncio.sleep(10)
             # Don't get arduino data if we're not serving clients.
             if self.server.ws_server.websockets:
                 self.logger.debug("Get system data")
-                async with self.sensor_condition:
-                    self.sensors.update(await raspberry.get_system_data())
-                    self.sensor_condition.notify_all()
-                await self.sensor_event.wait()
+                await self.sensor_queue.put(await raspberry.get_system_data())
+                await self.sensor_queue.join()
+            await asyncio.sleep(10)
 
     async def _send_sensors(self, websocket):
         while not self.stop_event.is_set():
-            self.sensor_event.clear()
-            async with self.sensor_condition:
-                await self.sensor_condition.wait()
-                await websocket.send(json.dumps(self.sensors))
-                self.sensor_event.set()
-        # Free other threads so they may exit.
-        self.sensor_event.set()
+            # empty the sensor queue before sending the data update.
+            while not self.stop_event.is_set():
+                self.sensors.update(await self.sensor_queue.get())
+                empty = self.sensor_queue.empty()
+                self.sensor_queue.task_done()
+                if empty:
+                    break
+            
+            self.logger.debug("Send sensor data")
+            await websocket.send(json.dumps(self.sensors))
+
+        # Drain the sensor queue so the other tasks can exit as well.
+        while not self.sensor_queue.empty():
+            self.sensors.update(await self.sensor_queue.get())
+            self.sensor_queue.task_done()
 
     async def _receive_input(self, websocket):
         while not self.stop_event.is_set():
@@ -97,9 +96,9 @@ class IOServer(multiprocessing.Process):
             self.logger.debug(f"Got websocket data {data}")
             async with self.actuator_lock:
                 if data["sensor_interval"] != self.actuators["sensor_interval"]:
-                    await self.arduino.set_interval(data["sensor_interval"])
+                    self.arduino.set_interval(data["sensor_interval"])
                 self.actuators.update(data)
-                await self.arduino.set_actuators(self.actuators)
+                self.arduino.set_actuators(self.actuators)
 
     async def _handler(self, websocket, path):
         self.logger.info(f"I/O server received connection from {path}")
@@ -117,8 +116,9 @@ class IOServer(multiprocessing.Process):
         logging.basicConfig(level=self.loglevel)
         self.logger = logging.getLogger("IOServer")
         self.sensor_condition = asyncio.Condition()
-        self.sensor_event = asyncio.Event()
         self.actuator_lock = asyncio.Lock()
+        self.sensor_queue = asyncio.Queue()
+        self.actuator_queue = asyncio.Queue()
 
         self.server = websockets.serve(self._handler, get_host_ip(), self.port)
         self.logger.info(f"I/O websocket server started at ws://{get_host_ip()}:{self.port}")
