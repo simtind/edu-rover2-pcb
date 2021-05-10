@@ -3,30 +3,32 @@ var keycodes = {l:76, c:67, esc:27, enter:13, w:87, a:65, s:83, d:68, q:81, e:69
 export class KeyBoard {
 
     KeyDownHandler(evt) {
+        var sensitivity_elm = document.getElementById("slider_actuator_sensitivity");
+        var sensitivity = sensitivity_elm.value / sensitivity_elm.max; 
         evt = evt || window.event;
         switch (evt.keyCode) {
             case keycodes.q:
-                this.main.actuators["port"] = 1.0;
+                this.main.actuators["port"] = sensitivity;
                 this.main.PostActuators();
                 break;
             case keycodes.w:
-                this.main.SetActuator("vertical", 1.0);
+                this.main.SetActuator("vertical", sensitivity);
                 this.main.PostActuators();
                 break;
             case keycodes.e:
-                this.main.SetActuator("starboard", 1.0);
+                this.main.SetActuator("starboard", sensitivity);
                 this.main.PostActuators();
                 break;
             case keycodes.a:
-                this.main.SetActuator("port", -1.0);
+                this.main.SetActuator("port", -sensitivity);
                 this.main.PostActuators();
                 break;
             case keycodes.s:
-                this.main.SetActuator("vertical", -1.0);
+                this.main.SetActuator("vertical", -sensitivity);
                 this.main.PostActuators();
                 break;
             case keycodes.d:
-                this.main.SetActuator("starboard", -1.0);
+                this.main.SetActuator("starboard", -sensitivity);
                 this.main.PostActuators();
                 break;
             case keycodes.l:

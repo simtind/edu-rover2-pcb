@@ -14,6 +14,10 @@ export class IOClient {
         console.log("I/O server connection closed");
     }
 
+    Close(){
+        this.client.close();
+    }
+
     constructor(messageHandler) {
         var self = this;
 
