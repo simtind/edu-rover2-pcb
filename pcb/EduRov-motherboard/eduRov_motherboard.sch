@@ -30,17 +30,6 @@ Text GLabel 5875 9600 0    60   Input ~ 0
 GND
 Text GLabel 9600 8725 2    60   Input ~ 0
 +Bat1
-$Comp
-L Device:R R110
-U 1 1 59CD15CB
-P 9550 9525
-F 0 "R110" V 9630 9525 50  0000 C CNN
-F 1 "10k" V 9550 9525 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9525 50  0001 C CNN
-F 3 "" H 9550 9525 50  0000 C CNN
-	1    9550 9525
-	-1   0    0    1   
-$EndComp
 Text GLabel 9550 9675 0    60   Input ~ 0
 BattMonitor
 Text GLabel 7200 9400 0    60   Input ~ 0
@@ -60,17 +49,6 @@ F 3 "" H 13825 4525 50  0000 C CNN
 $EndComp
 Text GLabel 12225 7500 0    60   Input ~ 0
 IO_LED
-$Comp
-L Device:R R112
-U 1 1 59D35BF6
-P 12425 7650
-F 0 "R112" V 12505 7650 50  0000 C CNN
-F 1 "10k" V 12425 7650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12355 7650 50  0001 C CNN
-F 3 "" H 12425 7650 50  0000 C CNN
-	1    12425 7650
-	-1   0    0    1   
-$EndComp
 Text GLabel 12225 7800 0    60   Input ~ 0
 GND
 $Comp
@@ -101,84 +79,51 @@ Text GLabel 9600 10025 2    60   Input ~ 0
 -Batt
 Text Notes 12155 10350 0    59   ~ 0
 PCB is made with 2oz copper layer due to cross-section requirement
-$Comp
-L Connector:Raspberry_Pi_2_3 RaspberryPI101
-U 1 1 5F72663B
-P 3125 4025
-F 0 "RaspberryPI101" H 2375 5375 50  0000 C CNN
-F 1 "Raspberry_Pi_2_3" H 2475 5275 50  0000 C CNN
-F 2 "EduRov:RaspBerry_PI" H 3125 4025 50  0001 C CNN
-F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 3125 4025 50  0001 C CNN
-	1    3125 4025
-	-1   0    0    -1  
-$EndComp
-Text GLabel 3325 2725 1    60   Input ~ 0
+Text GLabel 2125 1725 1    60   Input ~ 0
 +5V
-Text GLabel 3225 2725 1    60   Input ~ 0
+Text GLabel 2025 1725 1    60   Input ~ 0
 +5V
-Text GLabel 3175 5475 3    60   Input ~ 0
+Text GLabel 1975 4475 3    60   Input ~ 0
 GND
 Wire Wire Line
-	3525 5325 3525 5425
+	2325 4325 2325 4425
 Wire Wire Line
-	3525 5425 3425 5425
+	2325 4425 2225 4425
 Wire Wire Line
-	3175 5425 3175 5475
+	1975 4425 1975 4475
 Wire Wire Line
-	3425 5325 3425 5425
-Connection ~ 3425 5425
+	2225 4325 2225 4425
+Connection ~ 2225 4425
 Wire Wire Line
-	3425 5425 3325 5425
-Connection ~ 3325 5425
+	2225 4425 2125 4425
+Connection ~ 2125 4425
 Wire Wire Line
-	3325 5425 3225 5425
+	2125 4425 2025 4425
 Wire Wire Line
-	3225 5325 3225 5425
-Connection ~ 3225 5425
+	2025 4325 2025 4425
+Connection ~ 2025 4425
 Wire Wire Line
-	3225 5425 3175 5425
+	2025 4425 1975 4425
 Wire Wire Line
-	3125 5325 3125 5425
+	1925 4325 1925 4425
 Wire Wire Line
-	3125 5425 3175 5425
-Connection ~ 3175 5425
+	1925 4425 1975 4425
+Connection ~ 1975 4425
 Wire Wire Line
-	3125 5425 3025 5425
+	1925 4425 1825 4425
 Wire Wire Line
-	3025 5425 3025 5325
-Connection ~ 3125 5425
+	1825 4425 1825 4325
+Connection ~ 1925 4425
 Wire Wire Line
-	3025 5425 2925 5425
+	1825 4425 1725 4425
 Wire Wire Line
-	2925 5425 2925 5325
-Connection ~ 3025 5425
+	1725 4425 1725 4325
+Connection ~ 1825 4425
 Wire Wire Line
-	2925 5425 2825 5425
+	1725 4425 1625 4425
 Wire Wire Line
-	2825 5425 2825 5325
-Connection ~ 2925 5425
-$Comp
-L Device:R R111
-U 1 1 5F76240D
-P 9550 9825
-F 0 "R111" V 9630 9825 50  0000 C CNN
-F 1 "10k" V 9550 9825 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9825 50  0001 C CNN
-F 3 "" H 9550 9825 50  0000 C CNN
-	1    9550 9825
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R109
-U 1 1 59CD11FD
-P 9550 9225
-F 0 "R109" V 9630 9225 50  0000 C CNN
-F 1 "10k" V 9550 9225 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9225 50  0001 C CNN
-F 3 "" H 9550 9225 50  0000 C CNN
-	1    9550 9225
-	-1   0    0    1   
-$EndComp
+	1625 4425 1625 4325
+Connection ~ 1725 4425
 Wire Wire Line
 	9600 8725 9550 8725
 Wire Wire Line
@@ -188,43 +133,21 @@ Wire Wire Line
 Wire Wire Line
 	9550 10025 9600 10025
 Wire Wire Line
-	3325 5325 3325 5425
+	2125 4325 2125 4425
 Text GLabel 12075 5625 0    60   Input ~ 0
 IO4A
 Text GLabel 12075 5725 0    60   Input ~ 0
 IO4B
-$Comp
-L Device:R R105
-U 1 1 59CD3229
-P 6375 3525
-F 0 "R105" V 6455 3525 50  0000 C CNN
-F 1 "10k" V 6375 3525 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6305 3525 50  0001 C CNN
-F 3 "" H 6375 3525 50  0000 C CNN
-	1    6375 3525
-	1    0    0    1   
-$EndComp
-Text GLabel 6375 3675 3    60   Input ~ 0
+Text GLabel 5175 2675 3    60   Input ~ 0
 GND
 Text GLabel 12075 5475 0    60   Input ~ 0
 IOEN
-Text GLabel 7925 3925 2    60   Input ~ 0
+Text GLabel 6725 2925 2    60   Input ~ 0
 BattMonitor
-Text GLabel 7925 3825 2    60   Input ~ 0
+Text GLabel 6725 2825 2    60   Input ~ 0
 PressMonitor
-Text GLabel 7925 3725 2    60   Input ~ 0
+Text GLabel 6725 2725 2    60   Input ~ 0
 TempMonitor
-$Comp
-L Device:R R108
-U 1 1 5FB9B542
-P 9550 8925
-F 0 "R108" V 9630 8925 50  0000 C CNN
-F 1 "10k" V 9550 8925 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 8925 50  0001 C CNN
-F 3 "" H 9550 8925 50  0000 C CNN
-	1    9550 8925
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	12225 7800 12425 7800
 Connection ~ 12425 7800
@@ -364,54 +287,54 @@ Wire Wire Line
 $Comp
 L MCU_Module:Arduino_Nano_v3.x A101
 U 1 1 60095748
-P 7425 3725
-F 0 "A101" H 6525 4725 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 6825 4675 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 7425 3725 50  0001 C CIN
-F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 7425 3725 50  0001 C CNN
-	1    7425 3725
+P 6225 2725
+F 0 "A101" H 5325 3725 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5625 3675 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 6225 2725 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6225 2725 50  0001 C CNN
+	1    6225 2725
 	1    0    0    -1  
 $EndComp
-Text GLabel 7925 4425 2    60   Input ~ 0
+Text GLabel 6725 3425 2    60   Input ~ 0
 Sense1
-Text GLabel 7925 4325 2    60   Input ~ 0
+Text GLabel 6725 3325 2    60   Input ~ 0
 Sense2
-Text GLabel 7925 4225 2    60   Input ~ 0
+Text GLabel 6725 3225 2    60   Input ~ 0
 Sense3
-Text GLabel 7925 4125 2    60   Input ~ 0
+Text GLabel 6725 3125 2    60   Input ~ 0
 Sense4
-Text GLabel 6925 3725 0    60   Input ~ 0
+Text GLabel 5725 2725 0    60   Input ~ 0
 IO2B
-Text GLabel 6925 3825 0    60   Input ~ 0
+Text GLabel 5725 2825 0    60   Input ~ 0
 IO2A
-Text GLabel 6225 3325 0    60   Input ~ 0
+Text GLabel 5025 2325 0    60   Input ~ 0
 IOEN
-Text GLabel 6925 3625 0    60   Input ~ 0
+Text GLabel 5725 2625 0    60   Input ~ 0
 IO1A
-Text GLabel 6925 3525 0    60   Input ~ 0
+Text GLabel 5725 2525 0    60   Input ~ 0
 IO1B
-Text GLabel 6925 4025 0    60   Input ~ 0
+Text GLabel 5725 3025 0    60   Input ~ 0
 IO3A
-Text GLabel 6925 3925 0    60   Input ~ 0
+Text GLabel 5725 2925 0    60   Input ~ 0
 IO3B
-Text GLabel 6925 4225 0    60   Input ~ 0
+Text GLabel 5725 3225 0    60   Input ~ 0
 IO4A
-Text GLabel 6925 4125 0    60   Input ~ 0
+Text GLabel 5725 3125 0    60   Input ~ 0
 IO4B
-Text GLabel 6925 3425 0    60   Input ~ 0
+Text GLabel 5725 2425 0    60   Input ~ 0
 IO_LED
-Text GLabel 7525 4725 3    60   Input ~ 0
+Text GLabel 6325 3725 3    60   Input ~ 0
 GND
-Text GLabel 7425 4725 3    60   Input ~ 0
+Text GLabel 6225 3725 3    60   Input ~ 0
 GND
 Wire Wire Line
-	6225 3325 6375 3325
+	5025 2325 5175 2325
 Wire Wire Line
-	6375 3375 6375 3325
-Connection ~ 6375 3325
+	5175 2375 5175 2325
+Connection ~ 5175 2325
 Wire Wire Line
-	6375 3325 6925 3325
-Text GLabel 7625 2725 1    60   Input ~ 0
+	5175 2325 5725 2325
+Text GLabel 6425 1725 1    60   Input ~ 0
 +5V
 Text GLabel 12075 5875 0    60   Input ~ 0
 Sense4
@@ -445,74 +368,33 @@ F 0 "C102" H 12475 7250 50  0000 R CNN
 F 1 "100nF" H 12475 7175 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 12638 7050 50  0001 C CNN
 F 3 "~" H 12600 7200 50  0001 C CNN
+F 4 "FG18X7R1H104KNT00" H 12600 7200 50  0001 C CNN "Part number"
+F 5 "445-FG18X7R1H104KNT00-ND" H 12600 7200 50  0001 C CNN "Digikey reference"
+F 6 "100nF, 50V X7R, 2.5mm pitch" H 12600 7200 50  0001 C CNN "Description"
 	1    12600 7200
 	-1   0    0    -1  
 $EndComp
 Wire Notes Line
-	4575 2975 5725 2975
+	3375 1975 4525 1975
 Wire Notes Line
-	4575 4125 4575 2975
+	3375 3125 3375 1975
 Wire Notes Line
-	5725 4125 4575 4125
+	4525 3125 3375 3125
 Wire Notes Line
-	5725 2975 5725 4125
-Text Notes 4875 3625 0    39   ~ 0
-These resistors connects \nArduino serial port to \nRaspberry PI serial port.\nCan be ommitted if using \nUSB to power Arduino.
-$Comp
-L Device:R R102
-U 1 1 6015AA7F
-P 4775 3675
-F 0 "R102" V 4675 3725 50  0000 C CNN
-F 1 "10k" V 4775 3675 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4705 3675 50  0001 C CNN
-F 3 "" H 4775 3675 50  0000 C CNN
-	1    4775 3675
-	1    0    0    1   
-$EndComp
-Connection ~ 4775 3225
+	4525 1975 4525 3125
+Text Notes 3675 2625 0    39   ~ 0
+These resistors connects \nArduino serial port to \nRaspberry PI serial port \nin a safe manner.
+Connection ~ 3575 2225
 Wire Wire Line
-	3925 3225 4775 3225
-$Comp
-L Device:R R101
-U 1 1 6015A2BD
-P 4775 3375
-F 0 "R101" V 4675 3425 50  0000 C CNN
-F 1 "10k" V 4775 3375 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4705 3375 50  0001 C CNN
-F 3 "" H 4775 3375 50  0000 C CNN
-	1    4775 3375
-	1    0    0    1   
-$EndComp
+	2725 2225 3575 2225
 Wire Wire Line
-	4775 3125 3925 3125
-$Comp
-L Device:R R103
-U 1 1 600D5188
-P 4925 3125
-F 0 "R103" V 4975 3325 50  0000 C CNN
-F 1 "10k" V 4925 3125 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4855 3125 50  0001 C CNN
-F 3 "" H 4925 3125 50  0000 C CNN
-	1    4925 3125
-	0    1    -1   0   
-$EndComp
+	3575 2125 2725 2125
 Wire Wire Line
-	5075 3225 6925 3225
-Text GLabel 4775 3825 3    60   Input ~ 0
+	3875 2225 5725 2225
+Text GLabel 3575 2825 3    60   Input ~ 0
 GND
-$Comp
-L Device:R R104
-U 1 1 600D04E5
-P 4925 3225
-F 0 "R104" V 4875 3025 50  0000 C CNN
-F 1 "10k" V 4925 3225 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4855 3225 50  0001 C CNN
-F 3 "" H 4925 3225 50  0000 C CNN
-	1    4925 3225
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
-	6925 3125 5075 3125
+	5725 2125 3875 2125
 $Comp
 L Connector_Generic:Conn_01x03 P103
 U 1 1 60763419
@@ -541,13 +423,13 @@ Text GLabel 8200 9400 0    60   Input ~ 0
 SCL
 Text GLabel 8200 9500 0    60   Input ~ 0
 SDA
-Text GLabel 2325 3425 0    60   Input ~ 0
+Text GLabel 1125 2425 0    60   Input ~ 0
 SCL
-Text GLabel 2325 3525 0    60   Input ~ 0
+Text GLabel 1125 2525 0    60   Input ~ 0
 SDA
-Text GLabel 2925 2725 1    60   Input ~ 0
+Text GLabel 1725 1725 1    60   Input ~ 0
 +3V3
-Text GLabel 3025 2725 1    60   Input ~ 0
+Text GLabel 1825 1725 1    60   Input ~ 0
 +3V3
 $Comp
 L Connector_Generic:Conn_01x02 2Pscrew102
@@ -560,7 +442,7 @@ F 3 "" H 13825 3325 50  0000 C CNN
 	1    13825 3325
 	1    0    0    1   
 $EndComp
-Text GLabel 7525 2725 1    60   Input ~ 0
+Text GLabel 6325 1725 1    60   Input ~ 0
 +3V3
 Wire Notes Line
 	475  7600 10700 7600
@@ -568,42 +450,6 @@ Wire Notes Line
 	10700 475  10675 475 
 Wire Notes Line
 	10700 475  10700 11200
-Wire Wire Line
-	1225 9575 1225 9775
-Wire Wire Line
-	1525 9575 1525 9425
-Connection ~ 1525 9575
-Wire Wire Line
-	1525 9775 1575 9775
-Connection ~ 1525 9775
-Wire Wire Line
-	1525 9425 1475 9425
-Wire Wire Line
-	1525 9775 1525 9575
-Wire Wire Line
-	1225 9575 1225 9425
-Connection ~ 1225 9575
-Wire Wire Line
-	1225 9425 1325 9425
-$Comp
-L Device:CP C101
-U 1 1 600EBD67
-P 1375 9575
-AR Path="/600EBD67" Ref="C101"  Part="1" 
-AR Path="/5FFEC45F/600EBD67" Ref="C?"  Part="1" 
-AR Path="/60017CE1/600EBD67" Ref="C?"  Part="1" 
-AR Path="/600184A3/600EBD67" Ref="C?"  Part="1" 
-AR Path="/60018874/600EBD67" Ref="C?"  Part="1" 
-AR Path="/6003A868/600EBD67" Ref="C?"  Part="1" 
-AR Path="/6003F027/600EBD67" Ref="C?"  Part="1" 
-AR Path="/60043462/600EBD67" Ref="C?"  Part="1" 
-F 0 "C101" V 1225 9875 50  0000 C CNN
-F 1 "470uF" V 1325 9875 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 1413 9425 50  0001 C CNN
-F 3 "~" H 1375 9575 50  0001 C CNN
-	1    1375 9575
-	0    1    1    0   
-$EndComp
 Text GLabel 2775 9425 3    60   Input ~ 0
 GND
 Text GLabel 2675 9425 3    60   Input ~ 0
@@ -612,45 +458,10 @@ Text GLabel 2975 9425 3    60   Input ~ 0
 +5V
 Text GLabel 2875 9425 3    60   Input ~ 0
 GND
-$Comp
-L Connector_Generic:Conn_01x04 5vReg101
-U 1 1 5F7592EB
-P 2775 9225
-F 0 "5vReg101" V 2739 8937 50  0000 R CNN
-F 1 "Conn_01x04" V 2648 8937 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2775 9225 50  0001 C CNN
-F 3 "~" H 2775 9225 50  0001 C CNN
-	1    2775 9225
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1575 9775 1575 9825
-Wire Wire Line
-	1475 9775 1525 9775
-Text GLabel 1575 9825 3    60   Input ~ 0
-GND
 Text Notes 2625 9125 0    47   ~ 0
 Connect 5v regulator here
 Text Notes 1025 9060 0    47   ~ 0
 Connect battery here
-Text GLabel 1475 9775 3    60   Input ~ 0
--Batt
-$Comp
-L Connector_Generic:Conn_01x02 P101
-U 1 1 59F0943E
-P 1375 9225
-F 0 "P101" H 1375 9375 50  0000 C CNN
-F 1 "Battery connector" V 1475 9225 50  0000 C CNN
-F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 1375 9225 50  0001 C CNN
-F 3 "" H 1375 9225 50  0000 C CNN
-	1    1375 9225
-	0    -1   -1   0   
-$EndComp
-Text GLabel 1225 9775 3    60   Input ~ 0
-+Bat1
-Connection ~ 1475 9425
-Wire Wire Line
-	1475 9425 1425 9425
 Text Notes 650  1075 0    394  ~ 0
 Computing
 Text Notes 550  8150 0    394  ~ 0
@@ -713,4 +524,326 @@ Text GLabel 7200 9500 0    60   Input ~ 0
 +5V
 Text GLabel 8200 9600 0    60   Input ~ 0
 +3V3
+$Comp
+L Device:R R111
+U 1 1 5F76240D
+P 9550 9825
+F 0 "R111" V 9630 9825 50  0000 C CNN
+F 1 "10k" V 9550 9825 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9825 50  0001 C CNN
+F 3 "" H 9550 9825 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 9825 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 9825 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 9825 50  0001 C CNN "Description"
+	1    9550 9825
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R110
+U 1 1 59CD15CB
+P 9550 9525
+F 0 "R110" V 9630 9525 50  0000 C CNN
+F 1 "10k" V 9550 9525 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9525 50  0001 C CNN
+F 3 "" H 9550 9525 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 9525 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 9525 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 9525 50  0001 C CNN "Description"
+	1    9550 9525
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R109
+U 1 1 59CD11FD
+P 9550 9225
+F 0 "R109" V 9630 9225 50  0000 C CNN
+F 1 "10k" V 9550 9225 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9225 50  0001 C CNN
+F 3 "" H 9550 9225 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 9225 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 9225 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 9225 50  0001 C CNN "Description"
+	1    9550 9225
+	-1   0    0    1   
+$EndComp
+$Comp
+L Edurov:Generic U1
+U 1 1 60C9E470
+P 800 6500
+F 0 "U1" H 978 6341 50  0001 L CNN
+F 1 "Arduino header" H 978 6296 50  0000 L CNN
+F 2 "" H 800 6500 50  0001 C CNN
+F 3 "" H 800 6500 50  0001 C CNN
+F 4 "15 pin female through-hole header" H 978 6205 50  0000 L CNN "Description"
+F 5 "SSW-115-01-T-S" H 800 6500 50  0001 C CNN "Part number"
+F 6 "SAM1213-15-ND" H 800 6500 50  0001 C CNN "Digikey reference"
+	1    800  6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U5
+U 1 1 60CA6BBB
+P 6350 6900
+F 0 "U5" H 6528 6741 50  0001 L CNN
+F 1 "Pressure sensor" H 6528 6696 50  0000 L CNN
+F 2 "" H 6350 6900 50  0001 C CNN
+F 3 "" H 6350 6900 50  0001 C CNN
+F 4 "MPX4250AP 0-250kPa pressure sensor" H 6528 6605 50  0000 L CNN "Description"
+F 5 "MPX4250AP" H 6350 6900 50  0001 C CNN "Part number"
+F 6 "MPX4250AP-ND" H 6350 6900 50  0001 C CNN "Digikey reference"
+	1    6350 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U4
+U 1 1 60CA2DB7
+P 6350 6500
+F 0 "U4" H 6528 6341 50  0001 L CNN
+F 1 "Temp sensor" H 6528 6296 50  0000 L CNN
+F 2 "" H 6350 6500 50  0001 C CNN
+F 3 "" H 6350 6500 50  0001 C CNN
+F 4 "LM35 temperature sensor" H 6528 6205 50  0000 L CNN "Description"
+F 5 "LM35DZ/NOPB" H 6350 6500 50  0001 C CNN "Part number"
+F 6 "LM35DZ/NOPB-ND" H 6350 6500 50  0001 C CNN "Digikey reference"
+	1    6350 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U3
+U 1 1 60CA2003
+P 2950 6500
+F 0 "U3" H 3128 6341 50  0001 L CNN
+F 1 "Raspberry PI stacking header" H 3128 6296 50  0000 L CNN
+F 2 "" H 2950 6500 50  0001 C CNN
+F 3 "" H 2950 6500 50  0001 C CNN
+F 4 "2x20 female through-hole header with extra long pins for stacking" H 3128 6205 50  0000 L CNN "Description"
+F 5 "1979" H 2950 6500 50  0001 C CNN "Part number"
+F 6 "1528-1783-ND" H 2950 6500 50  0001 C CNN "Digikey reference"
+	1    2950 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U2
+U 1 1 60CA1AFC
+P 800 6900
+F 0 "U2" H 978 6741 50  0001 L CNN
+F 1 "Arduino header" H 978 6696 50  0000 L CNN
+F 2 "" H 800 6900 50  0001 C CNN
+F 3 "" H 800 6900 50  0001 C CNN
+F 4 "15 pin female through-hole header" H 978 6605 50  0000 L CNN "Description"
+F 5 "SSW-115-01-T-S" H 800 6900 50  0001 C CNN "Part number"
+F 6 "SAM1213-15-ND" H 800 6900 50  0001 C CNN "Digikey reference"
+	1    800  6900
+	1    0    0    -1  
+$EndComp
+Text Notes 550  6300 0    394  ~ 0
+Extra components
+Wire Notes Line
+	450  5800 10700 5800
+$Comp
+L Connector:Raspberry_Pi_2_3 RaspberryPI101
+U 1 1 5F72663B
+P 1925 3025
+F 0 "RaspberryPI101" H 1175 4375 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 1275 4275 50  0000 C CNN
+F 2 "EduRov:RaspBerry_PI" H 1925 3025 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1925 3025 50  0001 C CNN
+F 4 "Raspberry PI 3 or 4" H 1925 3025 50  0001 C CNN "Part number"
+F 5 "1690-RASPBERRYPI4B/4GB-ND" H 1925 3025 50  0001 C CNN "DigiKey reference"
+F 6 "Raspberry PI 3 or 4" H 1925 3025 50  0001 C CNN "Description"
+	1    1925 3025
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R101
+U 1 1 6015A2BD
+P 3575 2375
+F 0 "R101" V 3475 2425 50  0000 C CNN
+F 1 "10k" V 3575 2375 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3505 2375 50  0001 C CNN
+F 3 "" H 3575 2375 50  0000 C CNN
+F 4 "CF14JT10K0" V 3575 2375 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 3575 2375 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 3575 2375 50  0001 C CNN "Description"
+	1    3575 2375
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R104
+U 1 1 600D04E5
+P 3725 2225
+F 0 "R104" V 3675 2025 50  0000 C CNN
+F 1 "10k" V 3725 2225 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3655 2225 50  0001 C CNN
+F 3 "" H 3725 2225 50  0000 C CNN
+F 4 "CF14JT10K0" V 3725 2225 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 3725 2225 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 3725 2225 50  0001 C CNN "Description"
+	1    3725 2225
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R103
+U 1 1 600D5188
+P 3725 2125
+F 0 "R103" V 3775 2325 50  0000 C CNN
+F 1 "10k" V 3725 2125 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3655 2125 50  0001 C CNN
+F 3 "" H 3725 2125 50  0000 C CNN
+F 4 "CF14JT10K0" V 3725 2125 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 3725 2125 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 3725 2125 50  0001 C CNN "Description"
+	1    3725 2125
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R102
+U 1 1 6015AA7F
+P 3575 2675
+F 0 "R102" V 3475 2725 50  0000 C CNN
+F 1 "10k" V 3575 2675 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3505 2675 50  0001 C CNN
+F 3 "" H 3575 2675 50  0000 C CNN
+F 4 "CF14JT10K0" V 3575 2675 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 3575 2675 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 3575 2675 50  0001 C CNN "Description"
+	1    3575 2675
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R105
+U 1 1 59CD3229
+P 5175 2525
+F 0 "R105" V 5255 2525 50  0000 C CNN
+F 1 "10k" V 5175 2525 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5105 2525 50  0001 C CNN
+F 3 "" H 5175 2525 50  0000 C CNN
+F 4 "CF14JT10K0" V 5175 2525 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 5175 2525 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 5175 2525 50  0001 C CNN "Description"
+	1    5175 2525
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R112
+U 1 1 59D35BF6
+P 12425 7650
+F 0 "R112" V 12505 7650 50  0000 C CNN
+F 1 "10k" V 12425 7650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 12355 7650 50  0001 C CNN
+F 3 "" H 12425 7650 50  0000 C CNN
+F 4 "CF14JT10K0" V 12425 7650 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 12425 7650 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 12425 7650 50  0001 C CNN "Description"
+	1    12425 7650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R108
+U 1 1 5FB9B542
+P 9550 8925
+F 0 "R108" V 9630 8925 50  0000 C CNN
+F 1 "10k" V 9550 8925 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 8925 50  0001 C CNN
+F 3 "" H 9550 8925 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 8925 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 8925 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 8925 50  0001 C CNN "Description"
+	1    9550 8925
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 5vReg101
+U 1 1 5F7592EB
+P 2775 9225
+F 0 "5vReg101" V 2739 8937 50  0000 R CNN
+F 1 "Conn_01x04" V 2648 8937 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2775 9225 50  0001 C CNN
+F 3 "~" H 2775 9225 50  0001 C CNN
+F 4 "Micro" V 2775 9225 50  0001 C CNN "Part number"
+F 5 "IF-A006172" V 2775 9225 50  0001 C CNN "Elefun reference"
+F 6 "Iflight micro 30V->5V regulator, 2.5A" V 2775 9225 50  0001 C CNN "Description"
+	1    2775 9225
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1525 9725 1575 9725
+Connection ~ 1525 9725
+Wire Wire Line
+	1225 9375 1325 9375
+Wire Wire Line
+	1575 9725 1575 9775
+Wire Wire Line
+	1475 9725 1525 9725
+Text GLabel 1575 9775 3    60   Input ~ 0
+GND
+Text GLabel 1475 9725 3    60   Input ~ 0
+-Batt
+Connection ~ 1475 9375
+Connection ~ 1225 9525
+Wire Wire Line
+	1475 9375 1425 9375
+Wire Wire Line
+	1525 9375 1475 9375
+Connection ~ 1525 9525
+Wire Wire Line
+	1525 9725 1525 9525
+Wire Wire Line
+	1525 9525 1525 9375
+Wire Wire Line
+	1225 9525 1225 9375
+Wire Wire Line
+	1225 9525 1225 9725
+Text GLabel 1225 9725 3    60   Input ~ 0
++Bat1
+$Comp
+L Connector_Generic:Conn_01x02 P101
+U 1 1 59F0943E
+P 1325 9175
+F 0 "P101" H 1325 9325 50  0000 C CNN
+F 1 "Battery connector" V 1425 9175 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 1325 9175 50  0001 C CNN
+F 3 "" H 1325 9175 50  0000 C CNN
+F 4 "691137710002" H 1325 9175 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 1325 9175 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 1325 9175 50  0001 C CNN "Description"
+	1    1325 9175
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C101
+U 1 1 600EBD67
+P 1375 9525
+AR Path="/600EBD67" Ref="C101"  Part="1" 
+AR Path="/5FFEC45F/600EBD67" Ref="C?"  Part="1" 
+AR Path="/60017CE1/600EBD67" Ref="C?"  Part="1" 
+AR Path="/600184A3/600EBD67" Ref="C?"  Part="1" 
+AR Path="/60018874/600EBD67" Ref="C?"  Part="1" 
+AR Path="/6003A868/600EBD67" Ref="C?"  Part="1" 
+AR Path="/6003F027/600EBD67" Ref="C?"  Part="1" 
+AR Path="/60043462/600EBD67" Ref="C?"  Part="1" 
+F 0 "C101" V 1225 9825 50  0000 C CNN
+F 1 "470uF" V 1325 9825 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 1413 9375 50  0001 C CNN
+F 3 "~" H 1375 9525 50  0001 C CNN
+F 4 "UVR1H471MHD1TO" V 1375 9525 50  0001 C CNN "Part number"
+F 5 "493-12789-1-ND" V 1375 9525 50  0001 C CNN "Digikey reference"
+F 6 "470uF, 20%, 50V, 5mm pitch" V 1375 9525 50  0001 C CNN "Description"
+	1    1375 9525
+	0    1    1    0   
+$EndComp
+$Comp
+L Edurov:Generic U?
+U 1 1 60CED77A
+P 2950 6900
+F 0 "U?" H 3128 6741 50  0001 L CNN
+F 1 "JST Connector kit" H 3128 6696 50  0000 L CNN
+F 2 "" H 2950 6900 50  0001 C CNN
+F 3 "" H 2950 6900 50  0001 C CNN
+F 4 "JST PH connectors and crimps" H 3128 6605 50  0000 L CNN "Description"
+F 5 "FIT0299" H 2950 6900 50  0001 C CNN "Part number"
+F 6 "1738-1305-ND" H 2950 6900 50  0001 C CNN "Digikey reference"
+	1    2950 6900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
