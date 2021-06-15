@@ -283,6 +283,7 @@ F 0 "V-101" H 2800 4100 50  0000 C CNN
 F 1 "Conn_01x02" H 2800 4300 50  0000 C CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 2800 4200 50  0001 C CNN
 F 3 "~" H 2800 4200 50  0001 C CNN
+F 4 "Do not place" H 2800 4200 50  0001 C CNN "Config"
 	1    2800 4200
 	-1   0    0    1   
 $EndComp
@@ -294,6 +295,7 @@ F 0 "V+101" H 2800 2900 50  0000 C CNN
 F 1 "Conn_01x02" H 2800 3125 50  0000 C CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 2800 3000 50  0001 C CNN
 F 3 "~" H 2800 3000 50  0001 C CNN
+F 4 "Do not place" H 2800 3000 50  0001 C CNN "Config"
 	1    2800 3000
 	-1   0    0    1   
 $EndComp
