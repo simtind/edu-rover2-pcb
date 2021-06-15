@@ -16,25 +16,28 @@ $EndDescr
 $Comp
 L Connector_Generic:Conn_01x03 P102
 U 1 1 59CD089E
-P 6075 9500
-F 0 "P102" H 6075 9700 50  0000 C CNN
-F 1 "Ext press" V 6175 9500 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 6075 9500 50  0001 C CNN
-F 3 "" H 6075 9500 50  0000 C CNN
-	1    6075 9500
+P 6075 7675
+F 0 "P102" H 6075 7875 50  0000 C CNN
+F 1 "Ext press" V 6175 7675 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 6075 7675 50  0001 C CNN
+F 3 "" H 6075 7675 50  0000 C CNN
+F 4 "PHR-3" H 6075 7675 50  0001 C CNN "Part number"
+F 5 "2.5mm pitch 3-pin receptacle, JST PH" H 6075 7675 50  0001 C CNN "Description"
+F 6 "JST" H 6075 7675 50  0001 C CNN "Manufacturer"
+	1    6075 7675
 	1    0    0    -1  
 $EndComp
-Text GLabel 7200 9600 0    60   Input ~ 0
+Text GLabel 7200 7775 0    60   Input ~ 0
 GND
-Text GLabel 5875 9600 0    60   Input ~ 0
+Text GLabel 5875 7775 0    60   Input ~ 0
 GND
-Text GLabel 9600 8725 2    60   Input ~ 0
+Text GLabel 9600 6900 2    60   Input ~ 0
 +Bat1
-Text GLabel 9550 9675 0    60   Input ~ 0
+Text GLabel 9550 7850 0    60   Input ~ 0
 BattMonitor
-Text GLabel 7200 9400 0    60   Input ~ 0
+Text GLabel 7200 7575 0    60   Input ~ 0
 TempMonitor
-Text GLabel 5875 9400 0    60   Input ~ 0
+Text GLabel 5875 7575 0    60   Input ~ 0
 PressMonitor
 $Comp
 L Connector_Generic:Conn_01x02 2Pscrew103
@@ -44,6 +47,10 @@ F 0 "2Pscrew103" H 14175 4475 50  0000 C CNN
 F 1 "Channel 3" H 14125 4575 50  0000 C CNN
 F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 13825 4525 50  0001 C CNN
 F 3 "" H 13825 4525 50  0000 C CNN
+F 4 "691137710002" H 13825 4525 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 13825 4525 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 13825 4525 50  0001 C CNN "Description"
+F 7 "Wurth" H 13825 4525 50  0001 C CNN "Manufacturer"
 	1    13825 4525
 	1    0    0    1   
 $EndComp
@@ -59,6 +66,9 @@ F 0 "P105" H 13750 7025 50  0000 C CNN
 F 1 "Ch LED" H 13800 6950 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 13575 7025 50  0001 C CNN
 F 3 "" H 13575 7025 50  0000 C CNN
+F 4 "PHR-4" H 13575 7025 50  0001 C CNN "Part number"
+F 5 "2.5mm pitch 4-pin receptacle, JST PH" H 13575 7025 50  0001 C CNN "Description"
+F 6 "JST" H 13575 7025 50  0001 C CNN "Manufacturer"
 	1    13575 7025
 	1    0    0    -1  
 $EndComp
@@ -72,10 +82,14 @@ F 0 "Q101" H 13325 7575 50  0000 L CNN
 F 1 "IRL540NPBF" H 13325 7500 50  0001 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 13325 7425 50  0001 L CIN
 F 3 "" H 13075 7500 50  0001 L CNN
+F 4 "IRL540NPBF" H 13075 7500 50  0001 C CNN "Part number"
+F 5 "IRL540NPBF-ND" H 13075 7500 50  0001 C CNN "Digikey reference"
+F 6 "MOSFET, >2A, Vgth = 2V" H 13075 7500 50  0001 C CNN "Description"
+F 7 "Infineon Technologies" H 13075 7500 50  0001 C CNN "Manufacturer"
 	1    13075 7500
 	1    0    0    -1  
 $EndComp
-Text GLabel 9600 10025 2    60   Input ~ 0
+Text GLabel 9600 8200 2    60   Input ~ 0
 -Batt
 Text Notes 12155 10350 0    59   ~ 0
 PCB is made with 2oz copper layer due to cross-section requirement
@@ -125,13 +139,13 @@ Wire Wire Line
 	1625 4425 1625 4325
 Connection ~ 1725 4425
 Wire Wire Line
-	9600 8725 9550 8725
+	9600 6900 9550 6900
 Wire Wire Line
-	9550 8725 9550 8775
+	9550 6900 9550 6950
 Wire Wire Line
-	9550 9975 9550 10025
+	9550 8150 9550 8200
 Wire Wire Line
-	9550 10025 9600 10025
+	9550 8200 9600 8200
 Wire Wire Line
 	2125 4325 2125 4425
 Text GLabel 12075 5625 0    60   Input ~ 0
@@ -168,6 +182,10 @@ F 0 "2Pscrew101" H 14175 2125 50  0000 C CNN
 F 1 "Channel 1" H 14125 2225 50  0000 C CNN
 F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 13825 2175 50  0001 C CNN
 F 3 "" H 13825 2175 50  0000 C CNN
+F 4 "691137710002" H 13825 2175 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 13825 2175 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 13825 2175 50  0001 C CNN "Description"
+F 7 "Wurth" H 13825 2175 50  0001 C CNN "Manufacturer"
 	1    13825 2175
 	1    0    0    1   
 $EndComp
@@ -253,6 +271,10 @@ F 0 "2Pscrew104" H 14175 5675 50  0000 C CNN
 F 1 "Channel 4" H 14125 5775 50  0000 C CNN
 F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 13825 5725 50  0001 C CNN
 F 3 "" H 13825 5725 50  0000 C CNN
+F 4 "691137710002" H 13825 5725 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 13825 5725 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 13825 5725 50  0001 C CNN "Description"
+F 7 "Wurth" H 13825 5725 50  0001 C CNN "Manufacturer"
 	1    13825 5725
 	1    0    0    1   
 $EndComp
@@ -292,6 +314,10 @@ F 0 "A101" H 5325 3725 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 5625 3675 50  0000 C CNN
 F 2 "Module:Arduino_Nano" H 6225 2725 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6225 2725 50  0001 C CNN
+F 4 "ABX00033" H 6225 2725 50  0001 C CNN "Part number"
+F 5 "1050-ABX00033-ND" H 6225 2725 50  0001 C CNN "Digikey reference"
+F 6 "ARDUINO NANO EVERY with headers" H 6225 2725 50  0001 C CNN "Description"
+F 7 "Arduino" H 6225 2725 50  0001 C CNN "Manufacturer"
 	1    6225 2725
 	1    0    0    -1  
 $EndComp
@@ -371,6 +397,7 @@ F 3 "~" H 12600 7200 50  0001 C CNN
 F 4 "FG18X7R1H104KNT00" H 12600 7200 50  0001 C CNN "Part number"
 F 5 "445-FG18X7R1H104KNT00-ND" H 12600 7200 50  0001 C CNN "Digikey reference"
 F 6 "100nF, 50V X7R, 2.5mm pitch" H 12600 7200 50  0001 C CNN "Description"
+F 7 "TDK Corporation" H 12600 7200 50  0001 C CNN "Manufacturer"
 	1    12600 7200
 	-1   0    0    -1  
 $EndComp
@@ -398,30 +425,36 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x03 P103
 U 1 1 60763419
-P 7400 9500
-F 0 "P103" H 7400 9700 50  0000 C CNN
-F 1 "Ext press" V 7500 9500 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 7400 9500 50  0001 C CNN
-F 3 "" H 7400 9500 50  0000 C CNN
-	1    7400 9500
+P 7400 7675
+F 0 "P103" H 7400 7875 50  0000 C CNN
+F 1 "Ext press" V 7500 7675 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 7400 7675 50  0001 C CNN
+F 3 "" H 7400 7675 50  0000 C CNN
+F 4 "PHR-3" H 7400 7675 50  0001 C CNN "Part number"
+F 5 "2.5mm pitch 3-pin receptacle, JST PH" H 7400 7675 50  0001 C CNN "Description"
+F 6 "JST" H 7400 7675 50  0001 C CNN "Manufacturer"
+	1    7400 7675
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 P104
 U 1 1 60771AD7
-P 8400 9500
-F 0 "P104" H 8400 9700 50  0000 C CNN
-F 1 "Ext press" V 8500 9500 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 8400 9500 50  0001 C CNN
-F 3 "" H 8400 9500 50  0000 C CNN
-	1    8400 9500
+P 8400 7675
+F 0 "P104" H 8400 7875 50  0000 C CNN
+F 1 "Ext press" V 8500 7675 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 8400 7675 50  0001 C CNN
+F 3 "" H 8400 7675 50  0000 C CNN
+F 4 "PHR-4" H 8400 7675 50  0001 C CNN "Part number"
+F 5 "2.5mm pitch 4-pin receptacle, JST PH" H 8400 7675 50  0001 C CNN "Description"
+F 6 "JST" H 8400 7675 50  0001 C CNN "Manufacturer"
+	1    8400 7675
 	1    0    0    -1  
 $EndComp
-Text GLabel 8200 9700 0    60   Input ~ 0
+Text GLabel 8200 7875 0    60   Input ~ 0
 GND
-Text GLabel 8200 9400 0    60   Input ~ 0
+Text GLabel 8200 7575 0    60   Input ~ 0
 SCL
-Text GLabel 8200 9500 0    60   Input ~ 0
+Text GLabel 8200 7675 0    60   Input ~ 0
 SDA
 Text GLabel 1125 2425 0    60   Input ~ 0
 SCL
@@ -439,48 +472,50 @@ F 0 "2Pscrew102" H 14175 3275 50  0000 C CNN
 F 1 "Channel 2" H 14125 3375 50  0000 C CNN
 F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 13825 3325 50  0001 C CNN
 F 3 "" H 13825 3325 50  0000 C CNN
+F 4 "691137710002" H 13825 3325 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 13825 3325 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 13825 3325 50  0001 C CNN "Description"
+F 7 "Wurth" H 13825 3325 50  0001 C CNN "Manufacturer"
 	1    13825 3325
 	1    0    0    1   
 $EndComp
 Text GLabel 6325 1725 1    60   Input ~ 0
 +3V3
 Wire Notes Line
-	475  7600 10700 7600
+	475  5775 10700 5775
 Wire Notes Line
 	10700 475  10675 475 
 Wire Notes Line
 	10700 475  10700 11200
-Text GLabel 2775 9425 3    60   Input ~ 0
+Text GLabel 2775 7600 3    60   Input ~ 0
 GND
-Text GLabel 2675 9425 3    60   Input ~ 0
+Text GLabel 2675 7600 3    60   Input ~ 0
 +Bat1
-Text GLabel 2975 9425 3    60   Input ~ 0
+Text GLabel 2975 7600 3    60   Input ~ 0
 +5V
-Text GLabel 2875 9425 3    60   Input ~ 0
+Text GLabel 2875 7600 3    60   Input ~ 0
 GND
-Text Notes 2625 9125 0    47   ~ 0
+Text Notes 2600 7300 0    47   ~ 0
 Connect 5v regulator here
-Text Notes 1025 9060 0    47   ~ 0
+Text Notes 975  7150 0    47   ~ 0
 Connect battery here
 Text Notes 650  1075 0    394  ~ 0
 Computing
-Text Notes 550  8150 0    394  ~ 0
+Text Notes 550  6325 0    394  ~ 0
 Power in\n
-Text Notes 5200 8100 0    394  ~ 0
+Text Notes 5200 6275 0    394  ~ 0
 Sensors
-Wire Notes Line
-	4750 7600 4750 11225
-Text Notes 5875 9200 0    47   ~ 0
+Text Notes 5875 7375 0    47   ~ 0
 Pressure
-Text Notes 7050 9200 0    47   ~ 0
+Text Notes 7050 7375 0    47   ~ 0
 Temperature
-Text Notes 8025 9200 0    47   ~ 0
+Text Notes 8025 7375 0    47   ~ 0
 I2C bus
-Text Notes 9375 8550 0    47   ~ 0
+Text Notes 9375 6725 0    47   ~ 0
 Battery level
 Text Notes 10975 1050 0    394  ~ 0
 Actuators
-Text Notes 11200 6600 0    47   ~ 0
+Text Notes 13400 6825 0    47   ~ 0
 Headlights
 Wire Wire Line
 	13175 7800 13175 7700
@@ -516,130 +551,138 @@ Wire Wire Line
 	12600 7800 13175 7800
 Text GLabel 13175 7025 0    60   Input ~ 0
 LED-
-Text Notes 5925 9975 0    60   ~ 0
+Text Notes 5925 8150 0    60   ~ 0
 Sensor connectors compatible with Adafruit Stemma system.
-Text GLabel 5875 9500 0    60   Input ~ 0
+Text GLabel 5875 7675 0    60   Input ~ 0
 +5V
-Text GLabel 7200 9500 0    60   Input ~ 0
+Text GLabel 7200 7675 0    60   Input ~ 0
 +5V
-Text GLabel 8200 9600 0    60   Input ~ 0
+Text GLabel 8200 7775 0    60   Input ~ 0
 +3V3
 $Comp
 L Device:R R111
 U 1 1 5F76240D
-P 9550 9825
-F 0 "R111" V 9630 9825 50  0000 C CNN
-F 1 "10k" V 9550 9825 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9825 50  0001 C CNN
-F 3 "" H 9550 9825 50  0000 C CNN
-F 4 "CF14JT10K0" V 9550 9825 50  0001 C CNN "Part number"
-F 5 "CF14JT10K0CT-ND" V 9550 9825 50  0001 C CNN "Digikey reference"
-F 6 "10k Ohm, 1/4W, 5%" V 9550 9825 50  0001 C CNN "Description"
-	1    9550 9825
+P 9550 8000
+F 0 "R111" V 9630 8000 50  0000 C CNN
+F 1 "10k" V 9550 8000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 8000 50  0001 C CNN
+F 3 "" H 9550 8000 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 8000 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 8000 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 8000 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 9550 8000 50  0001 C CNN "Manufacturer"
+	1    9550 8000
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R110
 U 1 1 59CD15CB
-P 9550 9525
-F 0 "R110" V 9630 9525 50  0000 C CNN
-F 1 "10k" V 9550 9525 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9525 50  0001 C CNN
-F 3 "" H 9550 9525 50  0000 C CNN
-F 4 "CF14JT10K0" V 9550 9525 50  0001 C CNN "Part number"
-F 5 "CF14JT10K0CT-ND" V 9550 9525 50  0001 C CNN "Digikey reference"
-F 6 "10k Ohm, 1/4W, 5%" V 9550 9525 50  0001 C CNN "Description"
-	1    9550 9525
+P 9550 7700
+F 0 "R110" V 9630 7700 50  0000 C CNN
+F 1 "10k" V 9550 7700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 7700 50  0001 C CNN
+F 3 "" H 9550 7700 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 7700 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 7700 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 7700 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 9550 7700 50  0001 C CNN "Manufacturer"
+	1    9550 7700
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R109
 U 1 1 59CD11FD
-P 9550 9225
-F 0 "R109" V 9630 9225 50  0000 C CNN
-F 1 "10k" V 9550 9225 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 9225 50  0001 C CNN
-F 3 "" H 9550 9225 50  0000 C CNN
-F 4 "CF14JT10K0" V 9550 9225 50  0001 C CNN "Part number"
-F 5 "CF14JT10K0CT-ND" V 9550 9225 50  0001 C CNN "Digikey reference"
-F 6 "10k Ohm, 1/4W, 5%" V 9550 9225 50  0001 C CNN "Description"
-	1    9550 9225
+P 9550 7400
+F 0 "R109" V 9630 7400 50  0000 C CNN
+F 1 "10k" V 9550 7400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 7400 50  0001 C CNN
+F 3 "" H 9550 7400 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 7400 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 7400 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 7400 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 9550 7400 50  0001 C CNN "Manufacturer"
+	1    9550 7400
 	-1   0    0    1   
 $EndComp
 $Comp
 L Edurov:Generic U1
 U 1 1 60C9E470
-P 800 6500
-F 0 "U1" H 978 6341 50  0001 L CNN
-F 1 "Arduino header" H 978 6296 50  0000 L CNN
-F 2 "" H 800 6500 50  0001 C CNN
-F 3 "" H 800 6500 50  0001 C CNN
-F 4 "15 pin female through-hole header" H 978 6205 50  0000 L CNN "Description"
-F 5 "SSW-115-01-T-S" H 800 6500 50  0001 C CNN "Part number"
-F 6 "SAM1213-15-ND" H 800 6500 50  0001 C CNN "Digikey reference"
-	1    800  6500
+P 3750 10200
+F 0 "U1" H 3928 10041 50  0001 L CNN
+F 1 "Arduino header" H 3928 9996 50  0000 L CNN
+F 2 "" H 3750 10200 50  0001 C CNN
+F 3 "" H 3750 10200 50  0001 C CNN
+F 4 "15 pin female through-hole header" H 3928 9905 50  0000 L CNN "Description"
+F 5 "SSW-115-01-T-S" H 3750 10200 50  0001 C CNN "Part number"
+F 6 "SAM1213-15-ND" H 3750 10200 50  0001 C CNN "Digikey reference"
+F 7 "Samtec Inc." H 3750 10200 50  0001 C CNN "Manufacturer"
+	1    3750 10200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Edurov:Generic U5
 U 1 1 60CA6BBB
-P 6350 6900
-F 0 "U5" H 6528 6741 50  0001 L CNN
-F 1 "Pressure sensor" H 6528 6696 50  0000 L CNN
-F 2 "" H 6350 6900 50  0001 C CNN
-F 3 "" H 6350 6900 50  0001 C CNN
-F 4 "MPX4250AP 0-250kPa pressure sensor" H 6528 6605 50  0000 L CNN "Description"
-F 5 "MPX4250AP" H 6350 6900 50  0001 C CNN "Part number"
-F 6 "MPX4250AP-ND" H 6350 6900 50  0001 C CNN "Digikey reference"
-	1    6350 6900
+P 900 9800
+F 0 "U5" H 1078 9641 50  0001 L CNN
+F 1 "Pressure sensor" H 1078 9596 50  0000 L CNN
+F 2 "" H 900 9800 50  0001 C CNN
+F 3 "" H 900 9800 50  0001 C CNN
+F 4 "MPX4250AP 0-250kPa pressure sensor" H 1078 9505 50  0000 L CNN "Description"
+F 5 "MPX4250AP" H 900 9800 50  0001 C CNN "Part number"
+F 6 "MPX4250AP-ND" H 900 9800 50  0001 C CNN "Digikey reference"
+F 7 "NXP" H 900 9800 50  0001 C CNN "Manufacturer"
+	1    900  9800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Edurov:Generic U4
 U 1 1 60CA2DB7
-P 6350 6500
-F 0 "U4" H 6528 6341 50  0001 L CNN
-F 1 "Temp sensor" H 6528 6296 50  0000 L CNN
-F 2 "" H 6350 6500 50  0001 C CNN
-F 3 "" H 6350 6500 50  0001 C CNN
-F 4 "LM35 temperature sensor" H 6528 6205 50  0000 L CNN "Description"
-F 5 "LM35DZ/NOPB" H 6350 6500 50  0001 C CNN "Part number"
-F 6 "LM35DZ/NOPB-ND" H 6350 6500 50  0001 C CNN "Digikey reference"
-	1    6350 6500
+P 900 9400
+F 0 "U4" H 1078 9241 50  0001 L CNN
+F 1 "Temp sensor" H 1078 9196 50  0000 L CNN
+F 2 "" H 900 9400 50  0001 C CNN
+F 3 "" H 900 9400 50  0001 C CNN
+F 4 "LM35 temperature sensor" H 1078 9105 50  0000 L CNN "Description"
+F 5 "LM35DZ/NOPB" H 900 9400 50  0001 C CNN "Part number"
+F 6 "LM35DZ/NOPB-ND" H 900 9400 50  0001 C CNN "Digikey reference"
+F 7 "Texas Instruments" H 900 9400 50  0001 C CNN "Manufacturer"
+	1    900  9400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Edurov:Generic U3
 U 1 1 60CA2003
-P 2950 6500
-F 0 "U3" H 3128 6341 50  0001 L CNN
-F 1 "Raspberry PI stacking header" H 3128 6296 50  0000 L CNN
-F 2 "" H 2950 6500 50  0001 C CNN
-F 3 "" H 2950 6500 50  0001 C CNN
-F 4 "2x20 female through-hole header with extra long pins for stacking" H 3128 6205 50  0000 L CNN "Description"
-F 5 "1979" H 2950 6500 50  0001 C CNN "Part number"
-F 6 "1528-1783-ND" H 2950 6500 50  0001 C CNN "Digikey reference"
-	1    2950 6500
+P 3750 9400
+F 0 "U3" H 3928 9241 50  0001 L CNN
+F 1 "Raspberry PI stacking header" H 3928 9196 50  0000 L CNN
+F 2 "" H 3750 9400 50  0001 C CNN
+F 3 "" H 3750 9400 50  0001 C CNN
+F 4 "2x20 female through-hole header with extra long pins for stacking" H 3928 9105 50  0000 L CNN "Description"
+F 5 "1979" H 3750 9400 50  0001 C CNN "Part number"
+F 6 "1528-1783-ND" H 3750 9400 50  0001 C CNN "Digikey reference"
+F 7 "Adafruit Industries LLC" H 3750 9400 50  0001 C CNN "Manufacturer"
+	1    3750 9400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Edurov:Generic U2
 U 1 1 60CA1AFC
-P 800 6900
-F 0 "U2" H 978 6741 50  0001 L CNN
-F 1 "Arduino header" H 978 6696 50  0000 L CNN
-F 2 "" H 800 6900 50  0001 C CNN
-F 3 "" H 800 6900 50  0001 C CNN
-F 4 "15 pin female through-hole header" H 978 6605 50  0000 L CNN "Description"
-F 5 "SSW-115-01-T-S" H 800 6900 50  0001 C CNN "Part number"
-F 6 "SAM1213-15-ND" H 800 6900 50  0001 C CNN "Digikey reference"
-	1    800  6900
+P 3750 10600
+F 0 "U2" H 3928 10441 50  0001 L CNN
+F 1 "Arduino header" H 3928 10396 50  0000 L CNN
+F 2 "" H 3750 10600 50  0001 C CNN
+F 3 "" H 3750 10600 50  0001 C CNN
+F 4 "15 pin female through-hole header" H 3928 10305 50  0000 L CNN "Description"
+F 5 "SSW-115-01-T-S" H 3750 10600 50  0001 C CNN "Part number"
+F 6 "SAM1213-15-ND" H 3750 10600 50  0001 C CNN "Digikey reference"
+F 7 "Samtec Inc." H 3750 10600 50  0001 C CNN "Manufacturer"
+	1    3750 10600
 	1    0    0    -1  
 $EndComp
-Text Notes 550  6300 0    394  ~ 0
+Text Notes 550  9275 0    394  ~ 0
 Extra components
 Wire Notes Line
-	450  5800 10700 5800
+	450  8775 10700 8775
 $Comp
 L Connector:Raspberry_Pi_2_3 RaspberryPI101
 U 1 1 5F72663B
@@ -649,8 +692,10 @@ F 1 "Raspberry_Pi_2_3" H 1275 4275 50  0000 C CNN
 F 2 "EduRov:RaspBerry_PI" H 1925 3025 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1925 3025 50  0001 C CNN
 F 4 "Raspberry PI 3 or 4" H 1925 3025 50  0001 C CNN "Part number"
-F 5 "1690-RASPBERRYPI4B/4GB-ND" H 1925 3025 50  0001 C CNN "DigiKey reference"
+F 5 "" H 1925 3025 50  0001 C CNN "DigiKey reference"
 F 6 "Raspberry PI 3 or 4" H 1925 3025 50  0001 C CNN "Description"
+F 7 "1690-RASPBERRYPI4B/4GB-ND" H 1925 3025 50  0001 C CNN "Digikey reference"
+F 8 "Raspberry Pi" H 1925 3025 50  0001 C CNN "Manufacturer"
 	1    1925 3025
 	-1   0    0    -1  
 $EndComp
@@ -665,6 +710,7 @@ F 3 "" H 3575 2375 50  0000 C CNN
 F 4 "CF14JT10K0" V 3575 2375 50  0001 C CNN "Part number"
 F 5 "CF14JT10K0CT-ND" V 3575 2375 50  0001 C CNN "Digikey reference"
 F 6 "10k Ohm, 1/4W, 5%" V 3575 2375 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 3575 2375 50  0001 C CNN "Manufacturer"
 	1    3575 2375
 	1    0    0    1   
 $EndComp
@@ -679,6 +725,7 @@ F 3 "" H 3725 2225 50  0000 C CNN
 F 4 "CF14JT10K0" V 3725 2225 50  0001 C CNN "Part number"
 F 5 "CF14JT10K0CT-ND" V 3725 2225 50  0001 C CNN "Digikey reference"
 F 6 "10k Ohm, 1/4W, 5%" V 3725 2225 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 3725 2225 50  0001 C CNN "Manufacturer"
 	1    3725 2225
 	0    -1   1    0   
 $EndComp
@@ -693,6 +740,7 @@ F 3 "" H 3725 2125 50  0000 C CNN
 F 4 "CF14JT10K0" V 3725 2125 50  0001 C CNN "Part number"
 F 5 "CF14JT10K0CT-ND" V 3725 2125 50  0001 C CNN "Digikey reference"
 F 6 "10k Ohm, 1/4W, 5%" V 3725 2125 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 3725 2125 50  0001 C CNN "Manufacturer"
 	1    3725 2125
 	0    1    -1   0   
 $EndComp
@@ -707,6 +755,7 @@ F 3 "" H 3575 2675 50  0000 C CNN
 F 4 "CF14JT10K0" V 3575 2675 50  0001 C CNN "Part number"
 F 5 "CF14JT10K0CT-ND" V 3575 2675 50  0001 C CNN "Digikey reference"
 F 6 "10k Ohm, 1/4W, 5%" V 3575 2675 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 3575 2675 50  0001 C CNN "Manufacturer"
 	1    3575 2675
 	1    0    0    1   
 $EndComp
@@ -721,6 +770,7 @@ F 3 "" H 5175 2525 50  0000 C CNN
 F 4 "CF14JT10K0" V 5175 2525 50  0001 C CNN "Part number"
 F 5 "CF14JT10K0CT-ND" V 5175 2525 50  0001 C CNN "Digikey reference"
 F 6 "10k Ohm, 1/4W, 5%" V 5175 2525 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 5175 2525 50  0001 C CNN "Manufacturer"
 	1    5175 2525
 	1    0    0    1   
 $EndComp
@@ -735,85 +785,84 @@ F 3 "" H 12425 7650 50  0000 C CNN
 F 4 "CF14JT10K0" V 12425 7650 50  0001 C CNN "Part number"
 F 5 "CF14JT10K0CT-ND" V 12425 7650 50  0001 C CNN "Digikey reference"
 F 6 "10k Ohm, 1/4W, 5%" V 12425 7650 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 12425 7650 50  0001 C CNN "Manufacturer"
 	1    12425 7650
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R108
 U 1 1 5FB9B542
-P 9550 8925
-F 0 "R108" V 9630 8925 50  0000 C CNN
-F 1 "10k" V 9550 8925 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 8925 50  0001 C CNN
-F 3 "" H 9550 8925 50  0000 C CNN
-F 4 "CF14JT10K0" V 9550 8925 50  0001 C CNN "Part number"
-F 5 "CF14JT10K0CT-ND" V 9550 8925 50  0001 C CNN "Digikey reference"
-F 6 "10k Ohm, 1/4W, 5%" V 9550 8925 50  0001 C CNN "Description"
-	1    9550 8925
+P 9550 7100
+F 0 "R108" V 9630 7100 50  0000 C CNN
+F 1 "10k" V 9550 7100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 7100 50  0001 C CNN
+F 3 "" H 9550 7100 50  0000 C CNN
+F 4 "CF14JT10K0" V 9550 7100 50  0001 C CNN "Part number"
+F 5 "CF14JT10K0CT-ND" V 9550 7100 50  0001 C CNN "Digikey reference"
+F 6 "10k Ohm, 1/4W, 5%" V 9550 7100 50  0001 C CNN "Description"
+F 7 "Stackpole Electronics Inc" H 9550 7100 50  0001 C CNN "Manufacturer"
+	1    9550 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 5vReg101
 U 1 1 5F7592EB
-P 2775 9225
-F 0 "5vReg101" V 2739 8937 50  0000 R CNN
-F 1 "Conn_01x04" V 2648 8937 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2775 9225 50  0001 C CNN
-F 3 "~" H 2775 9225 50  0001 C CNN
-F 4 "Micro" V 2775 9225 50  0001 C CNN "Part number"
-F 5 "IF-A006172" V 2775 9225 50  0001 C CNN "Elefun reference"
-F 6 "Iflight micro 30V->5V regulator, 2.5A" V 2775 9225 50  0001 C CNN "Description"
-	1    2775 9225
+P 2775 7400
+F 0 "5vReg101" V 2739 7112 50  0000 R CNN
+F 1 "Conn_01x04" V 2648 7112 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2775 7400 50  0001 C CNN
+F 3 "~" H 2775 7400 50  0001 C CNN
+F 4 "Micro" V 2775 7400 50  0001 C CNN "Part number"
+F 5 "IF-A006172" V 2775 7400 50  0001 C CNN "Elefun reference"
+F 6 "Iflight micro 30V->5V regulator, 2.5A" V 2775 7400 50  0001 C CNN "Description"
+F 7 "IFlight" H 2775 7400 50  0001 C CNN "Manufacturer"
+	1    2775 7400
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1525 9725 1575 9725
-Connection ~ 1525 9725
+	1525 7900 1575 7900
+Connection ~ 1525 7900
 Wire Wire Line
-	1225 9375 1325 9375
+	1225 7550 1325 7550
 Wire Wire Line
-	1575 9725 1575 9775
+	1575 7900 1575 7950
 Wire Wire Line
-	1475 9725 1525 9725
-Text GLabel 1575 9775 3    60   Input ~ 0
+	1475 7900 1525 7900
+Text GLabel 1575 7950 3    60   Input ~ 0
 GND
-Text GLabel 1475 9725 3    60   Input ~ 0
+Text GLabel 1475 7900 3    60   Input ~ 0
 -Batt
-Connection ~ 1475 9375
-Connection ~ 1225 9525
+Connection ~ 1225 7700
+Connection ~ 1525 7700
 Wire Wire Line
-	1475 9375 1425 9375
+	1525 7900 1525 7700
 Wire Wire Line
-	1525 9375 1475 9375
-Connection ~ 1525 9525
+	1525 7700 1525 7550
 Wire Wire Line
-	1525 9725 1525 9525
+	1225 7700 1225 7550
 Wire Wire Line
-	1525 9525 1525 9375
-Wire Wire Line
-	1225 9525 1225 9375
-Wire Wire Line
-	1225 9525 1225 9725
-Text GLabel 1225 9725 3    60   Input ~ 0
+	1225 7700 1225 7900
+Text GLabel 1225 7900 3    60   Input ~ 0
 +Bat1
 $Comp
 L Connector_Generic:Conn_01x02 P101
 U 1 1 59F0943E
-P 1325 9175
-F 0 "P101" H 1325 9325 50  0000 C CNN
-F 1 "Battery connector" V 1425 9175 50  0000 C CNN
-F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 1325 9175 50  0001 C CNN
-F 3 "" H 1325 9175 50  0000 C CNN
-F 4 "691137710002" H 1325 9175 50  0001 C CNN "Part number"
-F 5 "732-10955-ND" H 1325 9175 50  0001 C CNN "Digikey reference"
-F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 1325 9175 50  0001 C CNN "Description"
-	1    1325 9175
+P 1325 7350
+F 0 "P101" H 1325 7500 50  0000 C CNN
+F 1 "Battery connector" V 1475 7350 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 1325 7350 50  0001 C CNN
+F 3 "" H 1325 7350 50  0000 C CNN
+F 4 "691137710002" H 1325 7350 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 1325 7350 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 1325 7350 50  0001 C CNN "Description"
+F 7 "Wurth" H 1325 7350 50  0001 C CNN "Manufacturer"
+	1    1325 7350
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:CP C101
 U 1 1 600EBD67
-P 1375 9525
+P 1375 7700
 AR Path="/600EBD67" Ref="C101"  Part="1" 
 AR Path="/5FFEC45F/600EBD67" Ref="C?"  Part="1" 
 AR Path="/60017CE1/600EBD67" Ref="C?"  Part="1" 
@@ -822,28 +871,304 @@ AR Path="/60018874/600EBD67" Ref="C?"  Part="1"
 AR Path="/6003A868/600EBD67" Ref="C?"  Part="1" 
 AR Path="/6003F027/600EBD67" Ref="C?"  Part="1" 
 AR Path="/60043462/600EBD67" Ref="C?"  Part="1" 
-F 0 "C101" V 1225 9825 50  0000 C CNN
-F 1 "470uF" V 1325 9825 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 1413 9375 50  0001 C CNN
-F 3 "~" H 1375 9525 50  0001 C CNN
-F 4 "UVR1H471MHD1TO" V 1375 9525 50  0001 C CNN "Part number"
-F 5 "493-12789-1-ND" V 1375 9525 50  0001 C CNN "Digikey reference"
-F 6 "470uF, 20%, 50V, 5mm pitch" V 1375 9525 50  0001 C CNN "Description"
-	1    1375 9525
+F 0 "C101" V 1225 8000 50  0000 C CNN
+F 1 "470uF" V 1325 8000 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 1413 7550 50  0001 C CNN
+F 3 "~" H 1375 7700 50  0001 C CNN
+F 4 "UVR1H471MHD1TO" V 1375 7700 50  0001 C CNN "Part number"
+F 5 "493-12789-1-ND" V 1375 7700 50  0001 C CNN "Digikey reference"
+F 6 "470uF, 20%, 50V, 5mm pitch" V 1375 7700 50  0001 C CNN "Description"
+F 7 "Nichicon" H 1375 7700 50  0001 C CNN "Manufacturer"
+	1    1375 7700
 	0    1    1    0   
 $EndComp
 $Comp
-L Edurov:Generic U?
+L Edurov:Generic U8
 U 1 1 60CED77A
-P 2950 6900
-F 0 "U?" H 3128 6741 50  0001 L CNN
-F 1 "JST Connector kit" H 3128 6696 50  0000 L CNN
-F 2 "" H 2950 6900 50  0001 C CNN
-F 3 "" H 2950 6900 50  0001 C CNN
-F 4 "JST PH connectors and crimps" H 3128 6605 50  0000 L CNN "Description"
-F 5 "FIT0299" H 2950 6900 50  0001 C CNN "Part number"
-F 6 "1738-1305-ND" H 2950 6900 50  0001 C CNN "Digikey reference"
-	1    2950 6900
+P 3750 9800
+F 0 "U8" H 3928 9641 50  0001 L CNN
+F 1 "JST Connector kit" H 3928 9596 50  0000 L CNN
+F 2 "" H 3750 9800 50  0001 C CNN
+F 3 "" H 3750 9800 50  0001 C CNN
+F 4 "JST PH connectors and crimps" H 3928 9505 50  0000 L CNN "Description"
+F 5 "FIT0299" H 3750 9800 50  0001 C CNN "Part number"
+F 6 "1738-1305-ND" H 3750 9800 50  0001 C CNN "Digikey reference"
+F 7 "DFRobot" H 3750 9800 50  0001 C CNN "Manufacturer"
+	1    3750 9800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1425 7550 1525 7550
+$Comp
+L Edurov:Generic U6
+U 1 1 60C94B86
+P 900 10200
+F 0 "U6" H 1078 10041 50  0001 L CNN
+F 1 "Sense hat" H 1078 9996 50  0000 L CNN
+F 2 "" H 900 10200 50  0001 C CNN
+F 3 "" H 900 10200 50  0001 C CNN
+F 4 "Raspberry PI sense hat" H 1078 9905 50  0000 L CNN "Description"
+F 5 "SENSE HAT" H 900 10200 50  0001 C CNN "Part number"
+F 6 "1690-1013-ND" H 900 10200 50  0001 C CNN "Digikey reference"
+F 7 "Raspberry Pi" H 900 10200 50  0001 C CNN "Manufacturer"
+	1    900  10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U7
+U 1 1 60C990EA
+P 900 10600
+F 0 "U7" H 1078 10441 50  0001 L CNN
+F 1 "Camera" H 1078 10396 50  0000 L CNN
+F 2 "" H 900 10600 50  0001 C CNN
+F 3 "" H 900 10600 50  0001 C CNN
+F 4 "Raspberry PI camera" H 1078 10305 50  0000 L CNN "Description"
+F 5 "114990838" H 900 10600 50  0001 C CNN "Part number"
+F 6 "1597-1427-ND" H 900 10600 50  0001 C CNN "Digikey reference"
+F 7 "Seeed Technology Co., Ltd" H 900 10600 50  0001 C CNN "Manufacturer"
+	1    900  10600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U14
+U 1 1 60CA78EE
+P 6950 10500
+F 0 "U14" H 7128 10341 50  0001 L CNN
+F 1 "Nut" H 7128 10296 50  0001 L CNN
+F 2 "" H 6950 10500 50  0001 C CNN
+F 3 "" H 6950 10500 50  0001 C CNN
+F 4 "Nylon nut" H 7128 10205 50  0001 L CNN "Description"
+F 5 "04M025045HN" H 6950 10500 50  0001 C CNN "Part number"
+F 6 "RPC7085-ND" H 6950 10500 50  0001 C CNN "Digikey reference"
+F 7 "Essentra Components" H 6950 10500 50  0001 C CNN "Manufacturer"
+	1    6950 10500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U12
+U 1 1 60CA78F7
+P 6925 9900
+F 0 "U12" H 7103 9741 50  0001 L CNN
+F 1 "Standoff" H 7103 9696 50  0001 L CNN
+F 2 "" H 6925 9900 50  0001 C CNN
+F 3 "" H 6925 9900 50  0001 C CNN
+F 4 "Hex standoff, M2.5, 16mm long" H 7103 9605 50  0001 L CNN "Description"
+F 5 "971160151" H 6925 9900 50  0001 C CNN "Part number"
+F 6 "732-10422-ND" H 6925 9900 50  0001 C CNN "Digikey reference"
+F 7 "Wurth" H 6925 9900 50  0001 C CNN "Manufacturer"
+	1    6925 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U10
+U 1 1 60CAE87D
+P 6900 10450
+F 0 "U10" H 7078 10291 50  0001 L CNN
+F 1 "Nut" H 7078 10246 50  0001 L CNN
+F 2 "" H 6900 10450 50  0001 C CNN
+F 3 "" H 6900 10450 50  0001 C CNN
+F 4 "Nylon nut" H 7078 10155 50  0001 L CNN "Description"
+F 5 "04M025045HN" H 6900 10450 50  0001 C CNN "Part number"
+F 6 "RPC7085-ND" H 6900 10450 50  0001 C CNN "Digikey reference"
+F 7 "Essentra Components" H 6900 10450 50  0001 C CNN "Manufacturer"
+	1    6900 10450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U16
+U 1 1 60CB3309
+P 6975 9950
+F 0 "U16" H 7153 9791 50  0001 L CNN
+F 1 "Standoff" H 7153 9746 50  0001 L CNN
+F 2 "" H 6975 9950 50  0001 C CNN
+F 3 "" H 6975 9950 50  0001 C CNN
+F 4 "Hex standoff, M2.5, 16mm long" H 7153 9655 50  0001 L CNN "Description"
+F 5 "971160151" H 6975 9950 50  0001 C CNN "Part number"
+F 6 "732-10422-ND" H 6975 9950 50  0001 C CNN "Digikey reference"
+F 7 "Wurth" H 6975 9950 50  0001 C CNN "Manufacturer"
+	1    6975 9950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U20
+U 1 1 60CB37AE
+P 7025 10000
+F 0 "U20" H 7203 9841 50  0001 L CNN
+F 1 "Standoff" H 7203 9796 50  0001 L CNN
+F 2 "" H 7025 10000 50  0001 C CNN
+F 3 "" H 7025 10000 50  0001 C CNN
+F 4 "Hex standoff, M2.5, 16mm long" H 7203 9705 50  0001 L CNN "Description"
+F 5 "971160151" H 7025 10000 50  0001 C CNN "Part number"
+F 6 "732-10422-ND" H 7025 10000 50  0001 C CNN "Digikey reference"
+F 7 "Wurth" H 7025 10000 50  0001 C CNN "Manufacturer"
+	1    7025 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U24
+U 1 1 60CB3BB3
+P 7075 10050
+F 0 "U24" H 7253 9891 50  0001 L CNN
+F 1 "Standoff" H 7253 9846 50  0000 L CNN
+F 2 "" H 7075 10050 50  0001 C CNN
+F 3 "" H 7075 10050 50  0001 C CNN
+F 4 "Hex standoff, M2.5, 16mm long" H 7253 9755 50  0000 L CNN "Description"
+F 5 "971160151" H 7075 10050 50  0001 C CNN "Part number"
+F 6 "732-10422-ND" H 7075 10050 50  0001 C CNN "Digikey reference"
+F 7 "Wurth" H 7075 10050 50  0001 C CNN "Manufacturer"
+	1    7075 10050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U18
+U 1 1 60CB81CE
+P 7000 10550
+F 0 "U18" H 7178 10391 50  0001 L CNN
+F 1 "Nut" H 7178 10346 50  0001 L CNN
+F 2 "" H 7000 10550 50  0001 C CNN
+F 3 "" H 7000 10550 50  0001 C CNN
+F 4 "Nylon nut" H 7178 10255 50  0001 L CNN "Description"
+F 5 "04M025045HN" H 7000 10550 50  0001 C CNN "Part number"
+F 6 "RPC7085-ND" H 7000 10550 50  0001 C CNN "Digikey reference"
+F 7 "Essentra Components" H 7000 10550 50  0001 C CNN "Manufacturer"
+	1    7000 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U22
+U 1 1 60CB8D3D
+P 7050 10625
+F 0 "U22" H 7228 10466 50  0001 L CNN
+F 1 "Nut" H 7228 10421 50  0000 L CNN
+F 2 "" H 7050 10625 50  0001 C CNN
+F 3 "" H 7050 10625 50  0001 C CNN
+F 4 "Nylon nut" H 7228 10330 50  0000 L CNN "Description"
+F 5 "04M025045HN" H 7050 10625 50  0001 C CNN "Part number"
+F 6 "RPC7085-ND" H 7050 10625 50  0001 C CNN "Digikey reference"
+F 7 "Essentra Components" H 7050 10625 50  0001 C CNN "Manufacturer"
+	1    7050 10625
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4300 5775 4300 8775
+$Comp
+L Edurov:Generic U23
+U 1 1 60D52A1D
+P 7075 9500
+F 0 "U23" H 7253 9341 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7253 9296 50  0000 L CNN
+F 2 "" H 7075 9500 50  0001 C CNN
+F 3 "" H 7075 9500 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7253 9205 50  0000 L CNN "Description"
+F 5 "FSDX78-8-D" H 7075 9500 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 7075 9500 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 7075 9500 50  0001 C CNN "Manufacturer"
+	1    7075 9500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U21
+U 1 1 60D53232
+P 7050 9475
+F 0 "U21" H 7228 9316 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7228 9271 50  0001 L CNN
+F 2 "" H 7050 9475 50  0001 C CNN
+F 3 "" H 7050 9475 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7228 9180 50  0001 L CNN "Description"
+F 5 "FSDX78-8-D" H 7050 9475 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 7050 9475 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 7050 9475 50  0001 C CNN "Manufacturer"
+	1    7050 9475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U19
+U 1 1 60D55911
+P 7025 9450
+F 0 "U19" H 7203 9291 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7203 9246 50  0001 L CNN
+F 2 "" H 7025 9450 50  0001 C CNN
+F 3 "" H 7025 9450 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7203 9155 50  0001 L CNN "Description"
+F 5 "FSDX78-8-D" H 7025 9450 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 7025 9450 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 7025 9450 50  0001 C CNN "Manufacturer"
+	1    7025 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U17
+U 1 1 60D55E7F
+P 7000 9425
+F 0 "U17" H 7178 9266 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7178 9221 50  0001 L CNN
+F 2 "" H 7000 9425 50  0001 C CNN
+F 3 "" H 7000 9425 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7178 9130 50  0001 L CNN "Description"
+F 5 "FSDX78-8-D" H 7000 9425 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 7000 9425 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 7000 9425 50  0001 C CNN "Manufacturer"
+	1    7000 9425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U15
+U 1 1 60D564CC
+P 6975 9400
+F 0 "U15" H 7153 9241 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7153 9196 50  0001 L CNN
+F 2 "" H 6975 9400 50  0001 C CNN
+F 3 "" H 6975 9400 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7153 9105 50  0001 L CNN "Description"
+F 5 "FSDX78-8-D" H 6975 9400 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 6975 9400 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 6975 9400 50  0001 C CNN "Manufacturer"
+	1    6975 9400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U13
+U 1 1 60D5689F
+P 6950 9375
+F 0 "U13" H 7128 9216 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7128 9171 50  0001 L CNN
+F 2 "" H 6950 9375 50  0001 C CNN
+F 3 "" H 6950 9375 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7128 9080 50  0001 L CNN "Description"
+F 5 "FSDX78-8-D" H 6950 9375 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 6950 9375 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 6950 9375 50  0001 C CNN "Manufacturer"
+	1    6950 9375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U11
+U 1 1 60D56A60
+P 6925 9350
+F 0 "U11" H 7103 9191 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7103 9146 50  0001 L CNN
+F 2 "" H 6925 9350 50  0001 C CNN
+F 3 "" H 6925 9350 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7103 9055 50  0001 L CNN "Description"
+F 5 "FSDX78-8-D" H 6925 9350 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 6925 9350 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 6925 9350 50  0001 C CNN "Manufacturer"
+	1    6925 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Edurov:Generic U9
+U 1 1 60D56C43
+P 6900 9325
+F 0 "U9" H 7078 9166 50  0001 L CNN
+F 1 "Ferrules for motor cables" H 7078 9121 50  0001 L CNN
+F 2 "" H 6900 9325 50  0001 C CNN
+F 3 "" H 6900 9325 50  0001 C CNN
+F 4 "1.5mm2 cable ferrule" H 7078 9030 50  0001 L CNN "Description"
+F 5 "FSDX78-8-D" H 6900 9325 50  0001 C CNN "Part number"
+F 6 "298-10757-ND" H 6900 9325 50  0001 C CNN "Digikey reference"
+F 7 "Panduit Corp" H 6900 9325 50  0001 C CNN "Manufacturer"
+	1    6900 9325
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

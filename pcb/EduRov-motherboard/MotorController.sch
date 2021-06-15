@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 5 5
 Title ""
 Date ""
 Rev ""
@@ -25,13 +25,14 @@ AR Path="/60018874/5FFEEEFF" Ref="D?"  Part="1"
 AR Path="/6003A868/5FFEEEFF" Ref="D302"  Part="1" 
 AR Path="/6003F027/5FFEEEFF" Ref="D402"  Part="1" 
 AR Path="/60043462/5FFEEEFF" Ref="D502"  Part="1" 
-F 0 "D202" H 6450 3500 50  0000 C CNN
+F 0 "D502" H 6450 3500 50  0000 C CNN
 F 1 "D" H 6400 3400 50  0001 C CNN
 F 2 "Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp" H 6250 3450 50  0001 C CNN
 F 3 "" H 6250 3450 50  0000 C CNN
 F 4 "1N4001" H 6250 3450 50  0001 C CNN "Part number"
 F 5 "1N4001-E3/54GICT-ND" H 6250 3450 50  0001 C CNN "Digikey reference"
 F 6 "General purpose diode, 1A forward current, 50V blocking voltage" H 6250 3450 50  0001 C CNN "Description"
+F 7 "Vishay General Semiconductor" H 6250 3450 50  0001 C CNN "Manufacturer"
 	1    6250 3450
 	0    1    1    0   
 $EndComp
@@ -47,13 +48,14 @@ AR Path="/60018874/5FFEEF0B" Ref="D?"  Part="1"
 AR Path="/6003A868/5FFEEF0B" Ref="D301"  Part="1" 
 AR Path="/6003F027/5FFEEF0B" Ref="D401"  Part="1" 
 AR Path="/60043462/5FFEEF0B" Ref="D501"  Part="1" 
-F 0 "D201" H 6300 3500 50  0000 C CNN
+F 0 "D501" H 6300 3500 50  0000 C CNN
 F 1 "D" H 6250 3400 50  0001 C CNN
 F 2 "Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp" H 6100 3450 50  0001 C CNN
 F 3 "" H 6100 3450 50  0000 C CNN
 F 4 "1N4001" H 6100 3450 50  0001 C CNN "Part number"
 F 5 "1N4001-E3/54GICT-ND" H 6100 3450 50  0001 C CNN "Digikey reference"
 F 6 "General purpose diode, 1A forward current, 50V blocking voltage" H 6100 3450 50  0001 C CNN "Description"
+F 7 "Vishay General Semiconductor" H 6100 3450 50  0001 C CNN "Manufacturer"
 	1    6100 3450
 	0    1    1    0   
 $EndComp
@@ -91,13 +93,14 @@ AR Path="/60018874/5FFEEF49" Ref="C?"  Part="1"
 AR Path="/6003A868/5FFEEF49" Ref="C304"  Part="1" 
 AR Path="/6003F027/5FFEEF49" Ref="C404"  Part="1" 
 AR Path="/60043462/5FFEEF49" Ref="C504"  Part="1" 
-F 0 "C204" V 5600 2850 50  0000 C CNN
+F 0 "C504" V 5600 2850 50  0000 C CNN
 F 1 "15nF" V 5600 3150 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5650 3000 50  0001 C CNN
 F 3 "~" H 5650 3000 50  0001 C CNN
 F 4 "FG18X7R1H153KNT06" V 5650 3000 50  0001 C CNN "Part number"
 F 5 "445-173267-1-ND" V 5650 3000 50  0001 C CNN "Digikey reference"
 F 6 "15nF, 50V X7R, 2.5mm pitch" V 5650 3000 50  0001 C CNN "Description"
+F 7 "TDK Corporation" H 5650 3000 50  0001 C CNN "Manufacturer"
 	1    5650 3000
 	0    1    1    0   
 $EndComp
@@ -120,13 +123,14 @@ AR Path="/60018874/5FFEEF54" Ref="C?"  Part="1"
 AR Path="/6003A868/5FFEEF54" Ref="C305"  Part="1" 
 AR Path="/6003F027/5FFEEF54" Ref="C405"  Part="1" 
 AR Path="/60043462/5FFEEF54" Ref="C505"  Part="1" 
-F 0 "C205" V 5700 3150 50  0000 C CNN
+F 0 "C505" V 5700 3150 50  0000 C CNN
 F 1 "15nF" V 5700 3450 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5650 3300 50  0001 C CNN
 F 3 "~" H 5650 3300 50  0001 C CNN
 F 4 "FG18X7R1H153KNT06" V 5650 3300 50  0001 C CNN "Part number"
 F 5 "445-173267-1-ND" V 5650 3300 50  0001 C CNN "Digikey reference"
 F 6 "15nF, 50V X7R, 2.5mm pitch" V 5650 3300 50  0001 C CNN "Description"
+F 7 "TDK Corporation" H 5650 3300 50  0001 C CNN "Manufacturer"
 	1    5650 3300
 	0    1    1    0   
 $EndComp
@@ -149,13 +153,14 @@ AR Path="/60018874/5FFEEF6B" Ref="C?"  Part="1"
 AR Path="/6003A868/5FFEEF6B" Ref="C302"  Part="1" 
 AR Path="/6003F027/5FFEEF6B" Ref="C402"  Part="1" 
 AR Path="/60043462/5FFEEF6B" Ref="C502"  Part="1" 
-F 0 "C202" V 3850 2750 50  0000 C CNN
+F 0 "C502" V 3850 2750 50  0000 C CNN
 F 1 "220nF" V 3850 3050 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 3900 2900 50  0001 C CNN
 F 3 "~" H 3900 2900 50  0001 C CNN
 F 4 "FG18X7R1H224KRT00" V 3900 2900 50  0001 C CNN "Part number"
 F 5 "445-181744-ND" V 3900 2900 50  0001 C CNN "Digikey reference"
 F 6 "220nF, 50V X7R, 2.5mm pitch" V 3900 2900 50  0001 C CNN "Description"
+F 7 "TDK Corporation" H 3900 2900 50  0001 C CNN "Manufacturer"
 	1    3900 2900
 	0    1    1    0   
 $EndComp
@@ -192,13 +197,14 @@ AR Path="/60043462/600F7A3C" Ref="C503"  Part="1"
 AR Path="/5FFEC45F/600F7A3C" Ref="C203"  Part="1" 
 AR Path="/6003A868/600F7A3C" Ref="C303"  Part="1" 
 AR Path="/6003F027/600F7A3C" Ref="C403"  Part="1" 
-F 0 "C203" V 5300 2650 50  0000 C CNN
+F 0 "C503" V 5300 2650 50  0000 C CNN
 F 1 "100nF" V 5200 2700 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5188 2350 50  0001 C CNN
 F 3 "~" H 5150 2500 50  0001 C CNN
 F 4 "FG18X7R1H104KNT00" V 5150 2500 50  0001 C CNN "Part number"
 F 5 "445-FG18X7R1H104KNT00-ND" V 5150 2500 50  0001 C CNN "Digikey reference"
 F 6 "100nF, 50V X7R, 2.5mm pitch" V 5150 2500 50  0001 C CNN "Description"
+F 7 "TDK Corporation" H 5150 2500 50  0001 C CNN "Manufacturer"
 	1    5150 2500
 	0    1    -1   0   
 $EndComp
@@ -256,7 +262,7 @@ AR Path="/6003A868/6032BA93" Ref="R301"  Part="1"
 AR Path="/5FFEC45F/6032BA93" Ref="R201"  Part="1" 
 AR Path="/6003F027/6032BA93" Ref="R401"  Part="1" 
 AR Path="/60043462/6032BA93" Ref="R501"  Part="1" 
-F 0 "R201" V 3880 4200 50  0000 C CNN
+F 0 "R501" V 3880 4200 50  0000 C CNN
 F 1 "0" V 3800 4200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3730 4200 50  0001 C CNN
 F 3 "" H 3800 4200 50  0000 C CNN
@@ -287,13 +293,14 @@ AR Path="/5FFEC45F/60485F83" Ref="U201"  Part="1"
 AR Path="/6003A868/60485F83" Ref="U301"  Part="1" 
 AR Path="/6003F027/60485F83" Ref="U401"  Part="1" 
 AR Path="/60043462/60485F83" Ref="U501"  Part="1" 
-F 0 "U201" H 3000 4700 50  0000 C CNN
+F 0 "U501" H 3000 4700 50  0000 C CNN
 F 1 "ACS723xLCTR-05AB" H 3250 4600 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2850 3900 50  0001 L CIN
 F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en" H 2750 4250 50  0001 C CNN
 F 4 "ACS723LLCTR-05AB-T" H 2750 4250 50  0001 C CNN "Part number"
 F 5 "620-1641-1-ND" H 2750 4250 50  0001 C CNN "Digikey reference"
 F 6 "5A hall-effect current sensor" H 2750 4250 50  0001 C CNN "Description"
+F 7 "Allegro MicroSystems" H 2750 4250 50  0001 C CNN "Manufacturer"
 	1    2750 4250
 	-1   0    0    -1  
 $EndComp
@@ -308,13 +315,14 @@ AR Path="/60043462/60487676" Ref="C501"  Part="1"
 AR Path="/5FFEC45F/60487676" Ref="C201"  Part="1" 
 AR Path="/6003A868/60487676" Ref="C301"  Part="1" 
 AR Path="/6003F027/60487676" Ref="C401"  Part="1" 
-F 0 "C201" V 3100 3950 50  0000 C CNN
+F 0 "C501" V 3100 3950 50  0000 C CNN
 F 1 "100nF" V 3000 4000 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 2938 3650 50  0001 C CNN
 F 3 "~" H 2900 3800 50  0001 C CNN
 F 4 "FG18X7R1H104KNT00" V 2900 3800 50  0001 C CNN "Part number"
 F 5 "445-FG18X7R1H104KNT00-ND" V 2900 3800 50  0001 C CNN "Digikey reference"
 F 6 "100nF, 50V X7R, 2.5mm pitch" V 2900 3800 50  0001 C CNN "Description"
+F 7 "TDK Corporation" H 2900 3800 50  0001 C CNN "Manufacturer"
 	1    2900 3800
 	0    1    -1   0   
 $EndComp
@@ -345,7 +353,7 @@ AR Path="/6003F027/60738BFF" Ref="IC401"  Part="1"
 AR Path="/5FFEC45F/60738BFF" Ref="IC201"  Part="1" 
 AR Path="/6003A868/60738BFF" Ref="IC301"  Part="1" 
 AR Path="/60043462/60738BFF" Ref="IC501"  Part="1" 
-F 0 "IC201" H 4800 3681 50  0000 C CNN
+F 0 "IC501" H 4800 3681 50  0000 C CNN
 F 1 "L6203" H 4800 3590 50  0000 C CNN
 F 2 "SnapEDA Library:MULTIWATT-11" H 4800 3100 50  0001 L BNN
 F 3 "" H 4800 3100 50  0001 L BNN
@@ -353,6 +361,10 @@ F 4 "" H 4800 3100 50  0001 L BNN "MF"
 F 5 "56P8434" H 4800 3100 50  0001 L BNN "OC_NEWARK"
 F 6 "1467715" H 4800 3100 50  0001 L BNN "OC_FARNELL"
 F 7 "L6203" H 4800 3100 50  0001 L BNN "MPN"
+F 8 "L6203" H 4800 3100 50  0001 C CNN "Part number"
+F 9 "497-1421-5-ND" H 4800 3100 50  0001 C CNN "Digikey reference"
+F 10 "H-Bridge DC motor controller" H 4800 3100 50  0001 C CNN "Description"
+F 11 "STMicroelectronics" H 4800 3100 50  0001 C CNN "Manufacturer"
 	1    4800 3100
 	1    0    0    -1  
 $EndComp
