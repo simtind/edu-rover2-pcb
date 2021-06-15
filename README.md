@@ -1,4 +1,4 @@
-# edurov-simple
+# EduROV - Rover2
 This repository aims to improve on the [eduROV](https://github.com/trolllabs/eduROV) project. 
 It lends heavily from the original eduROV project, and as such is distributed under the same license.
 
@@ -26,9 +26,9 @@ By doing this, we can improve performance and simplify making changes to the cod
 Performance is improved by allocating more I/O tasks on the client side, and making use of the multiprocessing 
 capabilities of python to separate camera streaming, sensor and actuator communication, and the general web site hosting.  
  
-The web site keeps the original design, but the javascript is redesign to communicate with the update server interface.
+The website keeps the original design, but the javascript is redesigned to communicate with the updated server interface.
 
-The web site no longer passes key presses back to the raspberry pi for processing. 
+The website no longer passes key presses back to the raspberry pi for processing. 
 This design lead to keys hanging, and caused unnecessary coupling between the python code and javascript.
 The web page javascript code now is made aware that it controls an ROV, and sends actuator requests to the python server.
 
