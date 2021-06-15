@@ -1,6 +1,18 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# Generic
+#
+DEF Generic U 0 40 Y Y 1 F N
+F0 "U" -100 50 50 H V R CNN
+F1 "Generic" -150 -50 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -150 -100 150 -400 0 1 0 f
+ENDDRAW
+ENDDEF
+#
 # IRL540NPBF
 #
 DEF IRL540NPBF Q 0 0 Y Y 1 F N
