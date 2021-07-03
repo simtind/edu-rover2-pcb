@@ -19,7 +19,7 @@ U 1 1 59CD089E
 P 6075 7675
 F 0 "P102" H 6075 7875 50  0000 C CNN
 F 1 "Ext press" V 6175 7675 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 6075 7675 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 6075 7675 50  0001 C CNN
 F 3 "" H 6075 7675 50  0000 C CNN
 F 4 "PHR-3" H 6075 7675 50  0001 C CNN "Part number"
 F 5 "2.5mm pitch 3-pin receptacle, JST PH" H 6075 7675 50  0001 C CNN "Description"
@@ -58,20 +58,6 @@ Text GLabel 12225 7500 0    60   Input ~ 0
 IO_LED
 Text GLabel 12225 7800 0    60   Input ~ 0
 GND
-$Comp
-L Connector_Generic:Conn_01x04 P105
-U 1 1 59D3A8DC
-P 13575 7025
-F 0 "P105" H 13750 7025 50  0000 C CNN
-F 1 "Ch LED" H 13800 6950 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 13575 7025 50  0001 C CNN
-F 3 "" H 13575 7025 50  0000 C CNN
-F 4 "PHR-4" H 13575 7025 50  0001 C CNN "Part number"
-F 5 "2.5mm pitch 4-pin receptacle, JST PH" H 13575 7025 50  0001 C CNN "Description"
-F 6 "JST" H 13575 7025 50  0001 C CNN "Manufacturer"
-	1    13575 7025
-	1    0    0    -1  
-$EndComp
 Text GLabel 12225 6925 0    60   Input ~ 0
 +Bat1
 $Comp
@@ -428,7 +414,7 @@ U 1 1 60763419
 P 7400 7675
 F 0 "P103" H 7400 7875 50  0000 C CNN
 F 1 "Ext press" V 7500 7675 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 7400 7675 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 7400 7675 50  0001 C CNN
 F 3 "" H 7400 7675 50  0000 C CNN
 F 4 "PHR-3" H 7400 7675 50  0001 C CNN "Part number"
 F 5 "2.5mm pitch 3-pin receptacle, JST PH" H 7400 7675 50  0001 C CNN "Description"
@@ -442,7 +428,7 @@ U 1 1 60771AD7
 P 8400 7675
 F 0 "P104" H 8400 7875 50  0000 C CNN
 F 1 "Ext press" V 8500 7675 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 8400 7675 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 8400 7675 50  0001 C CNN
 F 3 "" H 8400 7675 50  0000 C CNN
 F 4 "PHR-4" H 8400 7675 50  0001 C CNN "Part number"
 F 5 "2.5mm pitch 4-pin receptacle, JST PH" H 8400 7675 50  0001 C CNN "Description"
@@ -522,23 +508,7 @@ Wire Wire Line
 Wire Wire Line
 	12425 7800 12600 7800
 Wire Wire Line
-	13375 7225 13175 7225
-Wire Wire Line
-	13175 7225 13175 7300
-Wire Wire Line
 	13375 7025 13175 7025
-Wire Wire Line
-	13175 7025 13175 7225
-Connection ~ 13175 7225
-Wire Wire Line
-	13375 6925 13275 6925
-Wire Wire Line
-	13375 7125 13275 7125
-Wire Wire Line
-	13275 7125 13275 6925
-Connection ~ 13275 6925
-Wire Wire Line
-	13275 6925 12600 6925
 Wire Wire Line
 	12600 6925 12600 7050
 Connection ~ 12600 6925
@@ -549,8 +519,6 @@ Wire Wire Line
 Connection ~ 12600 7800
 Wire Wire Line
 	12600 7800 13175 7800
-Text GLabel 13175 7025 0    60   Input ~ 0
-LED-
 Text Notes 5925 8150 0    60   ~ 0
 Sensor connectors compatible with Adafruit Stemma system.
 Text GLabel 5875 7675 0    60   Input ~ 0
@@ -810,7 +778,7 @@ U 1 1 5F7592EB
 P 2775 7400
 F 0 "5vReg101" V 2739 7112 50  0000 R CNN
 F 1 "Conn_01x04" V 2648 7112 50  0001 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2775 7400 50  0001 C CNN
+F 2 "EduRov:iFlight_Micro" H 2775 7400 50  0001 C CNN
 F 3 "~" H 2775 7400 50  0001 C CNN
 F 4 "Micro" V 2775 7400 50  0001 C CNN "Part number"
 F 5 "IF-A006172" V 2775 7400 50  0001 C CNN "Elefun reference"
@@ -820,49 +788,39 @@ F 7 "IFlight" H 2775 7400 50  0001 C CNN "Manufacturer"
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1525 7900 1575 7900
-Connection ~ 1525 7900
+	1525 8200 1575 8200
+Connection ~ 1525 8200
 Wire Wire Line
-	1225 7550 1325 7550
+	1575 8200 1575 8250
 Wire Wire Line
-	1575 7900 1575 7950
-Wire Wire Line
-	1475 7900 1525 7900
-Text GLabel 1575 7950 3    60   Input ~ 0
+	1475 8200 1525 8200
+Text GLabel 1575 8250 3    60   Input ~ 0
 GND
-Text GLabel 1475 7900 3    60   Input ~ 0
+Text GLabel 1475 8200 3    60   Input ~ 0
 -Batt
-Connection ~ 1225 7700
-Connection ~ 1525 7700
 Wire Wire Line
-	1525 7900 1525 7700
-Wire Wire Line
-	1525 7700 1525 7550
-Wire Wire Line
-	1225 7700 1225 7550
-Wire Wire Line
-	1225 7700 1225 7900
-Text GLabel 1225 7900 3    60   Input ~ 0
+	1225 8000 1225 8200
+Text GLabel 1225 8200 3    60   Input ~ 0
 +Bat1
 $Comp
 L Connector_Generic:Conn_01x02 P101
 U 1 1 59F0943E
-P 1325 7350
-F 0 "P101" H 1325 7500 50  0000 C CNN
-F 1 "Battery connector" V 1475 7350 50  0000 C CNN
-F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 1325 7350 50  0001 C CNN
-F 3 "" H 1325 7350 50  0000 C CNN
-F 4 "691137710002" H 1325 7350 50  0001 C CNN "Part number"
-F 5 "732-10955-ND" H 1325 7350 50  0001 C CNN "Digikey reference"
-F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 1325 7350 50  0001 C CNN "Description"
-F 7 "Wurth" H 1325 7350 50  0001 C CNN "Manufacturer"
-	1    1325 7350
-	0    -1   -1   0   
+P 1425 7350
+F 0 "P101" H 1425 7500 50  0000 C CNN
+F 1 "Battery connector" V 1575 7350 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 1425 7350 50  0001 C CNN
+F 3 "" H 1425 7350 50  0000 C CNN
+F 4 "691137710002" H 1425 7350 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 1425 7350 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 1425 7350 50  0001 C CNN "Description"
+F 7 "Wurth" H 1425 7350 50  0001 C CNN "Manufacturer"
+	1    1425 7350
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:CP C101
 U 1 1 600EBD67
-P 1375 7700
+P 1375 8000
 AR Path="/600EBD67" Ref="C101"  Part="1" 
 AR Path="/5FFEC45F/600EBD67" Ref="C?"  Part="1" 
 AR Path="/60017CE1/600EBD67" Ref="C?"  Part="1" 
@@ -871,16 +829,16 @@ AR Path="/60018874/600EBD67" Ref="C?"  Part="1"
 AR Path="/6003A868/600EBD67" Ref="C?"  Part="1" 
 AR Path="/6003F027/600EBD67" Ref="C?"  Part="1" 
 AR Path="/60043462/600EBD67" Ref="C?"  Part="1" 
-F 0 "C101" V 1225 8000 50  0000 C CNN
-F 1 "470uF" V 1325 8000 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 1413 7550 50  0001 C CNN
-F 3 "~" H 1375 7700 50  0001 C CNN
-F 4 "UVR1H471MHD1TO" V 1375 7700 50  0001 C CNN "Part number"
-F 5 "493-12789-1-ND" V 1375 7700 50  0001 C CNN "Digikey reference"
-F 6 "470uF, 20%, 50V, 5mm pitch" V 1375 7700 50  0001 C CNN "Description"
-F 7 "Nichicon" H 1375 7700 50  0001 C CNN "Manufacturer"
-	1    1375 7700
-	0    1    1    0   
+F 0 "C101" V 1225 8300 50  0000 C CNN
+F 1 "470uF" V 1325 8300 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 1413 7850 50  0001 C CNN
+F 3 "~" H 1375 8000 50  0001 C CNN
+F 4 "UVR1H471MHD1TO" V 1375 8000 50  0001 C CNN "Part number"
+F 5 "493-12789-1-ND" V 1375 8000 50  0001 C CNN "Digikey reference"
+F 6 "470uF, 20%, 50V, 5mm pitch" V 1375 8000 50  0001 C CNN "Description"
+F 7 "Nichicon" H 1375 8000 50  0001 C CNN "Manufacturer"
+	1    1375 8000
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Edurov:Generic U8
@@ -1171,4 +1129,72 @@ F 7 "Panduit Corp" H 6900 9325 50  0001 C CNN "Manufacturer"
 	1    6900 9325
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:Fuse F1
+U 1 1 60DA2F6D
+P 1225 7700
+F 0 "F1" H 1285 7746 50  0000 L CNN
+F 1 "Fuse" H 1285 7655 50  0000 L CNN
+F 2 "Fuse:Fuseholder_Blade_Mini_Keystone_3568" V 1155 7700 50  0001 C CNN
+F 3 "~" H 1225 7700 50  0001 C CNN
+F 4 "Miniature fuse holder " H 1225 7700 50  0001 C CNN "Description"
+F 5 "36-3568-ND" H 1225 7700 50  0001 C CNN "Digikey reference"
+F 6 "3568" H 1225 7700 50  0001 C CNN "MPN"
+F 7 "Keystone Electronics" H 1225 7700 50  0001 C CNN "Manufacturer"
+F 8 "3568" H 1225 7700 50  0001 C CNN "Part number"
+	1    1225 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1525 8000 1525 8200
+Wire Wire Line
+	1225 7850 1225 8000
+Connection ~ 1225 8000
+Wire Wire Line
+	1525 7550 1525 8000
+Connection ~ 1525 8000
+Wire Wire Line
+	1225 7550 1325 7550
+$Comp
+L Connector_Generic:Conn_01x02 P105
+U 1 1 60DD0F84
+P 13575 7025
+F 0 "P105" H 13550 7125 50  0000 C CNN
+F 1 "HeadLight" H 13675 7200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 13575 7025 50  0001 C CNN
+F 3 "" H 13575 7025 50  0000 C CNN
+F 4 "691137710002" H 13575 7025 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 13575 7025 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 13575 7025 50  0001 C CNN "Description"
+F 7 "Wurth" H 13575 7025 50  0001 C CNN "Manufacturer"
+	1    13575 7025
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 P106
+U 1 1 60DD216D
+P 14000 7025
+F 0 "P106" H 13950 7125 50  0000 C CNN
+F 1 "HeadLight" H 14100 7200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 14000 7025 50  0001 C CNN
+F 3 "" H 14000 7025 50  0000 C CNN
+F 4 "691137710002" H 14000 7025 50  0001 C CNN "Part number"
+F 5 "732-10955-ND" H 14000 7025 50  0001 C CNN "Digikey reference"
+F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 14000 7025 50  0001 C CNN "Description"
+F 7 "Wurth" H 14000 7025 50  0001 C CNN "Manufacturer"
+	1    14000 7025
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	13375 6925 13800 6925
+Connection ~ 13375 6925
+Wire Wire Line
+	13375 7025 13800 7025
+Connection ~ 13375 7025
+Wire Wire Line
+	12600 6925 13375 6925
+Wire Wire Line
+	13175 7025 13175 7300
+Text Label 13175 7025 0    50   ~ 0
+LED-
 $EndSCHEMATC
