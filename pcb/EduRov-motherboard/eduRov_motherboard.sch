@@ -21,9 +21,10 @@ F 0 "P102" H 6075 7875 50  0000 C CNN
 F 1 "Ext press" V 6175 7675 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 6075 7675 50  0001 C CNN
 F 3 "" H 6075 7675 50  0000 C CNN
-F 4 "PHR-3" H 6075 7675 50  0001 C CNN "Part number"
-F 5 "2.5mm pitch 3-pin receptacle, JST PH" H 6075 7675 50  0001 C CNN "Description"
-F 6 "JST" H 6075 7675 50  0001 C CNN "Manufacturer"
+F 4 "PRPC003SBAN-M71RC" H 6075 7675 50  0001 C CNN "Part number"
+F 5 "2.54mm pitch 3-pin header" H 6075 7675 50  0001 C CNN "Description"
+F 6 "Sullins Connector Solutions" H 6075 7675 50  0001 C CNN "Manufacturer"
+F 7 "S1111EC-03-ND" H 6075 7675 50  0001 C CNN "Digikey reference"
 	1    6075 7675
 	1    0    0    -1  
 $EndComp
@@ -416,9 +417,11 @@ F 0 "P103" H 7400 7875 50  0000 C CNN
 F 1 "Ext press" V 7500 7675 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 7400 7675 50  0001 C CNN
 F 3 "" H 7400 7675 50  0000 C CNN
-F 4 "PHR-3" H 7400 7675 50  0001 C CNN "Part number"
-F 5 "2.5mm pitch 3-pin receptacle, JST PH" H 7400 7675 50  0001 C CNN "Description"
-F 6 "JST" H 7400 7675 50  0001 C CNN "Manufacturer"
+F 4 "PRPC003SBAN-M71RC" H 7400 7675 50  0001 C CNN "Part number"
+F 5 "2.54mm pitch 3-pin header" H 7400 7675 50  0001 C CNN "Description"
+F 6 "Sullins Connector Solutions" H 7400 7675 50  0001 C CNN "Manufacturer"
+F 7 "S1111EC-03-ND" H 7400 7675 50  0001 C CNN "Digikey Reference"
+F 8 "S1111EC-03-ND" H 7400 7675 50  0001 C CNN "Digikey reference"
 	1    7400 7675
 	1    0    0    -1  
 $EndComp
@@ -430,9 +433,10 @@ F 0 "P104" H 8400 7875 50  0000 C CNN
 F 1 "Ext press" V 8500 7675 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 8400 7675 50  0001 C CNN
 F 3 "" H 8400 7675 50  0000 C CNN
-F 4 "PHR-4" H 8400 7675 50  0001 C CNN "Part number"
-F 5 "2.5mm pitch 4-pin receptacle, JST PH" H 8400 7675 50  0001 C CNN "Description"
-F 6 "JST" H 8400 7675 50  0001 C CNN "Manufacturer"
+F 4 "PRPC004SBAN-M71RC" H 8400 7675 50  0001 C CNN "Part number"
+F 5 "2.54mm pitch 4-pin header" H 8400 7675 50  0001 C CNN "Description"
+F 6 "Sullins Connector Solutions" H 8400 7675 50  0001 C CNN "Manufacturer"
+F 7 "S1111EC-04-ND" H 8400 7675 50  0001 C CNN "Digikey reference"
 	1    8400 7675
 	1    0    0    -1  
 $EndComp
@@ -577,10 +581,10 @@ L Edurov:Generic U1
 U 1 1 60C9E470
 P 3750 10200
 F 0 "U1" H 3928 10041 50  0001 L CNN
-F 1 "Arduino header" H 3928 9996 50  0000 L CNN
+F 1 "Arduino header" H 3928 9996 50  0001 L CNN
 F 2 "" H 3750 10200 50  0001 C CNN
 F 3 "" H 3750 10200 50  0001 C CNN
-F 4 "15 pin female through-hole header" H 3928 9905 50  0000 L CNN "Description"
+F 4 "15 pin female through-hole header" H 3928 9905 50  0001 L CNN "Description"
 F 5 "SSW-115-01-T-S" H 3750 10200 50  0001 C CNN "Part number"
 F 6 "SAM1213-15-ND" H 3750 10200 50  0001 C CNN "Digikey reference"
 F 7 "Samtec Inc." H 3750 10200 50  0001 C CNN "Manufacturer"
@@ -635,16 +639,16 @@ $EndComp
 $Comp
 L Edurov:Generic U2
 U 1 1 60CA1AFC
-P 3750 10600
-F 0 "U2" H 3928 10441 50  0001 L CNN
-F 1 "Arduino header" H 3928 10396 50  0000 L CNN
-F 2 "" H 3750 10600 50  0001 C CNN
-F 3 "" H 3750 10600 50  0001 C CNN
-F 4 "15 pin female through-hole header" H 3928 10305 50  0000 L CNN "Description"
-F 5 "SSW-115-01-T-S" H 3750 10600 50  0001 C CNN "Part number"
-F 6 "SAM1213-15-ND" H 3750 10600 50  0001 C CNN "Digikey reference"
-F 7 "Samtec Inc." H 3750 10600 50  0001 C CNN "Manufacturer"
-	1    3750 10600
+P 3775 10225
+F 0 "U2" H 3953 10066 50  0001 L CNN
+F 1 "Arduino header" H 3953 10021 50  0000 L CNN
+F 2 "" H 3775 10225 50  0001 C CNN
+F 3 "" H 3775 10225 50  0001 C CNN
+F 4 "15 pin female through-hole header" H 3953 9930 50  0000 L CNN "Description"
+F 5 "SSW-115-01-T-S" H 3775 10225 50  0001 C CNN "Part number"
+F 6 "SAM1213-15-ND" H 3775 10225 50  0001 C CNN "Digikey reference"
+F 7 "Samtec Inc." H 3775 10225 50  0001 C CNN "Manufacturer"
+	1    3775 10225
 	1    0    0    -1  
 $EndComp
 Text Notes 550  9275 0    394  ~ 0
@@ -845,13 +849,13 @@ L Edurov:Generic U8
 U 1 1 60CED77A
 P 3750 9800
 F 0 "U8" H 3928 9641 50  0001 L CNN
-F 1 "JST Connector kit" H 3928 9596 50  0000 L CNN
+F 1 "Jumper wires" H 3928 9596 50  0000 L CNN
 F 2 "" H 3750 9800 50  0001 C CNN
 F 3 "" H 3750 9800 50  0001 C CNN
-F 4 "JST PH connectors and crimps" H 3928 9505 50  0000 L CNN "Description"
-F 5 "FIT0299" H 3750 9800 50  0001 C CNN "Part number"
-F 6 "1738-1305-ND" H 3750 9800 50  0001 C CNN "Digikey reference"
-F 7 "DFRobot" H 3750 9800 50  0001 C CNN "Manufacturer"
+F 4 "Cut and use to hook up sensors and headlights" H 3928 9505 50  0000 L CNN "Description"
+F 5 "1949" H 3750 9800 50  0001 C CNN "Part number"
+F 6 "1528-1960-ND" H 3750 9800 50  0001 C CNN "Digikey reference"
+F 7 "Adafruit Industries LLC" H 3750 9800 50  0001 C CNN "Manufacturer"
 	1    3750 9800
 	1    0    0    -1  
 $EndComp
@@ -1163,10 +1167,10 @@ F 0 "P105" H 13550 7125 50  0000 C CNN
 F 1 "HeadLight" H 13675 7200 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 13575 7025 50  0001 C CNN
 F 3 "" H 13575 7025 50  0000 C CNN
-F 4 "691137710002" H 13575 7025 50  0001 C CNN "Part number"
-F 5 "732-10955-ND" H 13575 7025 50  0001 C CNN "Digikey reference"
-F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 13575 7025 50  0001 C CNN "Description"
-F 7 "Wurth" H 13575 7025 50  0001 C CNN "Manufacturer"
+F 4 "PRPC002SAAN-RC" H 13575 7025 50  0001 C CNN "Part number"
+F 5 "S1011EC-02-ND" H 13575 7025 50  0001 C CNN "Digikey reference"
+F 6 "2.54mm pitch 2-pin header" H 13575 7025 50  0001 C CNN "Description"
+F 7 "Sullins Connector Solutions" H 13575 7025 50  0001 C CNN "Manufacturer"
 	1    13575 7025
 	1    0    0    1   
 $EndComp
@@ -1178,10 +1182,10 @@ F 0 "P106" H 13950 7125 50  0000 C CNN
 F 1 "HeadLight" H 14100 7200 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 14000 7025 50  0001 C CNN
 F 3 "" H 14000 7025 50  0000 C CNN
-F 4 "691137710002" H 14000 7025 50  0001 C CNN "Part number"
-F 5 "732-10955-ND" H 14000 7025 50  0001 C CNN "Digikey reference"
-F 6 "2-position terminal block, 12-30 AWG, 5mm pitch" H 14000 7025 50  0001 C CNN "Description"
-F 7 "Wurth" H 14000 7025 50  0001 C CNN "Manufacturer"
+F 4 "PRPC002SAAN-RC" H 14000 7025 50  0001 C CNN "Part number"
+F 5 "S1011EC-02-ND" H 14000 7025 50  0001 C CNN "Digikey reference"
+F 6 "2.54mm pitch 2-pin header" H 14000 7025 50  0001 C CNN "Description"
+F 7 "Sullins Connector Solutions" H 14000 7025 50  0001 C CNN "Manufacturer"
 	1    14000 7025
 	1    0    0    1   
 $EndComp
@@ -1197,4 +1201,19 @@ Wire Wire Line
 	13175 7025 13175 7300
 Text Label 13175 7025 0    50   ~ 0
 LED-
+$Comp
+L Edurov:Generic U25
+U 1 1 60E0ECB6
+P 3750 10600
+F 0 "U25" H 3928 10441 50  0001 L CNN
+F 1 "Micro SD Card" H 3928 10396 50  0000 L CNN
+F 2 "" H 3750 10600 50  0001 C CNN
+F 3 "" H 3750 10600 50  0001 C CNN
+F 4 "16GB micro SD card with NOOBS installed" H 3928 10305 50  0000 L CNN "Description"
+F 5 "SC0252F" H 3750 10600 50  0001 C CNN "Part number"
+F 6 "2648-SC0252F-ND" H 3750 10600 50  0001 C CNN "Digikey reference"
+F 7 "Raspberry Pi" H 3750 10600 50  0001 C CNN "Manufacturer"
+	1    3750 10600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
