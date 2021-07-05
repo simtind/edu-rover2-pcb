@@ -4,21 +4,21 @@ const { ipcMain } = require('electron');
 client = null;
 connection = null;
 
-export function io_send(data) {
+function io_send(data) {
     if (connection && connection.connected)
     {
         connection.send(JSON.stringify(data));
     }
 }
 
-export function io_close(){
+function io_close(){
     if (connection && connection.connected)
     {
         connection.close();
     }
 }
 
-export function io_open(address, window) {
+function io_open(address, window) {
 
     console.log("Starting I/O server");
     
@@ -47,3 +47,5 @@ export function io_open(address, window) {
     
     client.connect(address, 'echo-protocol');
 }
+
+module.exports = { io_send, io_close, io_open }

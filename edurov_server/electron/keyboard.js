@@ -1,4 +1,4 @@
-import { actuators_set, actuators_send } from './actuators.js';
+const { actuators_set, actuators_send } = require('./actuators.js');
 
 
 function handle_keyboard_input(event) {
@@ -62,3 +62,5 @@ function keyboard_init(window)
 {    
     window.webContents.on("before-input-event", handle_keyboard_input);
 }
+
+module.exports = { keyboard_init }

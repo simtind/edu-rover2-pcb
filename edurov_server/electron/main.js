@@ -1,11 +1,10 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
-var ipc = require('electron').ipcMain
-const path = require('path')
-import { actuators_init } from './actuators.js';
-import { io_send, io_open, io_close } from './ioclient.js';
-import { keyboard_init } from './keyboard.js';
-import { gamepad_init } from './keyboard.js';
+const ipc = require('electron').ipcMain;
+const { actuators_init } = require('./actuators.js');
+const { io_send, io_open, io_close } = require('./ioclient.js');
+const { keyboard_init } = require('./keyboard.js');
+const { gamepad_init } = require('./keyboard.js');
 
 function createWindow () {
     // Create the browser window.

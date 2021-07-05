@@ -1,5 +1,5 @@
 const { GamepadListener } = require('gamepad.js');
-import { actuators_set, actuators_send } from './actuators.js';
+const { actuators_set, actuators_send } = require('./actuators.js');
 
 armed_pressed = false;
 light_pressed = false;
@@ -138,3 +138,5 @@ function gamepad_init(window) {
     
     listener.start();
 }
+
+module.exports = { gamepad_init }
