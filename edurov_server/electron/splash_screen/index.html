@@ -1,214 +1,50 @@
 <html>
 <head>
-    <title>eduROV</title>
+    <title>EduROV</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./static/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="./static/style.css">
-    <link rel="stylesheet" type="text/css" href="./static/bootstrap.css">
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap.css">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ws: ssl.gstatic.com 'unsafe-inline';">
 </head>
 <body>
 
 <div class="flexbox">
-    <div class="side-panel">
+    <div class="panel">
         <div class="card">
-            <h5 class="card-header">Sensors</h5>
+            <h5 class="card-header">Connect</h5>
             <div class="card-body">
-                <h5>ROV</h5>
-                <table class="table table-hover table-sm">
-                    <tbody>
-                    <tr>
-                        <th scope="row">Temperature</th>
-                        <td id="temp"></td>
-                        <td>&#8451</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Pressure</th>
-                        <td id="pressure"></td>
-                        <td>kPa</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Humidity</th>
-                        <td id="humidity"></td>
-                        <td>%</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Pitch</th>
-                        <td id="pitch"></td>
-                        <td>&#176</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Roll</th>
-                        <td id="roll"></td>
-                        <td>&#176</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Yaw</th>
-                        <td id="yaw"></td>
-                        <td>&#176</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <h5>Water</h5>
-                <table class="table table-sm">
-                    <tbody>
-                    <tr>
-                        <th scope="row">Temperature</th>
-                        <td id="tempWater"></td>
-                        <td>&#8451</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Pressure</th>
-                        <td id="pressureWater"></td>
-                        <td>kPa</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card">
-            <h5 class="card-header">System</h5>
-            <div class="card-body">
-                <table class="table table-sm">
-                    <tbody class="table-borderless">
-                    <tr id="voltageTr">
-                        <th scope="row">Battery</th>
-                        <td id="batteryVoltage"></td>
-                        <td>V</td>
-                    </tr>
-                    <tr id="diskTr">
-                        <th scope="row">Disk space</th>
-                        <td id="free_space"></td>
-                        <td>MB</td>
-                    </tr>
-                    <tr id="cpuTr">
-                        <th scope="row">CPU temp</th>
-                        <td id="cpu_temp"></td>
-                        <td>&#8451</td>
-                    </tr>
-                    <tr id="cpuLr">
-                        <th scope="row">CPU Load</th>
-                        <td id="cpu_load"></td>
-                        <td>%</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="card">
-            <h5 class="card-header">Motor Current</h5>
-            <div class="card-body">
-                <table class="table table-sm">
-                    <tbody class="table-borderless">
-                        <tr id="voltageTr">
-                            <th scope="row">Port</th>
-                            <td id="motor_port"></td>
-                            <td>mA</td>
-                        </tr>
-                        <tr id="diskTr">
-                            <th scope="row">Starboard</th>
-                            <td id="motor_starboard"></td>
-                            <td>mA</td>
-                        </tr>
-                        <tr id="cpuTr">
-                            <th scope="row">Up 1</th>
-                            <td id="motor_up_1"></td>
-                            <td>mA</td>
-                        </tr>
-                        <tr id="cpuLr">
-                            <th scope="row">Up 2</th>
-                            <td id="motor_up_2"></td>
-                            <td>mA</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="panel" id="center-panel">
-		<canvas id="streamCanvas" style="margin:auto"></canvas>
-        <img class="rollOverlay" id="rollOverlay" src="./static/roll.png">
-    </div>
-    <div class="side-panel">
-        <div class="card">
-            <h5 class="card-header">Options</h5>
-            <div class="card-body">
-                <button type="button" id="button_arm"
-                        class="btn btn-outline-success btn-sm btn-block"
-                        title="Use this to arm the robot">
-                    Arm
-                </button>
-                <button type="button" id="button_rotate_image"
+                <label for="input_url">EduROV IP or hostname:</label>
+                <input type="url" id="input_url" style="float:right"
+                        title="URL of Raspberry PI on EduROV." value="raspberrypi.local"/>
+                <button type="button" id="button_start_app"
                         class="btn btn-outline-primary btn-sm btn-block"
-                        title="Will rotate the video 180 degrees">
-                    Flip video
+                        title="Will connect to the selected EduROV and start the app.">
+                    Start
                 </button>
-                <button type="button" id="button_toggle_roll"
-                        class="btn btn-outline-primary btn-sm btn-block active"
-                        title="Toggle the roll indicator on/off">
-                    Roll
-                </button>
-                <button type="button" id="button_enter_cinema"
-                        class="btn btn-outline-primary btn-sm btn-block"
-                        title="Enter cinema mode which hides everything except video">
-                    Cinema
-                </button>
-                <button type="button" id="button_toggle_light"
-                        class="btn btn-outline-warning btn-sm btn-block"
-                        title="Toggle the light on the ROV on/off">Light
-                </button>
-                <button type="button" id="button_stop_rov"
-                        class="btn btn-outline-danger btn-sm btn-block"
-                        title="Stops the ROV, this page will stop working">
-                    Shutdown
-                </button>
-                <p></p>
-                <label for="slider_sensor_interval">Sensor polling interval:</label>
-                <input  type="range" value="100"
-                        min="30" max="1000"
-                        class="slider" id="slider_sensor_interval"
-                        title="Set the sensor polling interval in ms"/>
-                <p></p>
-                <label for="slider_actuator_sensitivity">Motor sensitivity:</label>
-                <input  type="range" value="1023"
-                        min="255" max="1023"
-                        class="slider" id="slider_actuator_sensitivity"
-                        title="Set the actuator sensitivity"/>
-                <p></p>
-                <label for="slider_headlight_intensity">Headlight Intensity:</label>
-                <input  type="range" value="1023"
-                        min="0" max="1023"
-                        class="slider" id="slider_headlight_intensity"
-                        title="Set the headlight intensity"/>
             </div>
         </div>
         <div class="card">
-            <h5 class="card-header">Hotkeys</h5>
+            <h5 class="card-header">Search</h5>
             <div class="card-body">
-                <table class="table table-sm">
+                <p>Search for EduROVs on the local network.</p>
+                <button type="button" id="button_search"
+                        class="btn btn-outline-primary btn-sm btn-block"
+                        title="Will trigger a search for Raspberry PIs on the network">
+                    Search
+                </button>
+                <p></p>
+                <table id="table_ip_results">
+                    <thead>
+                        <th>Host Name</th>
+                        <th>IP</th>
+                    </thead>
                     <tbody>
-                    <tr>
-                        <td><b>F11</b></td>
-                        <td>Fullscreen</td>
-                    </tr>
-                    <tr>
-                        <td><b>L</b></td>
-                        <td>Lights</td>
-                    </tr>
-                    <tr>
-                        <td><b>C</b></td>
-                        <td>Cinema</td>
-                    </tr>
-                    <tr>
-                        <td><b>ENTER</b></td>
-                        <td>Arm</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
 </div>
 <script type="module" src="./scripts/index.mjs"></script>

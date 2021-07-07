@@ -105,15 +105,19 @@ document.getElementById("slider_headlight_intensity").onchange =    light_update
 document.getElementById("slider_actuator_sensitivity").onchange =   () => actuators_set("sensitivity", get_slider("slider_actuator_sensitivity"));
 window.addEventListener("resize",                                   video_update_size);
 
+function start(event, address)
+{
+    console.log("Got address " + address);
+    video_init(`ws://${address}:8081`);
+    io_open(
+        `ws://${address}:8082`, 
+        (event) => { refresh_ui(JSON.parse(event.data)); },
+        () =>      { }
+    );
+    
+    actuators_init();
+    gamepad_init();
+    keyboard_init();
+}
 
-var address = "192.168.1.211";
-video_init(`ws://${address}:8081`);
-io_open(
-    `ws://${address}:8082`, 
-    (event) => { refresh_ui(JSON.parse(event.data)); },
-    () =>      { }
-);
-
-actuators_init();
-gamepad_init();
-keyboard_init();
+window.rov.get_address(start);

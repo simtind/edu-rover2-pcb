@@ -34,6 +34,7 @@ body {
     display: inline;
     position: relative;
     margin: 10px;
+    width: 100%;
 }
 
 .side-panel {

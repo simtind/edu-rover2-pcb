@@ -1,5 +1,5 @@
 import { video_toggle_cinema, video_exit_cinema } from './video.mjs';
-import { light_toggle } from './renderer.mjs';
+import { light_toggle } from './index.mjs';
 import { actuators_set, actuators_get, actuators_send } from './actuators.mjs';
 
 function handle_keyboard_input(key, value) {
