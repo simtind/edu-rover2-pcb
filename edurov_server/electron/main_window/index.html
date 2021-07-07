@@ -6,6 +6,7 @@
     <link rel="icon" href="./static/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./static/style.css">
     <link rel="stylesheet" type="text/css" href="./static/bootstrap.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ws: ssl.gstatic.com 'unsafe-inline';">
 </head>
 <body>
 
@@ -153,11 +154,6 @@
                         title="Enter cinema mode which hides everything except video">
                     Cinema
                 </button>
-                <button type="button" id="button_set_update_frequency"
-                        class="btn btn-outline-primary btn-sm btn-block"
-                        title="Changes the sensor update frequency to desired value">
-                    Sensor frequency
-                </button>
                 <button type="button" id="button_toggle_light"
                         class="btn btn-outline-warning btn-sm btn-block"
                         title="Toggle the light on the ROV on/off">Light
@@ -167,6 +163,12 @@
                         title="Stops the ROV, this page will stop working">
                     Shutdown
                 </button>
+                <p></p>
+                <label for="slider_sensor_interval">Sensor polling interval:</label>
+                <input  type="range" value="100"
+                        min="30" max="1000"
+                        class="slider" id="slider_sensor_interval"
+                        title="Set the sensor polling interval in ms"/>
                 <p></p>
                 <label for="slider_actuator_sensitivity">Motor sensitivity:</label>
                 <input  type="range" value="1023"
@@ -209,6 +211,6 @@
 
     </div>
 </div>
-<script type="module" src="./scripts/renderer.js"></script>
+<script type="module" src="./scripts/index.mjs"></script>
 </body>
 </html>

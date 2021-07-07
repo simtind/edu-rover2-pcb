@@ -1,12 +1,9 @@
-const { actuators_set, actuators_send } = require('./actuators.js');
+import { video_toggle_cinema, video_exit_cinema } from './video.mjs';
+import { light_toggle } from './renderer.mjs';
+import { actuators_set, actuators_get, actuators_send } from './actuators.mjs';
 
-
-function handle_keyboard_input(event) {
-    var sensitivity_elm = document.getElementById("slider_actuator_sensitivity");
-    var sensitivity = sensitivity_elm.value / sensitivity_elm.max; 
-    evt = evt || window.event;
-    value = event.type == "keyUp" ? 0.0 : sensitivity;
-    switch (evt.key) {
+function handle_keyboard_input(key, value) {
+    switch (key) {
         case "q":
             actuators_set("port", value);
             actuators_send();
@@ -34,33 +31,32 @@ function handle_keyboard_input(event) {
         case "c":
             if (value != 0.0)
             {                
-                window.webContents.send('video-toggle-cinema');
+                video_toggle_cinema();
             }
             break;
         case "l":
             if (value != 0.0)
-            {                
-                window.webContents.send('light-toggle');
+            {   
+                light_toggle();
             }
             break;
         case "Enter":
             if (value != 0.0)
             {                
-                window.webContents.send('armed-toggle');
+                window.rov.armed.toggle();  
             }
             break;
         case "Escape":
             if (value != 0.0)
-            {                
-                window.webContents.send('video-exit-cinema');
+            {             
+                video_exit_cinema();
             }
             break;
     }
 }
 
-function keyboard_init(window)
-{    
-    window.webContents.on("before-input-event", handle_keyboard_input);
+export function keyboard_init()
+{
+    window.addEventListener("keydown", (event) => handle_keyboard_input(event.key, actuators_get("sensitivity")));
+    window.addEventListener("keyup",   (event) => handle_keyboard_input(event.key, 0.0));
 }
-
-module.exports = { keyboard_init }

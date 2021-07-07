@@ -27,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/simtind/edu-rover2/issues"
   },
-  "homepage": "https://github.com/simtind/edu-rover2#readme"
+  "homepage": "https://github.com/simtind/edu-rover2#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }

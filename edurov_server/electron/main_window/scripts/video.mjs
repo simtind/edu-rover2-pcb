@@ -1,17 +1,19 @@
-roll_ui = true;
-cinema_mode = false;
-MINIMUM_PANEL_WIDTH = 250;
-video_rotation = 0;
-pad = 10;
-frame = null;
-image = new Image();
-cinema_mode = false;
-canvas = null;
-context = null;
+
+var cinema_mode = false;
+var video_rotation = 0;
+var image = new Image();
+var cinema_mode = false;
+var canvas = null;
+var context = null;
 
 
 export function video_update_size()
 {
+    if (!canvas)
+    {
+        return;
+    }
+
     var panels = document.getElementsByClassName("side-panel");
     var roll = document.getElementById("rollOverlay");
     var margin = 20;
@@ -37,14 +39,31 @@ export function video_update_size()
     roll.style.top = canvas.height / 2;
 }
 
-export function video_rotate(){
+export function video_rotate()
+{
+    if (!canvas)
+    {
+        return;
+    }
+    
     video_rotation += 180;
-    canvas.style.transform = `rotate(${this.video_rotation}deg)`;
+    canvas.style.transform = `rotate(${video_rotation}deg)`;
+}
+
+export function video_toggle_cinema()
+{
+    if (cinema_mode)
+    {
+        return video_exit_cinema();
+    }
+    else
+    {
+        return video_enter_cinema();
+    }
 }
 
 export function video_enter_cinema()
 {
-    set_button_state("button_enter_cinema", value);
     if (!cinema_mode)
     {
         var panels = document.getElementsByClassName("side-panel");
@@ -57,11 +76,11 @@ export function video_enter_cinema()
         cinema_mode = true;
         video_update_size();
     }
+    return cinema_mode;
 }
 
 export function video_exit_cinema()
 {
-    set_button_state("button_enter_cinema", value);
     if (cinema_mode)
     {
         var panels = document.getElementsByClassName("side-panel");
@@ -86,8 +105,8 @@ export function video_init(address)
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     };
     
-    client = new WebSocket(address);
-    console.log("Received camera server url", adress)
+    var client = new WebSocket(address);
+    console.log("Received camera server url", address)
     client.addEventListener(
         'open', 
         function(event) {
