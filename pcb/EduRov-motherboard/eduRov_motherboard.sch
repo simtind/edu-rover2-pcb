@@ -469,8 +469,6 @@ F 7 "Wurth" H 13825 3325 50  0001 C CNN "Manufacturer"
 	1    13825 3325
 	1    0    0    1   
 $EndComp
-Text GLabel 6325 1725 1    60   Input ~ 0
-+3V3
 Wire Notes Line
 	475  5775 10700 5775
 Wire Notes Line
