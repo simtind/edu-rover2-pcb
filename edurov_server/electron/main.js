@@ -27,7 +27,7 @@ function createWindow () {
     return window;
 }
 
-function get_ips_from_subnet_range(cidr)
+function get_ips_from_subnet_range(interface_name, cidr)
 {            
     const cidr_components = cidr.split("/");
     const ip_string = cidr_components[0];
@@ -41,41 +41,52 @@ function get_ips_from_subnet_range(cidr)
         return ( (ipInt>>>24) +'.' + (ipInt>>>16 & 255) +'.' + (ipInt>>>8 & 255) +'.' + (ipInt & 255) );
     }
 
+    var ips = [];
+
+    if (bits == 32)
+    {
+        // Special case, there are no other devices on the network, and 
+        // this value causes the ip_mask evaluation to fail.
+        return ips;
+    }
+
     var ip_mask = ~(0xFFFFFFFF >>> parseInt(bits));
     var subnet_ip = ip2int(ip_string) & ip_mask;
     const ips_in_subnet = 2 ** (32 - bits);
     
-    var ips = [];
     for (var i = 0; i < ips_in_subnet; i++)
     {
-        ips.push(int2ip(subnet_ip + i));
+        ips.push({interface: interface_name, ip: int2ip(subnet_ip + i)});
     }
 
     return ips;
 }
 
-function call_if_edurov(ip, callback)
+function call_if_edurov(host, callback)
 {
     // Ping IP to see if it contains a live host.
-    ping.sys.probe(ip, function(isAlive){
-        console.log(isAlive ? 'host ' + ip + ' is alive' : 'host ' + ip + ' is dead');
+    ping.sys.probe(host["ip"], function(isAlive){
+        console.log(
+            isAlive 
+                ? `host ${host["ip"]} on network interface ${host["interface"]} is alive`
+                : `host ${host["ip"]} on network interface ${host["interface"]} is dead`);
         if (isAlive)
         {
             // Attempt to connect to EduROV name service on host. 
             // If it's an edurov, we'll get a message back with it's name.
-            const client = new WebSocket('ws://' + ip + ":8083", "", {handshakeTimeout: 100});
+            const client = new WebSocket('ws://' + host["ip"] + ":8083", "", {handshakeTimeout: 100});
 
             client.onmessage = 
                 (message) => 
                 {
-                    console.log('host ' + ip + ' is an edurov' );
+                    console.log('host ' + host["ip"] + ' is an edurov' );
                     callback(message.data);
                     client.close();
                 };
             client.onerror =
                 () => 
                 {
-                    console.log('host ' + ip + ' is not an edurov' );
+                    console.log('host ' + host["ip"] + ' is not an edurov' );
                     callback("unknown");
                 };
         }
@@ -85,7 +96,7 @@ function call_if_edurov(ip, callback)
 function do_ip_search(window)
 {
     const interfaces = os.networkInterfaces();
-    var ips = []
+    var hosts = []
 
     for (const key in interfaces)
     {
@@ -98,12 +109,25 @@ function do_ip_search(window)
                 continue;
             }
 
-            ips.push(...get_ips_from_subnet_range(connection.cidr));
+            hosts.push(...get_ips_from_subnet_range(key, connection.cidr));
         }
     }
 
     
-    ips.forEach((ip) => {call_if_edurov(ip, (message) => window.webContents.send("ip_search_result", [ip, message]))});
+    hosts.forEach(
+        (host) => 
+        {
+            call_if_edurov(host, 
+                (message) => window.webContents.send("ip_search_result", 
+                    {
+                        ip:host["ip"], 
+                        name:message,
+                        interface:host["interface"]
+                    }
+                )
+            )
+        }
+    );
 }
 
 function start_main_window(splash_window, address)

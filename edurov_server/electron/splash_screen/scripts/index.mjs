@@ -13,7 +13,7 @@ function on_table_row_click()
 function on_ip_search(event, result)
 {
     var table = document.getElementById("table_ip_results");
-    console.log("Got host at IP " + result[0]);
+    console.log("Got host at IP " + result["ip"]);
     // Create an empty <tr> element and add it to the 1st position of the table:
     var row = table.insertRow();
     row.onclick = on_table_row_click;
@@ -21,10 +21,12 @@ function on_ip_search(event, result)
     // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
     var cell_hostname = row.insertCell(0);
     var cell_address = row.insertCell(1);
+    var cell_interface = row.insertCell(2);
 
     // Add some text to the new cells:
-    cell_address.innerHTML = result[0]; 
-    cell_hostname.innerHTML = result[1];
+    cell_hostname.innerHTML = result["name"];
+    cell_address.innerHTML = result["ip"]; 
+    cell_interface.innerHTML = result["interface"];
 }
 
 function start_search()
