@@ -1,3 +1,5 @@
+var selected_row = null;
+
 function start_app()
 {
     const address = document.getElementById("input_url").value;
@@ -6,6 +8,13 @@ function start_app()
 
 function on_table_row_click()
 {
+    if (selected_row != null)
+    {
+        selected_row.classList.remove("table-primary");
+    }
+
+    selected_row = this;
+    this.classList.add("table-primary");
     var input = document.getElementById("input_url");
     input.value = this.cells[1].innerHTML;
 }
@@ -31,6 +40,10 @@ function on_ip_search(event, result)
 
 function start_search()
 {
+    // Clear search results
+    selected_row = null;
+    document.getElementById("table_ip_results").innerHTML = "";
+
     window.splash.ip_search.start();
     window.splash.ip_search.on_result(on_ip_search);
 }

@@ -15,33 +15,36 @@
         <div class="card">
             <h5 class="card-header">Connect</h5>
             <div class="card-body">
-                <label for="input_url">EduROV IP or hostname:</label>
-                <input type="url" id="input_url" style="float:right"
-                        title="URL of Raspberry PI on EduROV." value="raspberrypi.local"/>
-                <button type="button" id="button_start_app"
-                        class="btn btn-outline-primary btn-sm btn-block"
-                        title="Will connect to the selected EduROV and start the app.">
-                    Start
-                </button>
+                <form>
+                    <div class="form-group">
+                        <label for="input_url">EduROV IP or hostname:</label>
+                        <input type="url" id="input_url" class="form-control"
+                                title="IP or hostname of Raspberry PI on EduROV." value="raspberrypi.local"/>
+                    </div>
+                    <button type="button" id="button_start_app"
+                            class="btn btn-outline-primary btn-sm btn-block"
+                            title="Connect to the selected EduROV and start the app.">
+                        Start
+                    </button>
+                </form>
             </div>
         </div>
         <div class="card">
             <h5 class="card-header">Search</h5>
             <div class="card-body">
-                <p>Search for EduROVs on the local network.</p>
+                <label for="button_search">Search for computers on the local network.</label>
                 <button type="button" id="button_search"
                         class="btn btn-outline-primary btn-sm btn-block"
-                        title="Will trigger a search for Raspberry PIs on the network">
+                        title="Trigger a search for Raspberry PIs on the network">
                     Search
                 </button>
-                <p></p>
-                <table id="table_ip_results" style="width: 100%;">
+                <table class="table table-hover" style="overflow: scroll;">
                     <thead>
-                        <th>Host Name</th>
-                        <th>IP</th>
-                        <th>Interface</th>
+                        <th scope="col">Host Name</th>
+                        <th scope="col">IP</th>
+                        <th scope="col">Interface</th>
                     </thead>
-                    <tbody>
+                    <tbody id="table_ip_results">
                     </tbody>
                 </table>
             </div>

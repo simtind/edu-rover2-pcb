@@ -50,13 +50,18 @@ function get_ips_from_subnet_range(interface_name, cidr)
         return ips;
     }
 
-    var ip_mask = ~(0xFFFFFFFF >>> parseInt(bits));
-    var subnet_ip = ip2int(ip_string) & ip_mask;
-    const ips_in_subnet = 2 ** (32 - bits);
+    const ip_mask = ~(0xFFFFFFFF >>> parseInt(bits));
+    const host_ip = ip2int(ip_string);
+    const subnet_ip = host_ip & ip_mask;
+    const num_ips = 2 ** (32 - bits);
     
-    for (var i = 0; i < ips_in_subnet; i++)
+    for (var ip = subnet_ip; ip < subnet_ip + num_ips; ip++)
     {
-        ips.push({interface: interface_name, ip: int2ip(subnet_ip + i)});
+        if (int2ip(ip) == ip_string)
+        {
+            continue;
+        }
+        ips.push({interface: interface_name, ip: int2ip(ip)});
     }
 
     return ips;
