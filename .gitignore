@@ -281,4 +281,4 @@ $RECYCLE.BIN/
 pcb/*/*.bck
 pcb/*/*.dcm
 
-edurov_server/electron/node_modules/*
+/**/node_modules/*
