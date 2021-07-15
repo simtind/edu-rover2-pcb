@@ -1,4 +1,4 @@
-#include "../config.h"
+#include "config.h"
 #include <mbed.h>
 #include <rtos.h>
 #include <ArduinoJson.h>
@@ -161,65 +161,79 @@ void read_serial_input()
 {
   while (true) {
     Serial.println("read_serial_input");
-    String indata = Serial.readStringUntil('\n');
+    String indata = Serial1.readStringUntil('\n');
 
-    int starboard_thrust = 0;
-    int port_thrust = 0;
-    int vertical_thrust = 0;
-    int led_power = 0;
-    bool update_actuators = false;
 
     if (indata.length() > 1)
     {
       Serial.println(indata);
     }
 
-    update_actuators |= sscanf(
-                          indata.c_str(),
-                          "star=%i port=%i vert=%i light=%i",
-                          &starboard_thrust,
-                          &port_thrust,
-                          &vertical_thrust,
-                          &led_power
-                        ) == 4;
-
-    if (update_actuators)
+    StaticJsonDocument<256> doc;
+    auto error = deserializeMsgPack(doc, indata);
+    if (error != DeserializationError::Ok)
     {
-      digitalWrite(PIN_MOTOR_ENABLE, 1);
+      Serial.println("Failed to deserialize input");
+      return;
+    }
 
+    JsonVariant starboard_thrust = doc["starboard"];
+    JsonVariant port_thrust = doc["port"];
+    JsonVariant vertical_thrust = doc["vertical"];
+    JsonVariant led_power = doc["headlight"];
+    JsonVariant interval = doc["interval"];
+
+    if (!starboard_thrust.isNull() &&
+        !port_thrust.isNull() &&
+        !vertical_thrust.isNull())
+    {
+
+      digitalWrite(PIN_MOTOR_ENABLE, 1);
+    }
+
+    if (!starboard_thrust.isNull())
+    {
+      float val = starboard_thrust.as<float>();
       set_motor_thrust(
         PIN_MOTOR1_DIR,
         PIN_MOTOR1_PWM,
-        MOTOR1_DIR_VAL(starboard_thrust),
-        starboard_thrust
+        MOTOR1_DIR_VAL(val),
+        val
       );
+    }
+    if (!port_thrust.isNull())
+    {
+      float val = port_thrust.as<float>();
       set_motor_thrust(
         PIN_MOTOR2_DIR,
         PIN_MOTOR2_PWM,
-        MOTOR2_DIR_VAL(port_thrust),
-        port_thrust
+        MOTOR2_DIR_VAL(val),
+        val
       );
+    }
+    if (!vertical_thrust.isNull())
+    {
+      float val = vertical_thrust.as<float>();
       set_motor_thrust(
         PIN_MOTOR3_DIR,
         PIN_MOTOR3_PWM,
-        MOTOR3_DIR_VAL(vertical_thrust),
-        vertical_thrust
+        MOTOR3_DIR_VAL(val),
+        val
       );
       set_motor_thrust(
         PIN_MOTOR4_DIR,
         PIN_MOTOR4_PWM,
-        MOTOR4_DIR_VAL(vertical_thrust),
-        vertical_thrust
+        MOTOR4_DIR_VAL(val),
+        val
       );
-
-      analogWrite(PIN_LED_PWM, led_power);
     }
-
-    int interval = 0;
-    bool update_interval = sscanf(indata.c_str(), "interval=%i", &interval) == 1;
-    if (update_interval)
+    if (!led_power.isNull())
     {
-      sensor_interval = std::chrono::milliseconds(interval);
+      analogWrite(PIN_LED_PWM, led_power.as<float>());
+    }
+    if (!interval.isNull())
+    {
+      sensor_interval = std::chrono::milliseconds(interval.as<int>());
       Serial.println("Interval = " + sensor_interval.count());
     }
   }
@@ -312,8 +326,8 @@ void loop() {
   Serial.println("Loop");
 
   sensors_mutex.lock();
-  serializeJson(sensors, Serial);
-  Serial.println("");
+  serializeMsgPack(sensors, Serial1);
+  Serial1.println("");
   sensors_mutex.unlock();
 
   rtos::ThisThread::sleep_until(next_time);
