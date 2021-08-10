@@ -347,8 +347,6 @@ Wire Wire Line
 Connection ~ 5175 2325
 Wire Wire Line
 	5175 2325 5725 2325
-Text GLabel 6425 1725 1    60   Input ~ 0
-+5V
 Text GLabel 12075 5875 0    60   Input ~ 0
 Sense4
 Text GLabel 12075 2325 0    60   Input ~ 0
@@ -1214,4 +1212,6 @@ F 7 "Raspberry Pi" H 3750 10600 50  0001 C CNN "Manufacturer"
 	1    3750 10600
 	1    0    0    -1  
 $EndComp
+Text GLabel 6125 1725 1    60   Input ~ 0
++Bat1
 $EndSCHEMATC
