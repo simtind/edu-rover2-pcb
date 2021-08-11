@@ -1,0 +1,2077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\simti\Documents\Git\edu-rover2\pcb\EduRov-motherboard\eduRov_motherboard.sch</source>
+    <date>03/07/2021 14:47:51</date>
+    <tool>Eeschema (5.1.10)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>eduROV motherboard</title>
+        <company/>
+        <rev>A</rev>
+        <date/>
+        <source>eduRov_motherboard.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/MotorController_4/" tstamps="/5FFEC45F/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/MotorController_3/" tstamps="/6003A868/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/MotorController_2/" tstamps="/6003F027/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/MotorController_1/" tstamps="/60043462/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorController.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P102">
+      <value>Ext press</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">2.54mm pitch 3-pin header</field>
+        <field name="Digikey reference">S1111EC-03-ND</field>
+        <field name="Manufacturer">Sullins Connector Solutions</field>
+        <field name="Part number">PRPC003SBAN-M71RC</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD089E</tstamp>
+    </comp>
+    <comp ref="2Pscrew103">
+      <value>Channel 3</value>
+      <footprint>TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree</footprint>
+      <fields>
+        <field name="Description">2-position terminal block, 12-30 AWG, 5mm pitch</field>
+        <field name="Digikey reference">732-10955-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">691137710002</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3D3E</tstamp>
+    </comp>
+    <comp ref="Q101">
+      <value>IRL540NPBF</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <fields>
+        <field name="Description">MOSFET, &gt;2A, Vgth = 2V</field>
+        <field name="Digikey reference">IRL540NPBF-ND</field>
+        <field name="Manufacturer">Infineon Technologies</field>
+        <field name="Part number">IRL540NPBF</field>
+      </fields>
+      <libsource lib="Edurov" part="IRL540NPBF" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A60C2A4</tstamp>
+    </comp>
+    <comp ref="2Pscrew101">
+      <value>Channel 1</value>
+      <footprint>TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree</footprint>
+      <fields>
+        <field name="Description">2-position terminal block, 12-30 AWG, 5mm pitch</field>
+        <field name="Digikey reference">732-10955-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">691137710002</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3B58</tstamp>
+    </comp>
+    <comp ref="2Pscrew104">
+      <value>Channel 4</value>
+      <footprint>TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree</footprint>
+      <fields>
+        <field name="Description">2-position terminal block, 12-30 AWG, 5mm pitch</field>
+        <field name="Digikey reference">732-10955-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">691137710002</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3CF4</tstamp>
+    </comp>
+    <comp ref="A101">
+      <value>Arduino_Nano_v3.x</value>
+      <footprint>Module:Arduino_Nano</footprint>
+      <datasheet>http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</datasheet>
+      <fields>
+        <field name="Description">ARDUINO NANO EVERY with headers</field>
+        <field name="Digikey reference">1050-ABX00033-ND</field>
+        <field name="Manufacturer">Arduino</field>
+        <field name="Part number">ABX00033</field>
+      </fields>
+      <libsource lib="MCU_Module" part="Arduino_Nano_v3.x" description="Arduino Nano v3.x"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60095748</tstamp>
+    </comp>
+    <comp ref="C102">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC68142</tstamp>
+    </comp>
+    <comp ref="P103">
+      <value>Ext press</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">2.54mm pitch 3-pin header</field>
+        <field name="Digikey Reference">S1111EC-03-ND</field>
+        <field name="Digikey reference">S1111EC-03-ND</field>
+        <field name="Manufacturer">Sullins Connector Solutions</field>
+        <field name="Part number">PRPC003SBAN-M71RC</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60763419</tstamp>
+    </comp>
+    <comp ref="P104">
+      <value>Ext press</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">2.54mm pitch 4-pin header</field>
+        <field name="Digikey reference">S1111EC-04-ND</field>
+        <field name="Manufacturer">Sullins Connector Solutions</field>
+        <field name="Part number">PRPC004SBAN-M71RC</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60771AD7</tstamp>
+    </comp>
+    <comp ref="2Pscrew102">
+      <value>Channel 2</value>
+      <footprint>TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree</footprint>
+      <fields>
+        <field name="Description">2-position terminal block, 12-30 AWG, 5mm pitch</field>
+        <field name="Digikey reference">732-10955-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">691137710002</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CCD414</tstamp>
+    </comp>
+    <comp ref="R111">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F76240D</tstamp>
+    </comp>
+    <comp ref="R110">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD15CB</tstamp>
+    </comp>
+    <comp ref="R109">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD11FD</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>Arduino header</value>
+      <fields>
+        <field name="Description">15 pin female through-hole header</field>
+        <field name="Digikey reference">SAM1213-15-ND</field>
+        <field name="Manufacturer">Samtec Inc.</field>
+        <field name="Part number">SSW-115-01-T-S</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C9E470</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>Pressure sensor</value>
+      <fields>
+        <field name="Description">MPX4250AP 0-250kPa pressure sensor</field>
+        <field name="Digikey reference">MPX4250AP-ND</field>
+        <field name="Manufacturer">NXP</field>
+        <field name="Part number">MPX4250AP</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CA6BBB</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>Temp sensor</value>
+      <fields>
+        <field name="Description">LM35 temperature sensor</field>
+        <field name="Digikey reference">LM35DZ/NOPB-ND</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Part number">LM35DZ/NOPB</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CA2DB7</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>Raspberry PI stacking header</value>
+      <fields>
+        <field name="Description">2x20 female through-hole header with extra long pins for stacking</field>
+        <field name="Digikey reference">1528-1783-ND</field>
+        <field name="Manufacturer">Adafruit Industries LLC</field>
+        <field name="Part number">1979</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CA2003</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>Arduino header</value>
+      <fields>
+        <field name="Description">15 pin female through-hole header</field>
+        <field name="Digikey reference">SAM1213-15-ND</field>
+        <field name="Manufacturer">Samtec Inc.</field>
+        <field name="Part number">SSW-115-01-T-S</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CA1AFC</tstamp>
+    </comp>
+    <comp ref="RaspberryPI101">
+      <value>Raspberry_Pi_2_3</value>
+      <footprint>EduRov:RaspBerry_PI</footprint>
+      <datasheet>https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf</datasheet>
+      <fields>
+        <field name="Description">Raspberry PI 3 or 4</field>
+        <field name="Digikey reference">1690-RASPBERRYPI4B/4GB-ND</field>
+        <field name="Manufacturer">Raspberry Pi</field>
+        <field name="Part number">Raspberry PI 3 or 4</field>
+      </fields>
+      <libsource lib="Connector" part="Raspberry_Pi_2_3" description="expansion header for Raspberry Pi 2 &amp; 3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F72663B</tstamp>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6015A2BD</tstamp>
+    </comp>
+    <comp ref="R104">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>600D04E5</tstamp>
+    </comp>
+    <comp ref="R103">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>600D5188</tstamp>
+    </comp>
+    <comp ref="R102">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6015AA7F</tstamp>
+    </comp>
+    <comp ref="R105">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59CD3229</tstamp>
+    </comp>
+    <comp ref="R112">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59D35BF6</tstamp>
+    </comp>
+    <comp ref="R108">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Description">10k Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT10K0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT10K0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB9B542</tstamp>
+    </comp>
+    <comp ref="5vReg101">
+      <value>Conn_01x04</value>
+      <footprint>EduRov:iFlight_Micro</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">Iflight micro 30V-&gt;5V regulator, 2.5A</field>
+        <field name="Elefun reference">IF-A006172</field>
+        <field name="Manufacturer">IFlight</field>
+        <field name="Part number">Micro</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7592EB</tstamp>
+    </comp>
+    <comp ref="P101">
+      <value>Battery connector</value>
+      <footprint>TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree</footprint>
+      <fields>
+        <field name="Description">2-position terminal block, 12-30 AWG, 5mm pitch</field>
+        <field name="Digikey reference">732-10955-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">691137710002</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59F0943E</tstamp>
+    </comp>
+    <comp ref="C101">
+      <value>470uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">470uF, 20%, 50V, 5mm pitch</field>
+        <field name="Digikey reference">493-12789-1-ND</field>
+        <field name="Manufacturer">Nichicon</field>
+        <field name="Part number">UVR1H471MHD1TO</field>
+      </fields>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>600EBD67</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>Jumper wires</value>
+      <fields>
+        <field name="Description">Cut and use to hook up sensors and headlights</field>
+        <field name="Digikey reference">1528-1960-ND</field>
+        <field name="Manufacturer">Adafruit Industries LLC</field>
+        <field name="Part number">1949</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CED77A</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>Sense hat</value>
+      <fields>
+        <field name="Description">Raspberry PI sense hat</field>
+        <field name="Digikey reference">1690-1013-ND</field>
+        <field name="Manufacturer">Raspberry Pi</field>
+        <field name="Part number">SENSE HAT</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C94B86</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>Camera</value>
+      <fields>
+        <field name="Description">Raspberry PI camera</field>
+        <field name="Digikey reference">1597-1427-ND</field>
+        <field name="Manufacturer">Seeed Technology Co., Ltd</field>
+        <field name="Part number">114990838</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C990EA</tstamp>
+    </comp>
+    <comp ref="U14">
+      <value>Nut</value>
+      <fields>
+        <field name="Description">Nylon nut</field>
+        <field name="Digikey reference">RPC7085-ND</field>
+        <field name="Manufacturer">Essentra Components</field>
+        <field name="Part number">04M025045HN</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CA78EE</tstamp>
+    </comp>
+    <comp ref="U12">
+      <value>Standoff</value>
+      <fields>
+        <field name="Description">Hex standoff, M2.5, 16mm long</field>
+        <field name="Digikey reference">732-10422-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">971160151</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CA78F7</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>Nut</value>
+      <fields>
+        <field name="Description">Nylon nut</field>
+        <field name="Digikey reference">RPC7085-ND</field>
+        <field name="Manufacturer">Essentra Components</field>
+        <field name="Part number">04M025045HN</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CAE87D</tstamp>
+    </comp>
+    <comp ref="U16">
+      <value>Standoff</value>
+      <fields>
+        <field name="Description">Hex standoff, M2.5, 16mm long</field>
+        <field name="Digikey reference">732-10422-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">971160151</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB3309</tstamp>
+    </comp>
+    <comp ref="U20">
+      <value>Standoff</value>
+      <fields>
+        <field name="Description">Hex standoff, M2.5, 16mm long</field>
+        <field name="Digikey reference">732-10422-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">971160151</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB37AE</tstamp>
+    </comp>
+    <comp ref="U24">
+      <value>Standoff</value>
+      <fields>
+        <field name="Description">Hex standoff, M2.5, 16mm long</field>
+        <field name="Digikey reference">732-10422-ND</field>
+        <field name="Manufacturer">Wurth</field>
+        <field name="Part number">971160151</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB3BB3</tstamp>
+    </comp>
+    <comp ref="U18">
+      <value>Nut</value>
+      <fields>
+        <field name="Description">Nylon nut</field>
+        <field name="Digikey reference">RPC7085-ND</field>
+        <field name="Manufacturer">Essentra Components</field>
+        <field name="Part number">04M025045HN</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB81CE</tstamp>
+    </comp>
+    <comp ref="U22">
+      <value>Nut</value>
+      <fields>
+        <field name="Description">Nylon nut</field>
+        <field name="Digikey reference">RPC7085-ND</field>
+        <field name="Manufacturer">Essentra Components</field>
+        <field name="Part number">04M025045HN</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB8D3D</tstamp>
+    </comp>
+    <comp ref="U23">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D52A1D</tstamp>
+    </comp>
+    <comp ref="U21">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D53232</tstamp>
+    </comp>
+    <comp ref="U19">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D55911</tstamp>
+    </comp>
+    <comp ref="U17">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D55E7F</tstamp>
+    </comp>
+    <comp ref="U15">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D564CC</tstamp>
+    </comp>
+    <comp ref="U13">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D5689F</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D56A60</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>Ferrules for motor cables</value>
+      <fields>
+        <field name="Description">1.5mm2 cable ferrule</field>
+        <field name="Digikey reference">298-10757-ND</field>
+        <field name="Manufacturer">Panduit Corp</field>
+        <field name="Part number">FSDX78-8-D</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D56C43</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>Fuse</value>
+      <footprint>Fuse:Fuseholder_Blade_Mini_Keystone_3568</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">Miniature fuse holder </field>
+        <field name="Digikey reference">36-3568-ND</field>
+        <field name="MPN">3568</field>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="Part number">3568</field>
+      </fields>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60DA2F6D</tstamp>
+    </comp>
+    <comp ref="P105">
+      <value>HeadLight</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Description">2.54mm pitch 2-pin header</field>
+        <field name="Digikey reference">S1011EC-02-ND</field>
+        <field name="Manufacturer">Sullins Connector Solutions</field>
+        <field name="Part number">PRPC002SAAN-RC</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60DD0F84</tstamp>
+    </comp>
+    <comp ref="P106">
+      <value>HeadLight</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Description">2.54mm pitch 2-pin header</field>
+        <field name="Digikey reference">S1011EC-02-ND</field>
+        <field name="Manufacturer">Sullins Connector Solutions</field>
+        <field name="Part number">PRPC002SAAN-RC</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60DD216D</tstamp>
+    </comp>
+    <comp ref="U25">
+      <value>Micro SD Card</value>
+      <fields>
+        <field name="Description">16GB micro SD card with NOOBS installed</field>
+        <field name="Digikey reference">2648-SC0252F-ND</field>
+        <field name="Manufacturer">Raspberry Pi</field>
+        <field name="Part number">SC0252F</field>
+      </fields>
+      <libsource lib="Edurov" part="Generic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60E0ECB6</tstamp>
+    </comp>
+    <comp ref="D202">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D201">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="C204">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C205">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C202">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">220nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-181744-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H224KRT00</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C203">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R201">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <fields>
+        <field name="Config">Do not mount</field>
+        <field name="Description">Jumper, use lefotver resistor legs</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U201">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <fields>
+        <field name="Description">5A hall-effect current sensor</field>
+        <field name="Digikey reference">620-1641-1-ND</field>
+        <field name="Manufacturer">Allegro MicroSystems</field>
+        <field name="Part number">ACS723LLCTR-05AB-T</field>
+      </fields>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C201">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+    <comp ref="IC201">
+      <value>L6203</value>
+      <footprint>EduRov:MULTIWATT-11</footprint>
+      <fields>
+        <field name="Description">H-Bridge DC motor controller</field>
+        <field name="Digikey reference">497-1421-5-ND</field>
+        <field name="MPN">L6203</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+        <field name="Part number">L6203</field>
+      </fields>
+      <libsource lib="Edurov" part="L6203" description=""/>
+      <sheetpath names="/MotorController_4/" tstamps="/5FFEC45F/"/>
+      <tstamp>60738BFF</tstamp>
+    </comp>
+    <comp ref="D302">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D301">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="C304">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C305">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C302">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">220nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-181744-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H224KRT00</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C303">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R301">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <fields>
+        <field name="Config">Do not mount</field>
+        <field name="Description">Jumper, use lefotver resistor legs</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U301">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <fields>
+        <field name="Description">5A hall-effect current sensor</field>
+        <field name="Digikey reference">620-1641-1-ND</field>
+        <field name="Manufacturer">Allegro MicroSystems</field>
+        <field name="Part number">ACS723LLCTR-05AB-T</field>
+      </fields>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C301">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+    <comp ref="IC301">
+      <value>L6203</value>
+      <footprint>EduRov:MULTIWATT-11</footprint>
+      <fields>
+        <field name="Description">H-Bridge DC motor controller</field>
+        <field name="Digikey reference">497-1421-5-ND</field>
+        <field name="MPN">L6203</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+        <field name="Part number">L6203</field>
+      </fields>
+      <libsource lib="Edurov" part="L6203" description=""/>
+      <sheetpath names="/MotorController_3/" tstamps="/6003A868/"/>
+      <tstamp>60738BFF</tstamp>
+    </comp>
+    <comp ref="D402">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D401">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="C404">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C405">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C402">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">220nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-181744-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H224KRT00</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C403">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R401">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <fields>
+        <field name="Config">Do not mount</field>
+        <field name="Description">Jumper, use lefotver resistor legs</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U401">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <fields>
+        <field name="Description">5A hall-effect current sensor</field>
+        <field name="Digikey reference">620-1641-1-ND</field>
+        <field name="Manufacturer">Allegro MicroSystems</field>
+        <field name="Part number">ACS723LLCTR-05AB-T</field>
+      </fields>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C401">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+    <comp ref="IC401">
+      <value>L6203</value>
+      <footprint>EduRov:MULTIWATT-11</footprint>
+      <fields>
+        <field name="Description">H-Bridge DC motor controller</field>
+        <field name="Digikey reference">497-1421-5-ND</field>
+        <field name="MPN">L6203</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+        <field name="Part number">L6203</field>
+      </fields>
+      <libsource lib="Edurov" part="L6203" description=""/>
+      <sheetpath names="/MotorController_2/" tstamps="/6003F027/"/>
+      <tstamp>60738BFF</tstamp>
+    </comp>
+    <comp ref="D502">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEEFF</tstamp>
+    </comp>
+    <comp ref="D501">
+      <value>D</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_KathodeUp</footprint>
+      <fields>
+        <field name="Description">General purpose diode, 1A forward current, 50V blocking voltage</field>
+        <field name="Digikey reference">1N4001-E3/54GICT-ND</field>
+        <field name="Manufacturer">Vishay General Semiconductor</field>
+        <field name="Part number">1N4001</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF0B</tstamp>
+    </comp>
+    <comp ref="C504">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF49</tstamp>
+    </comp>
+    <comp ref="C505">
+      <value>15nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">15nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-173267-1-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H153KNT06</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF54</tstamp>
+    </comp>
+    <comp ref="C502">
+      <value>220nF</value>
+      <footprint>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">220nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-181744-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H224KRT00</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>5FFEEF6B</tstamp>
+    </comp>
+    <comp ref="C503">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>600F7A3C</tstamp>
+    </comp>
+    <comp ref="R501">
+      <value>0</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <fields>
+        <field name="Config">Do not mount</field>
+        <field name="Description">Jumper, use lefotver resistor legs</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>6032BA93</tstamp>
+    </comp>
+    <comp ref="U501">
+      <value>ACS723xLCTR-05AB</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/~/media/Files/Datasheets/ACS723-Datasheet.ashx?la=en</datasheet>
+      <fields>
+        <field name="Description">5A hall-effect current sensor</field>
+        <field name="Digikey reference">620-1641-1-ND</field>
+        <field name="Manufacturer">Allegro MicroSystems</field>
+        <field name="Part number">ACS723LLCTR-05AB-T</field>
+      </fields>
+      <libsource lib="Sensor_Current" part="ACS723xLCTR-05AB" description="±5A Bidirectional Hall-Effect Current Sensor, +5.0V supply, 400mV/A, SOIC-8"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>60485F83</tstamp>
+    </comp>
+    <comp ref="C501">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">100nF, 50V X7R, 2.5mm pitch</field>
+        <field name="Digikey reference">445-FG18X7R1H104KNT00-ND</field>
+        <field name="Manufacturer">TDK Corporation</field>
+        <field name="Part number">FG18X7R1H104KNT00</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>60487676</tstamp>
+    </comp>
+    <comp ref="IC501">
+      <value>L6203</value>
+      <footprint>EduRov:MULTIWATT-11</footprint>
+      <fields>
+        <field name="Description">H-Bridge DC motor controller</field>
+        <field name="Digikey reference">497-1421-5-ND</field>
+        <field name="MPN">L6203</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="OC_NEWARK">56P8434</field>
+        <field name="Part number">L6203</field>
+      </fields>
+      <libsource lib="Edurov" part="L6203" description=""/>
+      <sheetpath names="/MotorController_1/" tstamps="/60043462/"/>
+      <tstamp>60738BFF</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Raspberry_Pi_2_3">
+      <description>expansion header for Raspberry Pi 2 &amp; 3</description>
+      <docs>https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf</docs>
+      <footprints>
+        <fp>PinHeader*2x20*P2.54mm*Vertical*</fp>
+        <fp>PinSocket*2x20*P2.54mm*Vertical*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Raspberry_Pi_2_3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_in"/>
+        <pin num="2" name="5V" type="power_in"/>
+        <pin num="3" name="SDA/GPIO2" type="BiDi"/>
+        <pin num="4" name="5V" type="power_in"/>
+        <pin num="5" name="SCL/GPIO3" type="BiDi"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GCLK0/GPIO4" type="BiDi"/>
+        <pin num="8" name="GPIO14/TXD" type="BiDi"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="GPIO15/RXD" type="BiDi"/>
+        <pin num="11" name="GPIO17" type="BiDi"/>
+        <pin num="12" name="GPIO18/PWM0" type="BiDi"/>
+        <pin num="13" name="GPIO27" type="BiDi"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="GPIO22" type="BiDi"/>
+        <pin num="16" name="GPIO23" type="BiDi"/>
+        <pin num="17" name="3V3" type="power_in"/>
+        <pin num="18" name="GPIO24" type="BiDi"/>
+        <pin num="19" name="MOSI0/GPIO10" type="BiDi"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="MISO0/GPIO9" type="BiDi"/>
+        <pin num="22" name="GPIO25" type="BiDi"/>
+        <pin num="23" name="SCLK0/GPIO11" type="BiDi"/>
+        <pin num="24" name="~CE0~/GPIO8" type="BiDi"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="~CE1~/GPIO7" type="BiDi"/>
+        <pin num="27" name="ID_SD/GPIO0" type="BiDi"/>
+        <pin num="28" name="ID_SC/GPIO1" type="BiDi"/>
+        <pin num="29" name="GCLK1/GPIO5" type="BiDi"/>
+        <pin num="30" name="GND" type="power_in"/>
+        <pin num="31" name="GCLK2/GPIO6" type="BiDi"/>
+        <pin num="32" name="PWM0/GPIO12" type="BiDi"/>
+        <pin num="33" name="PWM1/GPIO13" type="BiDi"/>
+        <pin num="34" name="GND" type="power_in"/>
+        <pin num="35" name="GPIO19/MISO1" type="BiDi"/>
+        <pin num="36" name="GPIO16" type="BiDi"/>
+        <pin num="37" name="GPIO26" type="BiDi"/>
+        <pin num="38" name="GPIO20/MOSI1" type="BiDi"/>
+        <pin num="39" name="GND" type="power_in"/>
+        <pin num="40" name="GPIO21/SCLK1" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse">
+      <description>Fuse</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Edurov" part="Generic">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Generic</field>
+      </fields>
+    </libpart>
+    <libpart lib="Edurov" part="IRL540NPBF">
+      <aliases>
+        <alias>IRLZ44N</alias>
+        <alias>IRLIZ44N</alias>
+        <alias>IRLZ34N</alias>
+        <alias>IRF3205</alias>
+        <alias>IRF540N</alias>
+      </aliases>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">IRL540NPBF</field>
+        <field name="Footprint">TO_SOT_Packages_THT:TO-220_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Edurov" part="L6203">
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">L6203</field>
+        <field name="Footprint">SnapEDA Library:MULTIWATT-11</field>
+        <field name="OC_NEWARK">56P8434</field>
+        <field name="OC_FARNELL">1467715</field>
+        <field name="MPN">L6203</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT2" type="output"/>
+        <pin num="2" name="~" type="power_in"/>
+        <pin num="3" name="OUT1" type="output"/>
+        <pin num="4" name="CBOOT1" type="input"/>
+        <pin num="5" name="IN1" type="input"/>
+        <pin num="6" name="~" type="power_in"/>
+        <pin num="7" name="IN2" type="input"/>
+        <pin num="8" name="CBOOT2" type="input"/>
+        <pin num="9" name="VREF" type="input"/>
+        <pin num="10" name="SENSE" type="input"/>
+        <pin num="11" name="ENABLE" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Module" part="Arduino_Nano_v2.x">
+      <aliases>
+        <alias>Arduino_Nano_v3.x</alias>
+      </aliases>
+      <description>Arduino Nano v2.x</description>
+      <docs>https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf</docs>
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_Nano_v2.x</field>
+        <field name="Footprint">Module:Arduino_Nano</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D1/TX" type="BiDi"/>
+        <pin num="2" name="D0/RX" type="BiDi"/>
+        <pin num="3" name="~RESET" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="D2" type="BiDi"/>
+        <pin num="6" name="D3" type="BiDi"/>
+        <pin num="7" name="D4" type="BiDi"/>
+        <pin num="8" name="D5" type="BiDi"/>
+        <pin num="9" name="D6" type="BiDi"/>
+        <pin num="10" name="D7" type="BiDi"/>
+        <pin num="11" name="D8" type="BiDi"/>
+        <pin num="12" name="D9" type="BiDi"/>
+        <pin num="13" name="D10" type="BiDi"/>
+        <pin num="14" name="D11" type="BiDi"/>
+        <pin num="15" name="D12" type="BiDi"/>
+        <pin num="16" name="D13" type="BiDi"/>
+        <pin num="17" name="3V3" type="power_out"/>
+        <pin num="18" name="AREF" type="input"/>
+        <pin num="19" name="A0" type="BiDi"/>
+        <pin num="20" name="A1" type="BiDi"/>
+        <pin num="21" name="A2" type="BiDi"/>
+        <pin num="22" name="A3" type="BiDi"/>
+        <pin num="23" name="A4" type="BiDi"/>
+        <pin num="24" name="A5" type="BiDi"/>
+        <pin num="25" name="A6" type="BiDi"/>
+        <pin num="26" name="A7" type="BiDi"/>
+        <pin num="27" name="+5V" type="power_out"/>
+        <pin num="28" name="~RESET" type="input"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Current" part="ACS722xLCTR-05AB">
+      <aliases>
+        <alias>ACS722xLCTR-10AB</alias>
+        <alias>ACS722xLCTR-10AU</alias>
+        <alias>ACS722xLCTR-20AB</alias>
+        <alias>ACS722xLCTR-20AU</alias>
+        <alias>ACS722xLCTR-40AB</alias>
+        <alias>ACS722xLCTR-40AU</alias>
+        <alias>ACS723xLCTR-05AB</alias>
+        <alias>ACS723xLCTR-10AB</alias>
+        <alias>ACS723xLCTR-10AU</alias>
+        <alias>ACS723xLCTR-20AB</alias>
+        <alias>ACS723xLCTR-20AU</alias>
+        <alias>ACS723xLCTR-40AB</alias>
+        <alias>ACS723xLCTR-40AU</alias>
+      </aliases>
+      <description>±5A Bidirectional Hall-Effect Current Sensor, +3.3V supply, 264mV/A, SOIC-8</description>
+      <docs>http://www.allegromicro.com/~/media/Files/Datasheets/ACS722-Datasheet.ashx?la=en</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ACS722xLCTR-05AB</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IP+" type="passive"/>
+        <pin num="2" name="IP+" type="passive"/>
+        <pin num="3" name="IP-" type="passive"/>
+        <pin num="4" name="IP-" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="BW_SEL" type="input"/>
+        <pin num="7" name="VIOUT" type="output"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Edurov">
+      <uri>C:\Users\simti\Documents\Git\edu-rover2\pcb\EduRov-motherboard/edurov.lib</uri>
+    </library>
+    <library logical="MCU_Module">
+      <uri>C:\Program Files\KiCad\share\kicad\library/MCU_Module.lib</uri>
+    </library>
+    <library logical="Sensor_Current">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Sensor_Current.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(RaspberryPI101-Pad18)">
+      <node ref="RaspberryPI101" pin="18"/>
+    </net>
+    <net code="2" name="Net-(RaspberryPI101-Pad16)">
+      <node ref="RaspberryPI101" pin="16"/>
+    </net>
+    <net code="3" name="Net-(RaspberryPI101-Pad15)">
+      <node ref="RaspberryPI101" pin="15"/>
+    </net>
+    <net code="4" name="Net-(RaspberryPI101-Pad13)">
+      <node ref="RaspberryPI101" pin="13"/>
+    </net>
+    <net code="5" name="Net-(RaspberryPI101-Pad12)">
+      <node ref="RaspberryPI101" pin="12"/>
+    </net>
+    <net code="6" name="Net-(RaspberryPI101-Pad11)">
+      <node ref="RaspberryPI101" pin="11"/>
+    </net>
+    <net code="7" name="Net-(R101-Pad2)">
+      <node ref="R104" pin="1"/>
+      <node ref="R101" pin="2"/>
+      <node ref="RaspberryPI101" pin="10"/>
+    </net>
+    <net code="8" name="Net-(R108-Pad1)">
+      <node ref="R109" pin="2"/>
+      <node ref="R108" pin="1"/>
+    </net>
+    <net code="9" name="Net-(R109-Pad1)">
+      <node ref="R110" pin="2"/>
+      <node ref="R109" pin="1"/>
+    </net>
+    <net code="10" name="Net-(A101-Pad2)">
+      <node ref="R103" pin="1"/>
+      <node ref="A101" pin="2"/>
+    </net>
+    <net code="11" name="Net-(RaspberryPI101-Pad19)">
+      <node ref="RaspberryPI101" pin="19"/>
+    </net>
+    <net code="12" name="Net-(A101-Pad1)">
+      <node ref="R104" pin="2"/>
+      <node ref="A101" pin="1"/>
+    </net>
+    <net code="13" name="Net-(R103-Pad2)">
+      <node ref="R103" pin="2"/>
+      <node ref="RaspberryPI101" pin="8"/>
+    </net>
+    <net code="14" name="Net-(F1-Pad1)">
+      <node ref="F1" pin="1"/>
+      <node ref="P101" pin="2"/>
+    </net>
+    <net code="15" name="+5V">
+      <node ref="C401" pin="2"/>
+      <node ref="U201" pin="8"/>
+      <node ref="U401" pin="8"/>
+      <node ref="C201" pin="2"/>
+      <node ref="P103" pin="2"/>
+      <node ref="U301" pin="8"/>
+      <node ref="RaspberryPI101" pin="2"/>
+      <node ref="C301" pin="2"/>
+      <node ref="P102" pin="2"/>
+      <node ref="RaspberryPI101" pin="4"/>
+      <node ref="5vReg101" pin="4"/>
+      <node ref="C501" pin="2"/>
+      <node ref="A101" pin="27"/>
+      <node ref="U501" pin="8"/>
+    </net>
+    <net code="16" name="-Batt">
+      <node ref="C202" pin="2"/>
+      <node ref="C203" pin="1"/>
+      <node ref="R301" pin="1"/>
+      <node ref="U301" pin="5"/>
+      <node ref="U301" pin="4"/>
+      <node ref="U301" pin="3"/>
+      <node ref="U201" pin="5"/>
+      <node ref="IC201" pin="6"/>
+      <node ref="U201" pin="3"/>
+      <node ref="R201" pin="1"/>
+      <node ref="C201" pin="1"/>
+      <node ref="A101" pin="29"/>
+      <node ref="A101" pin="4"/>
+      <node ref="U201" pin="6"/>
+      <node ref="U201" pin="4"/>
+      <node ref="D201" pin="2"/>
+      <node ref="D202" pin="2"/>
+      <node ref="R501" pin="1"/>
+      <node ref="U501" pin="4"/>
+      <node ref="U501" pin="3"/>
+      <node ref="IC501" pin="6"/>
+      <node ref="C402" pin="2"/>
+      <node ref="C403" pin="1"/>
+      <node ref="D402" pin="2"/>
+      <node ref="D401" pin="2"/>
+      <node ref="D501" pin="2"/>
+      <node ref="C502" pin="2"/>
+      <node ref="C503" pin="1"/>
+      <node ref="D502" pin="2"/>
+      <node ref="U501" pin="6"/>
+      <node ref="C501" pin="1"/>
+      <node ref="U501" pin="5"/>
+      <node ref="C302" pin="2"/>
+      <node ref="C303" pin="1"/>
+      <node ref="D302" pin="2"/>
+      <node ref="D301" pin="2"/>
+      <node ref="C301" pin="1"/>
+      <node ref="U301" pin="6"/>
+      <node ref="IC301" pin="6"/>
+      <node ref="U401" pin="6"/>
+      <node ref="C401" pin="1"/>
+      <node ref="U401" pin="5"/>
+      <node ref="IC401" pin="6"/>
+      <node ref="R401" pin="1"/>
+      <node ref="U401" pin="4"/>
+      <node ref="U401" pin="3"/>
+      <node ref="RaspberryPI101" pin="39"/>
+      <node ref="5vReg101" pin="3"/>
+      <node ref="5vReg101" pin="2"/>
+      <node ref="R111" pin="1"/>
+      <node ref="RaspberryPI101" pin="6"/>
+      <node ref="RaspberryPI101" pin="9"/>
+      <node ref="R102" pin="1"/>
+      <node ref="R105" pin="1"/>
+      <node ref="RaspberryPI101" pin="20"/>
+      <node ref="C101" pin="2"/>
+      <node ref="C102" pin="2"/>
+      <node ref="P103" pin="3"/>
+      <node ref="RaspberryPI101" pin="14"/>
+      <node ref="P101" pin="1"/>
+      <node ref="P104" pin="4"/>
+      <node ref="Q101" pin="3"/>
+      <node ref="RaspberryPI101" pin="30"/>
+      <node ref="RaspberryPI101" pin="34"/>
+      <node ref="R112" pin="1"/>
+      <node ref="P102" pin="3"/>
+      <node ref="RaspberryPI101" pin="25"/>
+    </net>
+    <net code="17" name="+Bat">
+      <node ref="C403" pin="2"/>
+      <node ref="IC401" pin="2"/>
+      <node ref="IC201" pin="2"/>
+      <node ref="F1" pin="2"/>
+      <node ref="C102" pin="1"/>
+      <node ref="C101" pin="1"/>
+      <node ref="IC301" pin="2"/>
+      <node ref="P105" pin="2"/>
+      <node ref="C303" pin="2"/>
+      <node ref="C203" pin="2"/>
+      <node ref="P106" pin="2"/>
+      <node ref="C503" pin="2"/>
+      <node ref="5vReg101" pin="1"/>
+      <node ref="R108" pin="2"/>
+      <node ref="IC501" pin="2"/>
+    </net>
+    <net code="18" name="/LED-">
+      <node ref="P106" pin="1"/>
+      <node ref="Q101" pin="2"/>
+      <node ref="P105" pin="1"/>
+    </net>
+    <net code="19" name="Net-(RaspberryPI101-Pad28)">
+      <node ref="RaspberryPI101" pin="28"/>
+    </net>
+    <net code="20" name="Net-(RaspberryPI101-Pad36)">
+      <node ref="RaspberryPI101" pin="36"/>
+    </net>
+    <net code="21" name="Net-(RaspberryPI101-Pad35)">
+      <node ref="RaspberryPI101" pin="35"/>
+    </net>
+    <net code="22" name="Net-(RaspberryPI101-Pad33)">
+      <node ref="RaspberryPI101" pin="33"/>
+    </net>
+    <net code="23" name="Net-(RaspberryPI101-Pad32)">
+      <node ref="RaspberryPI101" pin="32"/>
+    </net>
+    <net code="24" name="Net-(RaspberryPI101-Pad31)">
+      <node ref="RaspberryPI101" pin="31"/>
+    </net>
+    <net code="25" name="SCL">
+      <node ref="P104" pin="1"/>
+      <node ref="RaspberryPI101" pin="3"/>
+    </net>
+    <net code="26" name="Net-(RaspberryPI101-Pad29)">
+      <node ref="RaspberryPI101" pin="29"/>
+    </net>
+    <net code="27" name="Net-(RaspberryPI101-Pad37)">
+      <node ref="RaspberryPI101" pin="37"/>
+    </net>
+    <net code="28" name="Net-(RaspberryPI101-Pad27)">
+      <node ref="RaspberryPI101" pin="27"/>
+    </net>
+    <net code="29" name="Net-(RaspberryPI101-Pad26)">
+      <node ref="RaspberryPI101" pin="26"/>
+    </net>
+    <net code="30" name="Net-(RaspberryPI101-Pad24)">
+      <node ref="RaspberryPI101" pin="24"/>
+    </net>
+    <net code="31" name="Net-(RaspberryPI101-Pad23)">
+      <node ref="RaspberryPI101" pin="23"/>
+    </net>
+    <net code="32" name="Net-(RaspberryPI101-Pad22)">
+      <node ref="RaspberryPI101" pin="22"/>
+    </net>
+    <net code="33" name="Net-(RaspberryPI101-Pad21)">
+      <node ref="RaspberryPI101" pin="21"/>
+    </net>
+    <net code="34" name="Net-(R101-Pad1)">
+      <node ref="R102" pin="2"/>
+      <node ref="R101" pin="1"/>
+    </net>
+    <net code="35" name="Net-(RaspberryPI101-Pad7)">
+      <node ref="RaspberryPI101" pin="7"/>
+    </net>
+    <net code="36" name="SDA">
+      <node ref="RaspberryPI101" pin="5"/>
+      <node ref="P104" pin="2"/>
+    </net>
+    <net code="37" name="Net-(RaspberryPI101-Pad40)">
+      <node ref="RaspberryPI101" pin="40"/>
+    </net>
+    <net code="38" name="Net-(RaspberryPI101-Pad38)">
+      <node ref="RaspberryPI101" pin="38"/>
+    </net>
+    <net code="39" name="Sense3">
+      <node ref="A101" pin="24"/>
+      <node ref="U301" pin="7"/>
+    </net>
+    <net code="40" name="IO3A">
+      <node ref="A101" pin="12"/>
+      <node ref="IC301" pin="5"/>
+    </net>
+    <net code="41" name="IOEN">
+      <node ref="A101" pin="5"/>
+      <node ref="R105" pin="2"/>
+      <node ref="IC301" pin="11"/>
+      <node ref="IC401" pin="11"/>
+      <node ref="IC501" pin="11"/>
+      <node ref="IC201" pin="11"/>
+    </net>
+    <net code="42" name="Sense4">
+      <node ref="U201" pin="7"/>
+      <node ref="A101" pin="23"/>
+    </net>
+    <net code="43" name="Net-(A101-Pad18)">
+      <node ref="A101" pin="18"/>
+    </net>
+    <net code="44" name="Net-(A101-Pad22)">
+      <node ref="A101" pin="22"/>
+    </net>
+    <net code="45" name="BattMonitor">
+      <node ref="A101" pin="21"/>
+      <node ref="R110" pin="1"/>
+      <node ref="R111" pin="2"/>
+    </net>
+    <net code="46" name="PressMonitor">
+      <node ref="P102" pin="1"/>
+      <node ref="A101" pin="20"/>
+    </net>
+    <net code="47" name="TempMonitor">
+      <node ref="P103" pin="1"/>
+      <node ref="A101" pin="19"/>
+    </net>
+    <net code="48" name="+3V3">
+      <node ref="A101" pin="17"/>
+      <node ref="RaspberryPI101" pin="1"/>
+      <node ref="P104" pin="3"/>
+      <node ref="RaspberryPI101" pin="17"/>
+    </net>
+    <net code="49" name="Net-(A101-Pad16)">
+      <node ref="A101" pin="16"/>
+    </net>
+    <net code="50" name="Net-(A101-Pad15)">
+      <node ref="A101" pin="15"/>
+    </net>
+    <net code="51" name="IO4A">
+      <node ref="IC201" pin="5"/>
+      <node ref="A101" pin="14"/>
+    </net>
+    <net code="52" name="IO4B">
+      <node ref="IC201" pin="7"/>
+      <node ref="A101" pin="13"/>
+    </net>
+    <net code="53" name="IO3B">
+      <node ref="IC301" pin="7"/>
+      <node ref="A101" pin="11"/>
+    </net>
+    <net code="54" name="/Mot3+">
+      <node ref="D302" pin="1"/>
+      <node ref="2Pscrew103" pin="2"/>
+      <node ref="IC301" pin="1"/>
+      <node ref="C305" pin="1"/>
+    </net>
+    <net code="55" name="IO_LED">
+      <node ref="Q101" pin="1"/>
+      <node ref="R112" pin="2"/>
+      <node ref="A101" pin="6"/>
+    </net>
+    <net code="56" name="Net-(A101-Pad30)">
+      <node ref="A101" pin="30"/>
+    </net>
+    <net code="57" name="Net-(A101-Pad3)">
+      <node ref="A101" pin="3"/>
+    </net>
+    <net code="58" name="Net-(A101-Pad28)">
+      <node ref="A101" pin="28"/>
+    </net>
+    <net code="59" name="Sense1">
+      <node ref="A101" pin="26"/>
+      <node ref="U501" pin="7"/>
+    </net>
+    <net code="60" name="IO1B">
+      <node ref="IC501" pin="7"/>
+      <node ref="A101" pin="7"/>
+    </net>
+    <net code="61" name="IO1A">
+      <node ref="A101" pin="8"/>
+      <node ref="IC501" pin="5"/>
+    </net>
+    <net code="62" name="Sense2">
+      <node ref="A101" pin="25"/>
+      <node ref="U401" pin="7"/>
+    </net>
+    <net code="63" name="IO2B">
+      <node ref="IC401" pin="7"/>
+      <node ref="A101" pin="9"/>
+    </net>
+    <net code="64" name="IO2A">
+      <node ref="A101" pin="10"/>
+      <node ref="IC401" pin="5"/>
+    </net>
+    <net code="65" name="/Mot3-">
+      <node ref="C304" pin="1"/>
+      <node ref="D301" pin="1"/>
+      <node ref="IC301" pin="3"/>
+      <node ref="2Pscrew103" pin="1"/>
+    </net>
+    <net code="66" name="/Mot1-">
+      <node ref="IC501" pin="3"/>
+      <node ref="D501" pin="1"/>
+      <node ref="C504" pin="1"/>
+      <node ref="2Pscrew101" pin="1"/>
+    </net>
+    <net code="67" name="/Mot1+">
+      <node ref="D502" pin="1"/>
+      <node ref="IC501" pin="1"/>
+      <node ref="C505" pin="1"/>
+      <node ref="2Pscrew101" pin="2"/>
+    </net>
+    <net code="68" name="/Mot2-">
+      <node ref="2Pscrew102" pin="1"/>
+      <node ref="IC401" pin="3"/>
+      <node ref="C404" pin="1"/>
+      <node ref="D401" pin="1"/>
+    </net>
+    <net code="69" name="/Mot2+">
+      <node ref="C405" pin="1"/>
+      <node ref="IC401" pin="1"/>
+      <node ref="D402" pin="1"/>
+      <node ref="2Pscrew102" pin="2"/>
+    </net>
+    <net code="70" name="/Mot4+">
+      <node ref="IC201" pin="1"/>
+      <node ref="C205" pin="1"/>
+      <node ref="D202" pin="1"/>
+      <node ref="2Pscrew104" pin="2"/>
+    </net>
+    <net code="71" name="/Mot4-">
+      <node ref="IC201" pin="3"/>
+      <node ref="2Pscrew104" pin="1"/>
+      <node ref="C204" pin="1"/>
+      <node ref="D201" pin="1"/>
+    </net>
+    <net code="72" name="Net-(IC201-Pad10)">
+      <node ref="U201" pin="2"/>
+      <node ref="R201" pin="2"/>
+      <node ref="U201" pin="1"/>
+      <node ref="IC201" pin="10"/>
+    </net>
+    <net code="73" name="Net-(C205-Pad2)">
+      <node ref="C205" pin="2"/>
+      <node ref="IC201" pin="8"/>
+    </net>
+    <net code="74" name="Net-(C204-Pad2)">
+      <node ref="C204" pin="2"/>
+      <node ref="IC201" pin="4"/>
+    </net>
+    <net code="75" name="Net-(C202-Pad1)">
+      <node ref="C202" pin="1"/>
+      <node ref="IC201" pin="9"/>
+    </net>
+    <net code="76" name="Net-(IC301-Pad10)">
+      <node ref="IC301" pin="10"/>
+      <node ref="R301" pin="2"/>
+      <node ref="U301" pin="2"/>
+      <node ref="U301" pin="1"/>
+    </net>
+    <net code="77" name="Net-(C302-Pad1)">
+      <node ref="C302" pin="1"/>
+      <node ref="IC301" pin="9"/>
+    </net>
+    <net code="78" name="Net-(C305-Pad2)">
+      <node ref="IC301" pin="8"/>
+      <node ref="C305" pin="2"/>
+    </net>
+    <net code="79" name="Net-(C304-Pad2)">
+      <node ref="IC301" pin="4"/>
+      <node ref="C304" pin="2"/>
+    </net>
+    <net code="80" name="Net-(IC401-Pad10)">
+      <node ref="R401" pin="2"/>
+      <node ref="U401" pin="2"/>
+      <node ref="U401" pin="1"/>
+      <node ref="IC401" pin="10"/>
+    </net>
+    <net code="81" name="Net-(C405-Pad2)">
+      <node ref="C405" pin="2"/>
+      <node ref="IC401" pin="8"/>
+    </net>
+    <net code="82" name="Net-(C404-Pad2)">
+      <node ref="C404" pin="2"/>
+      <node ref="IC401" pin="4"/>
+    </net>
+    <net code="83" name="Net-(C402-Pad1)">
+      <node ref="IC401" pin="9"/>
+      <node ref="C402" pin="1"/>
+    </net>
+    <net code="84" name="Net-(IC501-Pad10)">
+      <node ref="R501" pin="2"/>
+      <node ref="U501" pin="2"/>
+      <node ref="U501" pin="1"/>
+      <node ref="IC501" pin="10"/>
+    </net>
+    <net code="85" name="Net-(C502-Pad1)">
+      <node ref="IC501" pin="9"/>
+      <node ref="C502" pin="1"/>
+    </net>
+    <net code="86" name="Net-(C505-Pad2)">
+      <node ref="C505" pin="2"/>
+      <node ref="IC501" pin="8"/>
+    </net>
+    <net code="87" name="Net-(C504-Pad2)">
+      <node ref="IC501" pin="4"/>
+      <node ref="C504" pin="2"/>
+    </net>
+  </nets>
+</export>

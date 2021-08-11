@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\simti\Documents\Git\edu-rover2\pcb\EduRov_headlights\eduRov_headlights.sch</source>
+    <date>16/06/2021 00:57:42</date>
+    <tool>Eeschema (5.1.10)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>eduRov_headlights.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="D101">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60761915</tstamp>
+    </comp>
+    <comp ref="D102">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076381B</tstamp>
+    </comp>
+    <comp ref="D103">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60763EB7</tstamp>
+    </comp>
+    <comp ref="R101">
+      <value>56</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">56 Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT56R0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT56R0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60764816</tstamp>
+    </comp>
+    <comp ref="D104">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60769941</tstamp>
+    </comp>
+    <comp ref="D105">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60769947</tstamp>
+    </comp>
+    <comp ref="D106">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076994D</tstamp>
+    </comp>
+    <comp ref="R102">
+      <value>56</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">56 Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT56R0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT56R0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60769953</tstamp>
+    </comp>
+    <comp ref="D107">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076C91F</tstamp>
+    </comp>
+    <comp ref="D108">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076C925</tstamp>
+    </comp>
+    <comp ref="D109">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076C92B</tstamp>
+    </comp>
+    <comp ref="R103">
+      <value>56</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">56 Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT56R0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT56R0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076C931</tstamp>
+    </comp>
+    <comp ref="D110">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076E21B</tstamp>
+    </comp>
+    <comp ref="D111">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076E221</tstamp>
+    </comp>
+    <comp ref="D112">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm_Clear</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">White LED 5mm diameter, 3.2Vf</field>
+        <field name="Digikey reference">C512A-WNN-CZ0B0151-ND</field>
+        <field name="Manufacturer">Cree Inc.</field>
+        <field name="Part number">C512A-WNN-CZ0B0151</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076E227</tstamp>
+    </comp>
+    <comp ref="R104">
+      <value>56</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Description">56 Ohm, 1/4W, 5%</field>
+        <field name="Digikey reference">CF14JT56R0CT-ND</field>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Part number">CF14JT56R0</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076E22D</tstamp>
+    </comp>
+    <comp ref="V-101">
+      <value>Conn_01x02</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Config">Do not place</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076EF0C</tstamp>
+    </comp>
+    <comp ref="V+101">
+      <value>Conn_01x02</value>
+      <footprint>TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Config">Do not place</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60771C00</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x01">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(D111-Pad1)">
+      <node ref="D111" pin="1"/>
+      <node ref="D112" pin="2"/>
+    </net>
+    <net code="2" name="Net-(D110-Pad1)">
+      <node ref="D110" pin="1"/>
+      <node ref="D111" pin="2"/>
+    </net>
+    <net code="3" name="Net-(D112-Pad1)">
+      <node ref="R104" pin="1"/>
+      <node ref="D112" pin="1"/>
+    </net>
+    <net code="4" name="/V+">
+      <node ref="D107" pin="2"/>
+      <node ref="D104" pin="2"/>
+      <node ref="D101" pin="2"/>
+      <node ref="V+101" pin="1"/>
+      <node ref="D110" pin="2"/>
+    </net>
+    <net code="5" name="/V-">
+      <node ref="R104" pin="2"/>
+      <node ref="R103" pin="2"/>
+      <node ref="R102" pin="2"/>
+      <node ref="R101" pin="2"/>
+      <node ref="V-101" pin="1"/>
+    </net>
+    <net code="6" name="Net-(D105-Pad1)">
+      <node ref="D106" pin="2"/>
+      <node ref="D105" pin="1"/>
+    </net>
+    <net code="7" name="Net-(D102-Pad1)">
+      <node ref="D103" pin="2"/>
+      <node ref="D102" pin="1"/>
+    </net>
+    <net code="8" name="Net-(D101-Pad1)">
+      <node ref="D101" pin="1"/>
+      <node ref="D102" pin="2"/>
+    </net>
+    <net code="9" name="Net-(D103-Pad1)">
+      <node ref="R101" pin="1"/>
+      <node ref="D103" pin="1"/>
+    </net>
+    <net code="10" name="Net-(D104-Pad1)">
+      <node ref="D104" pin="1"/>
+      <node ref="D105" pin="2"/>
+    </net>
+    <net code="11" name="Net-(D106-Pad1)">
+      <node ref="D106" pin="1"/>
+      <node ref="R102" pin="1"/>
+    </net>
+    <net code="12" name="Net-(D107-Pad1)">
+      <node ref="D107" pin="1"/>
+      <node ref="D108" pin="2"/>
+    </net>
+    <net code="13" name="Net-(D108-Pad1)">
+      <node ref="D108" pin="1"/>
+      <node ref="D109" pin="2"/>
+    </net>
+    <net code="14" name="Net-(D109-Pad1)">
+      <node ref="D109" pin="1"/>
+      <node ref="R103" pin="1"/>
+    </net>
+  </nets>
+</export>
