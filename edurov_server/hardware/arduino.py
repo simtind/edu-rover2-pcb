@@ -1,8 +1,8 @@
 import asyncio
 import logging
 import serial_asyncio
+import msgpack
 from serial.tools import list_ports
-from ..utility import is_raspberrypi
 
 
 class Arduino(object):
@@ -49,31 +49,14 @@ class Arduino(object):
     async def get_sensors(self):
         received = (await self._reader.readline()).decode("ascii", errors="ignore").strip()
         self.logger.debug(f"Received data from Arduino: {received}")
-        sensors = received.split(',')
-        if len(sensors) != 7:
-            return dict()
-        sensors = [int(sensor) for sensor in sensors]
-        return {
-                   "batteryVoltage":    sensors[0] / 100.0,
-                   "pressureWater":     sensors[1] / 100.0,
-                   "tempWater":         sensors[2] / 100.0,
-                   "motor_starboard":   sensors[3],
-                   "motor_port":        sensors[4],
-                   "motor_up_1":        sensors[5],
-                   "motor_up_2":        sensors[6]
-               }
+        return msgpack.unpackb(received, encoding='ascii')
 
     def set_interval(self, interval):
-        message = f"interval={interval}\n".encode('ascii')
+        message = msgpack.packb({"interval" : interval})
         self.logger.debug(f"Sent interval to Arduino: {message}")
         self._writer.write(message)
 
     def set_actuators(self, values):
-        vertical  = int(round(1000 * values["vertical"]))
-        starboard = int(round(1000 * values["starboard"]))
-        port      = int(round(1000 * values["port"]))
-        lights    = int(round(1000 * values['lights']))
-
-        message = f"star={starboard} port={port} vert={vertical} light={lights}\n".encode('ascii')
+        message = msgpack.packb(values)
         self.logger.debug(f"Sent data to Arduino: {message}")
         self._writer.write(message)

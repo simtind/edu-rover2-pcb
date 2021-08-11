@@ -17,12 +17,12 @@ rtos::Thread thread_read_ext_sensors;
 rtos::Thread thread_read_serial_input;
 
 
-void set_motor_thrust(int dir_pin, int pwm_pin, bool dir_val, int thrust)
+void set_motor_thrust(int dir_pin, int pwm_pin, bool dir_val, float thrust)
 {
-  if (thrust == 0)
+  if (abs(thrust) < 1)
   {
     digitalWrite(dir_pin, 0);
-    digitalWrite(pwm_pin, 0);
+    analogWrite(pwm_pin, 0);
   }
   else
   {
@@ -161,38 +161,41 @@ void read_serial_input()
 {
   while (true) {
     Serial.println("read_serial_input");
-    String indata = Serial1.readStringUntil('\n');
+    String indata = Serial1.readStringUntil('}');
 
-
-    if (indata.length() > 1)
+    indata += "}";
+  
+    if (indata.length() <= 2)
     {
-      Serial.println(indata);
+      continue;
     }
+    
+    Serial.println("Got data input");
+    Serial.println(indata);
 
     StaticJsonDocument<256> doc;
-    auto error = deserializeMsgPack(doc, indata);
+    auto error = deserializeJson(doc, indata);
     if (error != DeserializationError::Ok)
     {
       Serial.println("Failed to deserialize input");
-      return;
+      continue;
     }
 
+    JsonVariant armed = doc["armed"];
     JsonVariant starboard_thrust = doc["starboard"];
     JsonVariant port_thrust = doc["port"];
     JsonVariant vertical_thrust = doc["vertical"];
     JsonVariant led_power = doc["headlight"];
     JsonVariant interval = doc["interval"];
 
-    if (!starboard_thrust.isNull() &&
-        !port_thrust.isNull() &&
-        !vertical_thrust.isNull())
+    if (!armed.isNull())
     {
-
-      digitalWrite(PIN_MOTOR_ENABLE, 1);
+      digitalWrite(PIN_MOTOR_ENABLE, armed.as<bool>());
     }
 
     if (!starboard_thrust.isNull())
     {
+      Serial.println("Got starboard thrust");
       float val = starboard_thrust.as<float>();
       set_motor_thrust(
         PIN_MOTOR1_DIR,
@@ -203,6 +206,7 @@ void read_serial_input()
     }
     if (!port_thrust.isNull())
     {
+      Serial.println("Got port thrust");
       float val = port_thrust.as<float>();
       set_motor_thrust(
         PIN_MOTOR2_DIR,
@@ -213,6 +217,7 @@ void read_serial_input()
     }
     if (!vertical_thrust.isNull())
     {
+      Serial.println("Got vertical thrust");
       float val = vertical_thrust.as<float>();
       set_motor_thrust(
         PIN_MOTOR3_DIR,
@@ -267,8 +272,6 @@ void setup() {
 
   Serial1.begin(115200);
   Serial.begin(115200);
-
-  while (!Serial);
 
   Serial1.println("EduROV Arduino start");
   Serial.println("EduROV Arduino debug start");
@@ -326,8 +329,8 @@ void loop() {
   Serial.println("Loop");
 
   sensors_mutex.lock();
-  serializeMsgPack(sensors, Serial1);
-  Serial1.println("");
+  serializeJson(sensors, Serial1);
+  
   sensors_mutex.unlock();
 
   rtos::ThisThread::sleep_until(next_time);

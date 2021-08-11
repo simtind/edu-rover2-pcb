@@ -1,7 +1,7 @@
 var client = null;
 
 export function io_send(data) {
-    if (client)
+    if (client && client.readyState == 1)
     {
         client.send(JSON.stringify(data));
     }

@@ -1,5 +1,5 @@
 import { io_send } from './ioclient.mjs';
-var actuators = {armed:false, lights:0.0, sensor_interval:500, sensitivity:100, vertical:0.0, port:0.0, starboard:0.0}
+var actuators = {armed:false, lights:0.0, sensor_interval:500, sensitivity:1023, vertical:0.0, port:0.0, starboard:0.0}
 
 var interval = null;
 

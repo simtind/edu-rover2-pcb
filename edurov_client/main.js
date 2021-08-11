@@ -4,6 +4,7 @@ const ipc = require('electron').ipcMain;
 const path = require('path');
 const ping = require('ping');
 const WebSocket = require('ws');
+const arp = require('node-arp');
 const os = require("os");
 
 function createWindow () {
@@ -67,35 +68,37 @@ function get_ips_from_subnet_range(interface_name, cidr)
     return ips;
 }
 
-function call_if_edurov(host, callback)
+function call_if_alive(host, callback)
 {
+    console.log("Ping " + host["ip"]);
     // Ping IP to see if it contains a live host.
-    ping.sys.probe(host["ip"], function(isAlive){
-        console.log(
-            isAlive 
-                ? `host ${host["ip"]} on network interface ${host["interface"]} is alive`
-                : `host ${host["ip"]} on network interface ${host["interface"]} is dead`);
-        if (isAlive)
+    ping.sys.probe(
+        host["ip"], 
+        function(isAlive)
         {
-            // Attempt to connect to EduROV name service on host. 
-            // If it's an edurov, we'll get a message back with it's name.
-            const client = new WebSocket('ws://' + host["ip"] + ":8083", "", {handshakeTimeout: 100});
-
-            client.onmessage = 
-                (message) => 
-                {
-                    console.log('host ' + host["ip"] + ' is an edurov' );
-                    callback(message.data);
-                    client.close();
-                };
-            client.onerror =
-                () => 
-                {
-                    console.log('host ' + host["ip"] + ' is not an edurov' );
-                    callback("unknown");
-                };
-        }
-    });
+            console.log(
+                isAlive 
+                    ? `host ${host["ip"]} on network interface ${host["interface"]} is alive`
+                    : `host ${host["ip"]} on network interface ${host["interface"]} is not alive`);
+            if (isAlive)
+            {
+                arp.getMAC(
+                    host["ip"], 
+                    function(err, mac) 
+                    {
+                        if (!err) {
+                            const is_raspberry =    mac.startsWith("b8:27:eb") |
+                                                    mac.startsWith("dc:a6:32") |
+                                                    mac.startsWith("e4:5f:01");
+                            console.log(`host ${host["ip"]} is ${is_raspberry ? '' : 'not'} an edurov`);
+                            callback(mac, is_raspberry);
+                        }
+                    }
+                );
+            }
+        },
+        { timeout: 1 }
+    );
 }
 
 function do_ip_search(window)
@@ -118,16 +121,23 @@ function do_ip_search(window)
         }
     }
 
-    
+    var prev_percent = 0;
     hosts.forEach(
-        (host) => 
+        (host, index) => 
         {
-            call_if_edurov(host, 
-                (message) => window.webContents.send("ip_search_result", 
+            const percent = Math.ceil(index * 100 / hosts.length);
+            if (percent > prev_percent)
+            {
+                window.webContents.send("ip_search_progress", percent);
+                prev_percent = percent;   
+            }
+            call_if_alive(host, 
+                (mac, is_raspberry) => window.webContents.send("ip_search_result", 
                     {
                         ip:host["ip"], 
-                        name:message,
-                        interface:host["interface"]
+                        mac:mac,
+                        interface:host["interface"],
+                        is_raspberry:is_raspberry
                     }
                 )
             )

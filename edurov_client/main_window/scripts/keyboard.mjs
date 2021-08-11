@@ -1,5 +1,5 @@
 import { video_toggle_cinema, video_exit_cinema } from './video.mjs';
-import { light_toggle } from './index.mjs';
+import { light_toggle, armed_toggle } from './index.mjs';
 import { actuators_set, actuators_get, actuators_send } from './actuators.mjs';
 
 function handle_keyboard_input(key, value) {
@@ -43,7 +43,7 @@ function handle_keyboard_input(key, value) {
         case "Enter":
             if (value != 0.0)
             {                
-                window.rov.armed.toggle();  
+                armed_toggle();  
             }
             break;
         case "Escape":

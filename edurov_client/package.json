@@ -22,7 +22,8 @@
   "devDependencies": {
     "electron": "^13.1.5",
     "ping": "^0.4.1",
-    "ws": "^7.5.2"
+    "ws": "^7.5.2",
+    "node-arp": "^1.0.6"
   },
   "bugs": {
     "url": "https://github.com/simtind/edu-rover2/issues"
